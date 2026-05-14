@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Our Projects | TrueNest | Nandi Hills Residences, Bangalore</title>
+    <meta name="description" content="Explore TrueNest's curated portfolio of biophilic luxury residences in Nandi Hills, Bangalore. Retreat 76 — 76 residences at 915m altitude. Hills & Skies — 32 exclusive apartments." />
+    <meta name="keywords" content="TrueNest projects, Retreat 76, Hills Skies, Nandi Hills apartments, luxury residences Bangalore, biophilic homes, 1 BHK Nandi Hills" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://truenest.co.in/projects.html" />
+    <meta property="og:title" content="Our Projects | TrueNest Nandi Hills" />
+    <meta property="og:description" content="Retreat 76 & Hills & Skies — curated luxury biophilic residences in Nandi Hills, Bangalore." />
+    <meta property="og:image" content="assets/images/retreat76-elevation.jpg" />
+    <meta property="og:url" content="https://truenest.co.in/projects.html" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/site.css" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script src="assets/js/tailwind.config.js"></script>
+    <style>
+        body { -webkit-font-smoothing: antialiased; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24; }
+        /* Project image zoom */
+        .proj-img { transition: transform 0.9s cubic-bezier(0.25,0.46,0.45,0.94); }
+        .proj-wrap:hover .proj-img { transform: scale(1.06); }
+        /* Overlay reveal */
+        .proj-overlay { background: rgba(27,28,28,0); transition: background 0.5s ease; }
+        .proj-wrap:hover .proj-overlay { background: rgba(27,28,28,0.35); }
+        .proj-cta-reveal { transform: translateY(20px); opacity: 0; transition: transform 0.4s ease 0.1s, opacity 0.4s ease 0.1s; }
+        .proj-wrap:hover .proj-cta-reveal { transform: translateY(0); opacity: 1; }
+        /* Stats row animate */
+        .stat-num { transition: color 0.3s ease; }
+        .proj-info:hover .stat-num { color: #c08b3a; }
+        /* Feature tag */
+        .feature-tag { display: inline-flex; align-items: center; gap: 6px; padding: 4px 12px; border: 1px solid rgba(126,118,108,0.2); font-size: 11px; letter-spacing: 0.1em; font-family: 'Metropolis', sans-serif; font-weight: 600; text-transform: uppercase; }
+        /* Blueprint divider */
+        .blueprint-divider { height: 1px; background: rgba(206,197,186,0.4); position: relative; }
+        .blueprint-divider::after { content: "TN-PROJ-24"; position: absolute; right: 0; top: 4px; font-family: 'Metropolis'; font-size: 10px; color: #8aab92; letter-spacing: 0.05em; }
+        /* Scroll animation */
+        .fade-in-up { opacity: 0; transform: translateY(32px); transition: opacity 0.8s ease, transform 0.8s ease; }
+        .fade-in-up.visible { opacity: 1; transform: translateY(0); }
+        /* Why Nandi - stat card */
+        .why-card { transition: border-color 0.3s ease, transform 0.3s ease; }
+        .why-card:hover { border-color: rgba(192,139,58,0.3); transform: translateY(-4px); }
+        /* Page-specific background: subtle stone pattern */
+        .stone-bg { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60'%3E%3Crect width='60' height='60' fill='%23fafaf6'/%3E%3Ccircle cx='30' cy='30' r='0.5' fill='%23b8d4c0' opacity='0.4'/%3E%3Cline x1='0' y1='30' x2='60' y2='30' stroke='%23b8d4c0' stroke-width='0.2' opacity='0.2'/%3E%3Cline x1='30' y1='0' x2='30' y2='60' stroke='%23b8d4c0' stroke-width='0.2' opacity='0.2'/%3E%3C/svg%3E"); }
+    </style>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "name": "TrueNest Projects",
+        "description": "Curated luxury biophilic residences by TrueNest in Nandi Hills, Bangalore.",
+        "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Retreat 76", "url": "https://truenest.co.in/retreat76.html" },
+            { "@type": "ListItem", "position": 2, "name": "Hills & Skies", "url": "https://truenest.co.in/hillsandskies.html" }
+        ]
+    }
+    </script>
+</head>
+<body class="bg-background text-on-surface stone-bg">
+    <div id="shared-header"></div>
+
+    <!-- HERO -->
+    <header class="relative pt-40 pb-20 px-margin-mobile md:px-margin-desktop overflow-hidden">
+        <!-- Background image with overlay -->
+        <div class="absolute inset-0 z-0">
+            <img src="assets/images/retreat76-elevation.jpg" alt="" class="w-full h-full object-cover opacity-10" aria-hidden="true" />
+            <div class="absolute inset-0 bg-gradient-to-b from-background via-background/95 to-background"></div>
+        </div>
+        <div class="relative z-10 max-w-container-max mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-end">
+                <div class="md:col-span-8">
+                    <span class="font-label-caps text-label-caps text-primary mb-4 block tracking-widest">TN-PROJ-2024</span>
+                    <h1 class="font-display-lg text-display-lg md:text-display-xl text-on-surface leading-none mb-8">
+                        Portfolio of<br /><span class="italic text-primary">Persistent Elegance</span>
+                    </h1>
+                    <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl leading-relaxed">
+                        Architectural milestones where brutalist honesty meets the quietude of high-end living — each structure a dialogue between Bangalore's urban rhythm and the serenity of nature.
+                    </p>
+                </div>
+                <div class="md:col-span-4 flex flex-col items-start md:items-end gap-6">
+                    <div class="flex flex-col gap-2 text-right">
+                        <span class="font-headline-xl text-headline-xl text-primary">2</span>
+                        <span class="font-label-caps text-[10px] text-outline tracking-widest">ACTIVE PROJECTS</span>
+                    </div>
+                    <div class="flex flex-col gap-2 text-right">
+                        <span class="font-headline-xl text-headline-xl text-primary">108+</span>
+                        <span class="font-label-caps text-[10px] text-outline tracking-widest">TOTAL RESIDENCES</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Decorative line -->
+        <div class="relative z-10 max-w-container-max mx-auto mt-16">
+            <div class="blueprint-divider"></div>
+        </div>
+    </header>
+
+    <main>
+        <!-- PROJECT GALLERY -->
+        <section class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto pb-section-gap space-y-24 md:space-y-32">
+
+            <!-- PROJECT 01: RETREAT 76 -->
+            <article class="fade-in-up">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-stretch">
+                    <!-- Image Panel -->
+                    <div class="lg:col-span-7 proj-wrap relative overflow-hidden group cursor-pointer" style="min-height:560px" onclick="window.location.href='retreat76.html'">
+                        <img src="assets/images/retreat76-elevation.jpg"
+                            alt="Retreat 76 — Architecture at 915m, Nandi Hills"
+                            class="proj-img absolute inset-0 w-full h-full object-cover" />
+                        <!-- Dark overlay on hover -->
+                        <div class="proj-overlay absolute inset-0 z-10 flex flex-col items-center justify-center">
+                            <div class="proj-cta-reveal flex items-center gap-3 px-8 py-4 bg-white text-on-background font-label-caps text-label-caps">
+                                EXPLORE PROJECT
+                                <span class="material-symbols-outlined text-base">arrow_forward</span>
+                            </div>
+                        </div>
+                        <!-- Status Badge -->
+                        <div class="absolute top-6 left-6 z-20 flex items-center gap-2 bg-background/90 backdrop-blur-sm px-4 py-2">
+                            <span class="w-2 h-2 rounded-full bg-secondary inline-block animate-pulse"></span>
+                            <span class="font-label-caps text-[10px] text-secondary tracking-widest">COMING SOON</span>
+                        </div>
+                        <!-- Coordinates tag -->
+                        <div class="absolute bottom-6 right-6 z-20 bg-on-background/80 backdrop-blur-sm px-4 py-2">
+                            <span class="font-label-caps text-[9px] text-white/60 tracking-widest">13.3979° N · 77.6918° E</span>
+                        </div>
+                        <!-- Project number -->
+                        <div class="absolute bottom-0 left-0 z-5 pointer-events-none">
+                            <span class="font-headline-xl text-[160px] leading-none text-white/8 font-bold select-none" style="color:rgba(255,255,255,0.06)">01</span>
+                        </div>
+                    </div>
+
+                    <!-- Info Panel -->
+                    <div class="lg:col-span-5 proj-info flex flex-col justify-between py-2">
+                        <div>
+                            <div class="flex items-center gap-3 mb-6">
+                                <span class="font-label-caps text-[10px] text-outline tracking-widest">PROJECT</span>
+                                <span class="font-headline-lg text-[56px] text-outline/15 leading-none">01</span>
+                            </div>
+                            <h2 class="font-headline-xl text-headline-xl text-primary mb-3">Retreat 76</h2>
+                            <p class="font-label-caps text-[11px] text-outline tracking-widest mb-6">NANDI HILLS, KARNATAKA</p>
+                            <p class="font-body-lg text-body-lg text-on-surface-variant mb-8 leading-relaxed">
+                                Perched on the serene slopes of Nandi Hills, Retreat 76 redefines the service apartment experience. Monolithic concrete forms are softened by indigenous flora — a sanctuary carved from the mountain itself.
+                            </p>
+
+                            <!-- Stats -->
+                            <div class="grid grid-cols-2 gap-px bg-outline/10 mb-8 border border-outline/10">
+                                <div class="bg-background p-5">
+                                    <p class="font-label-caps text-[9px] text-outline tracking-widest mb-2">RESIDENCES</p>
+                                    <p class="stat-num font-headline-lg text-[36px] leading-none">76</p>
+                                </div>
+                                <div class="bg-background p-5">
+                                    <p class="font-label-caps text-[9px] text-outline tracking-widest mb-2">ALTITUDE</p>
+                                    <p class="stat-num font-headline-lg text-[36px] leading-none">915<span class="text-lg text-outline">m</span></p>
+                                </div>
+                                <div class="bg-background p-5">
+                                    <p class="font-label-caps text-[9px] text-outline tracking-widest mb-2">LAND AREA</p>
+                                    <p class="stat-num font-headline-lg text-[36px] leading-none">16.8<span class="text-lg text-outline">K</span></p>
+                                </div>
+                                <div class="bg-background p-5">
+                                    <p class="font-label-caps text-[9px] text-outline tracking-widest mb-2">PRICE FROM</p>
+                                    <p class="stat-num font-headline-lg text-[28px] leading-none">₹60L</p>
+                                </div>
+                            </div>
+
+                            <!-- Features -->
+                            <div class="flex flex-wrap gap-2 mb-8">
+                                <span class="feature-tag"><span class="material-symbols-outlined text-primary text-sm">yard</span>Vertical Orchards</span>
+                                <span class="feature-tag"><span class="material-symbols-outlined text-primary text-sm">pool</span>Infinity Pool</span>
+                                <span class="feature-tag"><span class="material-symbols-outlined text-primary text-sm">verified</span>RERA Approved</span>
+                            </div>
+                        </div>
+
+                        <!-- Location + CTA -->
+                        <div>
+                            <a href="https://www.google.com/maps/search/?api=1&query=13.3979,77.6918" target="_blank" rel="noopener noreferrer"
+                                class="inline-flex items-center gap-2 text-outline hover:text-primary transition-colors mb-6 font-label-caps text-[11px]">
+                                <span class="material-symbols-outlined text-base">location_on</span>
+                                VIEW ON GOOGLE MAPS
+                            </a>
+                            <a href="retreat76.html" class="group flex items-center justify-between w-full px-6 py-4 bg-on-background text-primary-fixed hover:bg-primary transition-colors">
+                                <span class="font-label-caps text-label-caps">EXPLORE RETREAT 76</span>
+                                <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Divider -->
+            <div class="blueprint-divider"></div>
+
+            <!-- PROJECT 02: HILLS & SKIES -->
+            <article class="fade-in-up">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-stretch">
+                    <!-- Info Panel (left on desktop) -->
+                    <div class="lg:col-span-5 proj-info flex flex-col justify-between py-2 order-2 lg:order-1">
+                        <div>
+                            <div class="flex items-center gap-3 mb-6">
+                                <span class="font-label-caps text-[10px] text-outline tracking-widest">PROJECT</span>
+                                <span class="font-headline-lg text-[56px] text-outline/15 leading-none">02</span>
+                            </div>
+                            <h2 class="font-headline-xl text-headline-xl text-primary mb-3">Hills & Skies</h2>
+                            <p class="font-label-caps text-[11px] text-outline tracking-widest mb-6">NANDI HILLS, KARNATAKA</p>
+                            <p class="font-body-lg text-body-lg text-on-surface-variant mb-8 leading-relaxed">
+                                A residential enclave that dissolves the boundaries between indoor and outdoor living. The design features expansive cantilevered terraces that offer panoramic views of Bangalore's changing horizon.
+                            </p>
+
+                            <div class="grid grid-cols-2 gap-px bg-outline/10 mb-8 border border-outline/10">
+                                <div class="bg-background p-5">
+                                    <p class="font-label-caps text-[9px] text-outline tracking-widest mb-2">RESIDENCES</p>
+                                    <p class="stat-num font-headline-lg text-[36px] leading-none">32</p>
+                                </div>
+                                <div class="bg-background p-5">
+                                    <p class="font-label-caps text-[9px] text-outline tracking-widest mb-2">ALTITUDE</p>
+                                    <p class="stat-num font-headline-lg text-[36px] leading-none">915<span class="text-lg text-outline">m</span></p>
+                                </div>
+                                <div class="bg-background p-5">
+                                    <p class="font-label-caps text-[9px] text-outline tracking-widest mb-2">LAND AREA</p>
+                                    <p class="stat-num font-headline-lg text-[36px] leading-none">8,000<span class="text-lg text-outline">sft</span></p>
+                                </div>
+                                <div class="bg-background p-5">
+                                    <p class="font-label-caps text-[9px] text-outline tracking-widest mb-2">PRICE FROM</p>
+                                    <p class="stat-num font-headline-lg text-[28px] leading-none">₹60L</p>
+                                </div>
+                            </div>
+
+                            <div class="flex flex-wrap gap-2 mb-8">
+                                <span class="feature-tag"><span class="material-symbols-outlined text-primary text-sm">deck</span>Sky Deck</span>
+                                <span class="feature-tag"><span class="material-symbols-outlined text-primary text-sm">pool</span>Sky Pool</span>
+                                <span class="feature-tag"><span class="material-symbols-outlined text-primary text-sm">nightlight</span>Star Observatory</span>
+                            </div>
+                        </div>
+                        <div>
+                            <a href="https://www.google.com/maps/search/?api=1&query=13.397393,77.690496" target="_blank" rel="noopener noreferrer"
+                                class="inline-flex items-center gap-2 text-outline hover:text-primary transition-colors mb-6 font-label-caps text-[11px]">
+                                <span class="material-symbols-outlined text-base">location_on</span>
+                                VIEW ON GOOGLE MAPS
+                            </a>
+                            <a href="hillsandskies.html" class="group flex items-center justify-between w-full px-6 py-4 bg-on-background text-primary-fixed hover:bg-primary transition-colors">
+                                <span class="font-label-caps text-label-caps">EXPLORE HILLS & SKIES</span>
+                                <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Image Panel (right) -->
+                    <div class="lg:col-span-7 proj-wrap relative overflow-hidden group cursor-pointer order-1 lg:order-2" style="min-height:560px" onclick="window.location.href='hillsandskies.html'">
+                        <img src="assets/images/hillsandskies-elevation.jpg"
+                            alt="Hills & Skies — 32 luxury residences, Nandi Hills"
+                            class="proj-img absolute inset-0 w-full h-full object-cover" />
+                        <div class="proj-overlay absolute inset-0 z-10 flex flex-col items-center justify-center">
+                            <div class="proj-cta-reveal flex items-center gap-3 px-8 py-4 bg-white text-on-background font-label-caps text-label-caps">
+                                EXPLORE PROJECT
+                                <span class="material-symbols-outlined text-base">arrow_forward</span>
+                            </div>
+                        </div>
+                        <div class="absolute top-6 left-6 z-20 flex items-center gap-2 bg-background/90 backdrop-blur-sm px-4 py-2">
+                            <span class="w-2 h-2 rounded-full bg-secondary inline-block animate-pulse"></span>
+                            <span class="font-label-caps text-[10px] text-secondary tracking-widest">COMING SOON</span>
+                        </div>
+                        <div class="absolute bottom-6 right-6 z-20 bg-on-background/80 backdrop-blur-sm px-4 py-2">
+                            <span class="font-label-caps text-[9px] text-white/60 tracking-widest">13.3974° N · 77.6905° E</span>
+                        </div>
+                        <div class="absolute bottom-0 left-0 z-5 pointer-events-none">
+                            <span class="font-headline-xl text-[160px] leading-none font-bold select-none" style="color:rgba(255,255,255,0.06)">02</span>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <!-- WHY NANDI HILLS -->
+        <section class="py-section-gap bg-surface-container-low px-margin-mobile md:px-margin-desktop" id="nandi-hills">
+            <div class="max-w-container-max mx-auto grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
+                <!-- Text Content -->
+                <div class="lg:col-span-5">
+                    <span class="font-label-caps text-label-caps text-primary mb-4 block tracking-widest">THE GEOGRAPHY OF WELLNESS</span>
+                    <h2 class="font-display-lg text-display-lg mb-4 leading-tight">Why Nandi <span class="italic">Hills?</span></h2>
+                    <p class="font-body-md text-body-md text-on-surface-variant mb-12 leading-relaxed max-w-md">
+                        Nandi Hills is not merely a location — it is a microclimate, a history, and a philosophy of living aligned with the earth.
+                    </p>
+                    <!-- Reason Cards -->
+                    <div class="space-y-6">
+                        <div class="why-card p-6 border border-outline/10 bg-background">
+                            <div class="flex items-start gap-4">
+                                <span class="material-symbols-outlined text-primary text-2xl mt-0.5">air</span>
+                                <div>
+                                    <h4 class="font-label-caps text-label-caps text-on-surface mb-2">BLUE ZONE MICROCLIMATE</h4>
+                                    <p class="font-body-md text-[14px] text-on-surface-variant leading-relaxed">Air quality consistently at pristine levels — inspired by global Blue Zone longevity research.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="why-card p-6 border border-outline/10 bg-background">
+                            <div class="flex items-start gap-4">
+                                <span class="material-symbols-outlined text-primary text-2xl mt-0.5">castle</span>
+                                <div>
+                                    <h4 class="font-label-caps text-label-caps text-on-surface mb-2">HISTORICAL GRANDEUR</h4>
+                                    <p class="font-body-md text-[14px] text-on-surface-variant leading-relaxed">Proximity to Tipu Sultan's Summer Residence — centuries of royalty chose this landscape.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="why-card p-6 border border-outline/10 bg-background">
+                            <div class="flex items-start gap-4">
+                                <span class="material-symbols-outlined text-primary text-2xl mt-0.5">thermostat</span>
+                                <div>
+                                    <h4 class="font-label-caps text-label-caps text-on-surface mb-2">THERAPEUTIC ALTITUDE</h4>
+                                    <p class="font-body-md text-[14px] text-on-surface-variant leading-relaxed">At 1,478m above sea level — cooler temperatures, reduced humidity, natural urban refuge.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Image + Stats -->
+                <div class="lg:col-start-7 lg:col-span-6">
+                    <div class="relative">
+                        <div class="aspect-[4/5] overflow-hidden">
+                            <img class="w-full h-full object-cover hover:scale-105 transition-transform duration-1000"
+                                src="assets/images/nandi-hills-mist.jpg"
+                                alt="Misty sunrise over Nandi Hills — the natural sanctuary above Bangalore" />
+                        </div>
+                        <!-- Stats overlay cards -->
+                        <div class="absolute -bottom-8 -left-8 bg-background border border-outline/20 p-6 shadow-xl hidden md:block">
+                            <p class="font-headline-xl text-headline-xl text-primary leading-none">0%</p>
+                            <p class="font-label-caps text-[9px] text-outline tracking-widest mt-1">POLLUTION INDEX</p>
+                        </div>
+                        <div class="absolute -top-8 -right-8 bg-primary text-on-primary p-6 shadow-xl hidden md:block">
+                            <p class="font-headline-xl text-headline-xl leading-none">1478</p>
+                            <p class="font-label-caps text-[9px] tracking-widest opacity-70 mt-1">METRES ASL</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto text-center">
+            <span class="font-label-caps text-label-caps text-primary mb-4 block">BEGIN YOUR ACQUISITION</span>
+            <h2 class="font-headline-xl text-headline-xl mb-6">Ready to secure your <span class="italic">sanctuary?</span></h2>
+            <p class="font-body-md text-body-md text-on-surface-variant max-w-xl mx-auto mb-10">Our private advisory team is available for discreet conversations about acquisition, site visits, and unit customization.</p>
+            <a href="inquiries.html" class="inline-flex items-center gap-3 px-12 py-5 bg-on-background text-primary-fixed font-label-caps text-label-caps hover:bg-primary transition-colors group">
+                INQUIRE PRIVATELY
+                <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+            </a>
+        </section>
+    </main>
+
+    <div id="shared-footer"></div>
+    <script src="assets/js/components.js"></script>
+    <script>
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-in-up').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

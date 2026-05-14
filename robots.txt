@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /assets/hero-videos/
+
+Sitemap: https://truenest.co.in/sitemap.xml

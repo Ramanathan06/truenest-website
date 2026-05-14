@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TrueNest | Truly In Nature | Luxury Biophilic Homes in Bangalore</title>
+    <meta name="description" content="TrueNest creates curated residential sanctuaries at the intersection of nature and architecture. Explore luxury biophilic homes in Nandi Hills, Bangalore. Retreat 76 & Hills & Skies." />
+    <meta name="keywords" content="TrueNest, luxury homes Bangalore, biophilic architecture, Nandi Hills residences, Retreat 76, Hills Skies, quiet luxury apartments, nature homes Bangalore" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://truenest.co.in/" />
+    <meta property="og:title" content="TrueNest | Truly In Nature" />
+    <meta property="og:description" content="Curated residential sanctuaries at the intersection of nature and architecture. Nandi Hills, Bangalore." />
+    <meta property="og:image" content="assets/images/retreat76-elevation.jpg" />
+    <meta property="og:url" content="https://truenest.co.in/" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="TrueNest | Truly In Nature" />
+    <meta name="twitter:description" content="Curated luxury sanctuaries in Nandi Hills, Bangalore." />
+    <meta name="twitter:image" content="assets/images/retreat76-elevation.jpg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/site.css" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script src="assets/js/tailwind.config.js"></script>
+    <style>
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24; }
+        /* Carousel */
+        #project-carousel-track { display: grid; }
+        .carousel-slide { grid-area: 1/1; opacity: 0; visibility: hidden; transition: opacity 1.2s ease; }
+        .carousel-slide.is-active { opacity: 1; visibility: visible; }
+        /* Progress bar */
+        @keyframes progress { from { width: 0%; } to { width: 100%; } }
+        .progress-bar-fill { animation: progress 8s linear forwards; }
+        /* Scroll hint */
+        @keyframes scroll-drop { 0%,100%{transform:translateY(-4px);opacity:0} 50%{transform:translateY(4px);opacity:1} }
+        .scroll-hint-dot { animation: scroll-drop 1.8s ease-in-out infinite; }
+        /* Grayscale reveal */
+        @keyframes grayscale-reveal { 0%{filter:grayscale(100%)} 100%{filter:grayscale(0%)} }
+        .animate-color-reveal { animation: grayscale-reveal 4s ease-out forwards; }
+        /* Stats counter animate */
+        .stat-card { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .stat-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(28,58,40,0.12); }
+    </style>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "TrueNest",
+        "url": "https://truenest.co.in",
+        "logo": "https://truenest.co.in/assets/images/TrueNest-Logo.svg",
+        "description": "Boutique biophilic luxury residential developer in Bangalore.",
+        "address": { "@type": "PostalAddress", "streetAddress": "#17, SLN Layout, Rampura", "addressLocality": "Bangalore", "postalCode": "560049", "addressCountry": "IN" },
+        "contactPoint": { "@type": "ContactPoint", "telephone": "+91-80-4455-9900", "contactType": "sales" },
+        "sameAs": ["https://www.instagram.com/truenest", "https://www.linkedin.com/company/truenest"]
+    }
+    </script>
+</head>
+<body class="bg-background text-on-surface font-body-md antialiased">
+    <div id="shared-header"></div>
+
+    <!-- HERO -->
+    <section class="relative h-screen w-full overflow-hidden flex items-end pb-20 px-margin-mobile md:px-margin-desktop">
+        <div class="absolute inset-0 z-0">
+            <div class="absolute inset-0 bg-gradient-to-t from-on-background/60 via-on-background/10 to-transparent z-10"></div>
+            <video id="hero-video" autoplay muted playsinline loop class="w-full h-full object-cover" src="assets/images/hero-fog.mp4" aria-label="Aerial view of Nandi Hills misty landscape"></video>
+        </div>
+        <div class="relative z-20 max-w-container-max mx-auto w-full">
+            <p class="font-label-caps text-label-caps text-white/60 mb-4 tracking-[0.25em]">TRUENEST · BANGALORE · EST. 2024</p>
+            <h1 class="font-display-xl text-display-xl text-white mb-8 leading-none">Truly In<br /><span class="italic">Nature.</span></h1>
+            <div class="flex flex-col sm:flex-row gap-4 items-start">
+                <button onclick="window.location.href='projects.html'" class="px-10 py-4 bg-white text-on-background font-label-caps text-label-caps hover:bg-primary-fixed transition-colors group flex items-center gap-3">
+                    EXPLORE RESIDENCES
+                    <span class="material-symbols-outlined text-base group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                </button>
+                <button onclick="document.getElementById('projects').scrollIntoView({behavior:'smooth'})" class="px-10 py-4 border border-white/40 text-white font-label-caps text-label-caps hover:bg-white/10 transition-colors">
+                    FEATURED PROJECTS
+                </button>
+            </div>
+        </div>
+        <!-- Scroll Hint -->
+        <div class="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-2 text-white/60 pointer-events-none">
+            <span class="font-label-caps text-[10px] tracking-[0.2em]">SCROLL</span>
+            <div class="flex flex-col gap-1">
+                <span class="scroll-hint-dot block w-1 h-1 rounded-full bg-white/80"></span>
+                <span class="scroll-hint-dot block w-1 h-1 rounded-full bg-white/50" style="animation-delay:0.3s"></span>
+                <span class="scroll-hint-dot block w-1 h-1 rounded-full bg-white/30" style="animation-delay:0.6s"></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- BRAND STATEMENT BAR -->
+    <div class="bg-on-background text-primary-fixed py-5 px-margin-mobile md:px-margin-desktop overflow-hidden">
+        <div class="flex items-center justify-center gap-12 font-label-caps text-label-caps tracking-widest opacity-80 text-[11px]">
+            <span>BIOPHILIC URBANISM</span>
+            <span class="w-1 h-1 rounded-full bg-primary-fixed/40 inline-block"></span>
+            <span>QUIET LUXURY</span>
+            <span class="w-1 h-1 rounded-full bg-primary-fixed/40 inline-block"></span>
+            <span>NANDI HILLS · 915M</span>
+            <span class="w-1 h-1 rounded-full bg-primary-fixed/40 inline-block hidden md:inline-block"></span>
+            <span class="hidden md:inline">RERA APPROVED</span>
+        </div>
+    </div>
+
+    <!-- FEATURED PROJECTS CAROUSEL -->
+    <section class="bg-surface-container-low py-section-gap overflow-hidden" id="projects">
+        <div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+            <div class="flex justify-between items-end mb-12">
+                <div>
+                    <span class="font-label-caps text-label-caps text-primary mb-3 block">OUR PORTFOLIO</span>
+                    <h2 class="font-headline-xl text-headline-xl text-on-surface">Curated <span class="italic">Sanctuaries</span></h2>
+                </div>
+                <div class="flex items-center gap-4">
+                    <button id="carousel-prev" class="w-12 h-12 border border-outline flex items-center justify-center hover:bg-on-background hover:text-white hover:border-on-background transition-all" aria-label="Previous project">
+                        <span class="material-symbols-outlined text-xl">west</span>
+                    </button>
+                    <button id="carousel-next" class="w-12 h-12 border border-outline flex items-center justify-center hover:bg-on-background hover:text-white hover:border-on-background transition-all" aria-label="Next project">
+                        <span class="material-symbols-outlined text-xl">east</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Slides -->
+            <div class="relative" id="project-carousel-track">
+                <!-- Slide 1: Retreat 76 -->
+                <article class="carousel-slide is-active">
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-0 border border-outline/10">
+                        <!-- Image -->
+                        <div class="lg:col-span-7 relative overflow-hidden" style="min-height:480px">
+                            <img src="assets/images/retreat76-elevation.jpg" alt="Retreat 76 — Luxury residence in Nandi Hills" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 hover:scale-105" />
+                            <div class="absolute inset-0 bg-gradient-to-t from-on-background/50 via-transparent to-transparent pointer-events-none"></div>
+                            <!-- Status Badge -->
+                            <div class="absolute top-6 left-6 bg-background/90 backdrop-blur-sm px-4 py-2">
+                                <span class="font-label-caps text-[10px] text-secondary tracking-widest">COMING SOON</span>
+                            </div>
+                            <!-- Project Number -->
+                            <div class="absolute bottom-6 left-6">
+                                <span class="font-display-xl text-[120px] leading-none text-white/10 font-bold select-none">01</span>
+                            </div>
+                        </div>
+                        <!-- Info -->
+                        <div class="lg:col-span-5 flex flex-col justify-between p-8 lg:p-12 bg-surface-container-low">
+                            <div>
+                                <p class="font-label-caps text-[11px] text-primary tracking-widest mb-4">NANDI HILLS, BANGALORE</p>
+                                <h3 class="font-headline-xl text-headline-xl mb-4 leading-tight">Retreat 76</h3>
+                                <p class="font-body-md text-body-md text-on-surface-variant mb-8 leading-relaxed">
+                                    A sunset-facing sanctuary perched on the western ridge of Nandi Hills — 76 private residences set into the contour of the land, oriented toward the long, slow dusk.
+                                </p>
+                                <!-- Stats Grid -->
+                                <div class="grid grid-cols-2 gap-px bg-outline/10 border border-outline/10 mb-8">
+                                    <div class="bg-surface-container-low p-4">
+                                        <p class="font-label-caps text-[9px] text-outline tracking-widest mb-1">RESIDENCES</p>
+                                        <p class="font-headline-lg text-[28px] text-on-surface">76</p>
+                                    </div>
+                                    <div class="bg-surface-container-low p-4">
+                                        <p class="font-label-caps text-[9px] text-outline tracking-widest mb-1">ALTITUDE</p>
+                                        <p class="font-headline-lg text-[28px] text-on-surface">915<span class="text-base text-outline ml-1">m</span></p>
+                                    </div>
+                                    <div class="bg-surface-container-low p-4">
+                                        <p class="font-label-caps text-[9px] text-outline tracking-widest mb-1">LAND AREA</p>
+                                        <p class="font-headline-lg text-[28px] text-on-surface">16.8<span class="text-base text-outline ml-1">K sft</span></p>
+                                    </div>
+                                    <div class="bg-surface-container-low p-4">
+                                        <p class="font-label-caps text-[9px] text-outline tracking-widest mb-1">TYPE</p>
+                                        <p class="font-headline-lg text-[28px] text-on-surface">1 BHK</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="retreat76.html" class="group flex items-center justify-between px-6 py-4 bg-on-background text-primary-fixed hover:bg-primary transition-colors">
+                                <span class="font-label-caps text-label-caps">EXPLORE RETREAT 76</span>
+                                <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+                <!-- Slide 2: Hills & Skies -->
+                <article class="carousel-slide">
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-0 border border-outline/10">
+                        <div class="lg:col-span-7 relative overflow-hidden" style="min-height:480px">
+                            <img src="assets/images/hillsandskies-elevation.jpg" alt="Hills & Skies — Luxury apartments Nandi Hills" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 hover:scale-105" />
+                            <div class="absolute inset-0 bg-gradient-to-t from-on-background/50 via-transparent to-transparent pointer-events-none"></div>
+                            <div class="absolute top-6 left-6 bg-background/90 backdrop-blur-sm px-4 py-2">
+                                <span class="font-label-caps text-[10px] text-secondary tracking-widest">COMING SOON</span>
+                            </div>
+                            <div class="absolute bottom-6 left-6">
+                                <span class="font-display-xl text-[120px] leading-none text-white/10 font-bold select-none">02</span>
+                            </div>
+                        </div>
+                        <div class="lg:col-span-5 flex flex-col justify-between p-8 lg:p-12 bg-surface-container-low">
+                            <div>
+                                <p class="font-label-caps text-[11px] text-primary tracking-widest mb-4">NANDI HILLS, BANGALORE</p>
+                                <h3 class="font-headline-xl text-headline-xl mb-4 leading-tight">Hills & Skies</h3>
+                                <p class="font-body-md text-body-md text-on-surface-variant mb-8 leading-relaxed">
+                                    A horizon-line estate where architecture dissolves into landscape — crafted for the stillness of early mornings and the quiet majesty of the western sky.
+                                </p>
+                                <div class="grid grid-cols-2 gap-px bg-outline/10 border border-outline/10 mb-8">
+                                    <div class="bg-surface-container-low p-4">
+                                        <p class="font-label-caps text-[9px] text-outline tracking-widest mb-1">RESIDENCES</p>
+                                        <p class="font-headline-lg text-[28px] text-on-surface">32</p>
+                                    </div>
+                                    <div class="bg-surface-container-low p-4">
+                                        <p class="font-label-caps text-[9px] text-outline tracking-widest mb-1">ALTITUDE</p>
+                                        <p class="font-headline-lg text-[28px] text-on-surface">915<span class="text-base text-outline ml-1">m</span></p>
+                                    </div>
+                                    <div class="bg-surface-container-low p-4">
+                                        <p class="font-label-caps text-[9px] text-outline tracking-widest mb-1">LAND AREA</p>
+                                        <p class="font-headline-lg text-[28px] text-on-surface">8,000<span class="text-base text-outline ml-1">sft</span></p>
+                                    </div>
+                                    <div class="bg-surface-container-low p-4">
+                                        <p class="font-label-caps text-[9px] text-outline tracking-widest mb-1">TYPE</p>
+                                        <p class="font-headline-lg text-[28px] text-on-surface">1 BHK</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="hillsandskies.html" class="group flex items-center justify-between px-6 py-4 bg-on-background text-primary-fixed hover:bg-primary transition-colors">
+                                <span class="font-label-caps text-label-caps">EXPLORE HILLS & SKIES</span>
+                                <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Progress -->
+            <div class="flex items-center gap-4 mt-6">
+                <div class="flex-1 h-px bg-outline/20">
+                    <div id="progress-bar" class="h-px bg-primary progress-bar-fill"></div>
+                </div>
+                <span id="slide-counter" class="font-label-caps text-[10px] text-outline tracking-widest">01 / 02</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- PHILOSOPHY -->
+    <section class="reveal py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+            <div class="md:col-span-6 relative">
+                <div class="aspect-[4/5] overflow-hidden animate-color-reveal">
+                    <img class="w-full h-full object-cover" src="assets/images/minimal-interior.jpg" alt="TrueNest minimalist interior — the art of subtraction" />
+                </div>
+                <!-- Blueprint tag -->
+                <div class="absolute -bottom-4 -right-4 bg-primary-container px-6 py-4 hidden md:block">
+                    <p class="font-label-caps text-[9px] text-outline tracking-widest">TN-0824</p>
+                    <p class="font-headline-lg text-[20px] text-primary leading-none mt-1">ART OF<br/>SUBTRACTION</p>
+                </div>
+            </div>
+            <div class="md:col-start-8 md:col-span-5">
+                <p class="font-label-caps text-label-caps text-primary mb-6">OUR PHILOSOPHY</p>
+                <h2 class="font-display-lg text-display-lg mb-8 leading-tight">The Art of<br /><span class="italic">Subtraction.</span></h2>
+                <p class="font-body-lg text-body-lg text-on-surface-variant mb-8 leading-relaxed">
+                    In a city that never stops, TrueNest provides the silence. We remove the unnecessary — focusing on light, volume, and natural materiality to create spaces that breathe.
+                </p>
+                <div class="grid grid-cols-3 gap-6 mb-10">
+                    <div class="text-center">
+                        <p class="font-headline-xl text-headline-xl text-primary">108+</p>
+                        <p class="font-label-caps text-[9px] text-outline tracking-widest mt-1">RESIDENCES</p>
+                    </div>
+                    <div class="text-center">
+                        <p class="font-headline-xl text-headline-xl text-primary">5</p>
+                        <p class="font-label-caps text-[9px] text-outline tracking-widest mt-1">FOUNDERS</p>
+                    </div>
+                    <div class="text-center">
+                        <p class="font-headline-xl text-headline-xl text-primary">1</p>
+                        <p class="font-label-caps text-[9px] text-outline tracking-widest mt-1">PHILOSOPHY</p>
+                    </div>
+                </div>
+                <a href="story.html" class="group inline-flex items-center gap-3 text-primary font-label-caps text-label-caps border-b border-primary pb-1">
+                    READ OUR STORY
+                    <span class="material-symbols-outlined text-base group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS TEASER -->
+    <section class="py-section-gap bg-surface-container px-margin-mobile md:px-margin-desktop">
+        <div class="max-w-container-max mx-auto">
+            <div class="text-center mb-16">
+                <span class="font-label-caps text-label-caps text-primary mb-3 block">RESIDENT VOICES</span>
+                <h2 class="font-headline-xl text-headline-xl">What Our Residents <span class="italic">Say</span></h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Testimonial 1 -->
+                <div class="reveal reveal-delay-1 stat-card bg-background p-8 border border-outline/10">
+                    <div class="flex gap-1 mb-6">
+                        <span class="material-symbols-outlined text-primary text-lg" style="font-variation-settings:'FILL' 1">star</span>
+                        <span class="material-symbols-outlined text-primary text-lg" style="font-variation-settings:'FILL' 1">star</span>
+                        <span class="material-symbols-outlined text-primary text-lg" style="font-variation-settings:'FILL' 1">star</span>
+                        <span class="material-symbols-outlined text-primary text-lg" style="font-variation-settings:'FILL' 1">star</span>
+                        <span class="material-symbols-outlined text-primary text-lg" style="font-variation-settings:'FILL' 1">star</span>
+                    </div>
+                    <p class="font-headline-lg text-[20px] italic text-on-surface leading-snug mb-6">"Waking up to misty hills every morning — I didn't know luxury could feel this natural."</p>
+                    <div>
+                        <p class="font-label-caps text-[11px] text-on-surface">ARJUN MEHTA</p>
+                        <p class="font-body-md text-[13px] text-outline">Retreat 76 · 1 BHK, Variant B</p>
+                    </div>
+                </div>
+                <!-- Testimonial 2 -->
+                <div class="reveal reveal-delay-2 stat-card bg-background p-8 border border-outline/10 md:mt-8">
+                    <div class="flex gap-1 mb-6">
+                        <span class="material-symbols-outlined text-primary text-lg" style="font-variation-settings:'FILL' 1">star</span>
+                        <span class="material-symbols-outlined text-primary text-lg" style="font-variation-settings:'FILL' 1">star</span>
+                        <span class="material-symbols-outlined text-primary text-lg" style="font-variation-settings:'FILL' 1">star</span>
+                        <span class="material-symbols-outlined text-primary text-lg" style="font-variation-settings:'FILL' 1">star</span>
+                        <span class="material-symbols-outlined text-primary text-lg" style="font-variation-settings:'FILL' 1">star</span>
+                    </div>
+                    <p class="font-headline-lg text-[20px] italic text-on-surface leading-snug mb-6">"The materials, the silence, the light — TrueNest delivered something I couldn't imagine."</p>
+                    <div>
+                        <p class="font-label-caps text-[11px] text-on-surface">KAVITHA NAIR</p>
+                        <p class="font-body-md text-[13px] text-outline">Hills & Skies · 1 BHK, Orchard Suite</p>
+                    </div>
+                </div>
+                <!-- Testimonial 3 -->
+                <div class="reveal reveal-delay-3 stat-card bg-background p-8 border border-outline/10">
+                    <div class="flex gap-1 mb-6">
+                        <span class="material-symbols-outlined text-primary text-lg" style="font-variation-settings:'FILL' 1">star</span>
+                        <span class="material-symbols-outlined text-primary text-lg" style="font-variation-settings:'FILL' 1">star</span>
+                        <span class="material-symbols-outlined text-primary text-lg" style="font-variation-settings:'FILL' 1">star</span>
+                        <span class="material-symbols-outlined text-primary text-lg" style="font-variation-settings:'FILL' 1">star</span>
+                        <span class="material-symbols-outlined text-primary text-lg" style="font-variation-settings:'FILL' 1">star</span>
+                    </div>
+                    <p class="font-headline-lg text-[20px] italic text-on-surface leading-snug mb-6">"An investment in how I live — not just where I live. The philosophy runs through every stone."</p>
+                    <div>
+                        <p class="font-label-caps text-[11px] text-on-surface">ROHAN SHARMA</p>
+                        <p class="font-body-md text-[13px] text-outline">Retreat 76 · 1 BHK, Variant A</p>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-12">
+                <a href="testimonials.html" class="inline-flex items-center gap-3 font-label-caps text-label-caps text-primary border-b border-primary pb-1">
+                    VIEW ALL TESTIMONIALS
+                    <span class="material-symbols-outlined text-base">arrow_forward</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA BANNER -->
+    <section class="reveal-zoom relative overflow-hidden" style="min-height:400px">
+        <img src="assets/images/nandi-hills-mist.jpg" alt="Nandi Hills misty landscape" class="absolute inset-0 w-full h-full object-cover" />
+        <div class="absolute inset-0 bg-on-background/70"></div>
+        <div class="relative z-10 flex flex-col items-center justify-center text-center px-margin-mobile md:px-margin-desktop py-24">
+            <span class="font-label-caps text-label-caps text-white/60 mb-4 tracking-widest">BEGIN YOUR JOURNEY</span>
+            <h2 class="font-display-lg text-display-lg text-white mb-8 max-w-2xl leading-tight">Find your <span class="italic">sanctuary</span> above the city.</h2>
+            <a href="inquiries.html" class="px-12 py-5 bg-white text-on-background font-label-caps text-label-caps hover:bg-primary-fixed transition-colors group inline-flex items-center gap-3">
+                INQUIRE NOW
+                <span class="material-symbols-outlined text-base group-hover:translate-x-1 transition-transform">arrow_forward</span>
+            </a>
+        </div>
+    </section>
+
+    <div id="shared-footer"></div>
+    <script src="assets/js/components.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const slides = document.querySelectorAll('.carousel-slide');
+        const prevBtn = document.getElementById('carousel-prev');
+        const nextBtn = document.getElementById('carousel-next');
+        const counter = document.getElementById('slide-counter');
+        const progressBar = document.getElementById('progress-bar');
+        let current = 0;
+        let autoTimer;
+
+        function setSlide(n) {
+            slides[current].classList.remove('is-active');
+            current = (n + slides.length) % slides.length;
+            slides[current].classList.add('is-active');
+            counter.textContent = `0${current + 1} / 0${slides.length}`;
+            progressBar.classList.remove('progress-bar-fill');
+            void progressBar.offsetWidth;
+            progressBar.classList.add('progress-bar-fill');
+        }
+
+        function startAuto() { autoTimer = setInterval(() => setSlide(current + 1), 8000); }
+        function resetAuto() { clearInterval(autoTimer); startAuto(); }
+
+        nextBtn.addEventListener('click', () => { setSlide(current + 1); resetAuto(); });
+        prevBtn.addEventListener('click', () => { setSlide(current - 1); resetAuto(); });
+        setSlide(0);
+        startAuto();
+
+        // Hero video playlist
+        const video = document.getElementById('hero-video');
+        if (video) {
+            fetch('assets/hero-videos/1.mp4', { method: 'HEAD' }).then(r => {
+                if (r.ok) {
+                    let track = 1;
+                    video.loop = false;
+                    video.addEventListener('ended', () => {
+                        track++;
+                        video.src = `assets/hero-videos/${track}.mp4`;
+                        video.load();
+                        video.play().catch(() => { track = 1; video.src = 'assets/hero-videos/1.mp4'; video.load(); video.play(); });
+                    });
+                    video.src = 'assets/hero-videos/1.mp4';
+                    video.load();
+                    video.play().catch(() => {});
+                }
+            }).catch(() => {});
+        }
+    });
+    </script>
+</body>
+</html>
