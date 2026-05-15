@@ -155,6 +155,20 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
 .grid3,.grid2,.footer-in{grid-template-columns:1fr;gap:1.4rem}
 .still-stats{gap:1.5rem}
 }
+
+/* --- Sample 2 distinct: petrol-forward (deep teal bands) --- */
+.projects{background:#143A37}
+.projects .s-title{color:#F4F1EA}
+.projects .s-title em{color:#A9CFC9;font-style:italic}
+.projects .s-label{color:#A9CFC9}
+.projects .s-label::before{background:#A9CFC9}
+.projects .proj-sub{color:rgba(244,241,234,.72)}
+.footer{background:#143A37}
+.footer-base{border-top-color:rgba(244,241,234,.14)}
+.cta-bg{filter:saturate(.9) brightness(.42)}
+.cta-bg::after{background:linear-gradient(180deg,rgba(15,40,38,.6),rgba(15,40,38,.92))}
+.btn-primary:hover{box-shadow:0 10px 34px rgba(31,78,74,.32)}
+.card-icon{background:rgba(31,78,74,.1)}
 </style>
 </head>
 <body>
@@ -270,7 +284,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
   const hero=document.getElementById('hero');
   const vid=hero.querySelector('.hero-video');
   const bar=document.getElementById('heroProgress');
-  const DUR=12000;
+  const DUR=15000;
   let start=null,done=false;
   function tick(t){
     if(done)return;
