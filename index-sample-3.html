@@ -1,0 +1,647 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TrueNest — Dubai-Style Luxury · Cinematic Estate Experience</title>
+<meta name="description" content="A cinematic luxury experience for TrueNest — fullscreen film, interactive gallery, virtual tours, ROI projections and private acquisition.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&display=swap" rel="stylesheet">
+<script src="https://code.iconify.design/iconify-icon/1.0.8/iconify-icon.min.js"></script>
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+--bg:#F4F1EA;            /* warm ivory */
+--bg-soft:#ECE7DB;       /* sand panel */
+--bg-card:#FFFFFF;
+--ink:#1C1B18;           /* charcoal text */
+--ink-soft:#5A554B;      /* muted text */
+--line:#D8D1C2;
+--accent:#2F4A39;        /* moss green */
+--accent-soft:#3D6149;
+--accent-tint:rgba(47,74,57,0.08);
+--clay:#B0764F;          /* clay secondary */
+--font-display:'Fraunces',Georgia,serif;
+--font-body:'Inter',system-ui,sans-serif;
+--ease:cubic-bezier(0.16,1,0.3,1);
+}
+html{scroll-behavior:smooth;font-size:16px;overflow-x:hidden}
+body{font-family:var(--font-body);background:var(--bg);color:var(--ink);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit}
+.container{max-width:1320px;margin:0 auto;padding:0 clamp(1.5rem,4vw,3rem)}
+::selection{background:var(--accent);color:var(--bg)}
+::-webkit-scrollbar{width:6px}::-webkit-scrollbar-track{background:var(--bg)}::-webkit-scrollbar-thumb{background:var(--line);border-radius:3px}::-webkit-scrollbar-thumb:hover{background:var(--accent)}
+
+/* NAV */
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1.4rem 0;transition:all .4s}
+.nav.scrolled{background:rgba(244,241,234,0.85);backdrop-filter:blur(20px) saturate(1.2);-webkit-backdrop-filter:blur(20px) saturate(1.2);padding:.8rem 0;border-bottom:1px solid var(--line)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between}
+.nav-logo{font-family:var(--font-display);font-size:1.45rem;font-weight:600;letter-spacing:.14em;color:var(--ink)}
+.nav-links{display:flex;gap:2.3rem;align-items:center}
+.nav-link{font-size:.76rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-soft);position:relative;transition:color .3s}
+.nav-link::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:1px;background:linear-gradient(90deg,var(--accent),transparent);transition:width .4s var(--ease)}
+.nav-link:hover{color:var(--ink)}.nav-link:hover::after{width:100%}
+.nav-cta{padding:.7rem 1.6rem;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;font-weight:600;border-radius:100px;background:var(--accent);color:var(--bg);transition:all .4s var(--ease)}
+.nav-cta:hover{background:var(--accent-soft);letter-spacing:.18em;box-shadow:0 8px 30px rgba(47,74,57,.25);transform:translateY(-1px)}
+
+/* HERO */
+.hero{position:relative;min-height:100vh;display:flex;align-items:flex-end;overflow:hidden;background:var(--ink)}
+.hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
+.hero-scrim{position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(20,19,16,.45) 0%,rgba(20,19,16,.15) 35%,rgba(20,19,16,.5) 70%,rgba(20,19,16,.9) 100%)}
+.hero-intro{position:relative;z-index:3;width:100%;padding:0 0 clamp(4rem,10vh,7rem);transition:opacity 1s var(--ease),transform 1s var(--ease)}
+.hero.show-still .hero-intro{opacity:0;transform:translateY(-20px);pointer-events:none}
+.hero-tag{display:inline-flex;align-items:center;gap:.5rem;padding:.45rem 1rem;border:1px solid rgba(244,241,234,.3);border-radius:100px;font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:#F4F1EA;margin-bottom:1.2rem;background:rgba(244,241,234,.1);backdrop-filter:blur(8px)}
+.hero-title{font-family:var(--font-display);font-size:clamp(2.8rem,7vw,5.8rem);font-weight:400;line-height:1.02;letter-spacing:-.02em;color:#F8F5EF}
+.hero-title em{font-style:italic;color:#C9D8B6}
+.hero-desc{margin-top:1.2rem;font-size:clamp(.9rem,1.1vw,1.05rem);line-height:1.6;color:rgba(248,245,239,.85);max-width:520px}
+.hero-actions{display:flex;gap:1rem;margin-top:1.6rem;flex-wrap:wrap}
+
+/* HERO STILL (fades in after video) */
+.hero-still{position:absolute;inset:0;z-index:2;opacity:0;transition:opacity 1.4s var(--ease);pointer-events:none}
+.hero.show-still .hero-still{opacity:1;pointer-events:auto}
+.hero-still img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1.05);transition:transform 8s ease-out}
+.hero.show-still .hero-still img{transform:scale(1)}
+.hero-still-scrim{position:absolute;inset:0;background:linear-gradient(90deg,rgba(20,19,16,.85) 0%,rgba(20,19,16,.5) 45%,transparent 75%),linear-gradient(180deg,transparent 50%,rgba(20,19,16,.7) 100%)}
+.hero-still-card{position:absolute;left:0;right:0;bottom:0;z-index:3;padding:0 0 clamp(4rem,10vh,7rem)}
+.still-eyebrow{display:inline-flex;align-items:center;gap:.5rem;font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:#C9D8B6;margin-bottom:1rem}
+.still-eyebrow::before{content:'';width:28px;height:1px;background:#C9D8B6}
+.still-name{font-family:var(--font-display);font-size:clamp(2.4rem,5vw,4rem);color:#F8F5EF;line-height:1.05}
+.still-loc{font-size:.85rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(248,245,239,.7);margin-top:.6rem}
+.still-stats{display:flex;gap:2.5rem;margin:1.8rem 0;flex-wrap:wrap}
+.still-stat-n{font-family:var(--font-display);font-size:1.7rem;color:#F8F5EF}
+.still-stat-l{font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(248,245,239,.6);margin-top:.2rem}
+.hero-progress{position:absolute;left:0;bottom:0;height:2px;background:var(--clay);width:0;z-index:4;transition:width .2s linear}
+.hero.show-still .hero-progress{opacity:0}
+
+/* BUTTONS */
+.btn{display:inline-flex;align-items:center;gap:.5rem;padding:.95rem 2rem;font-size:.74rem;letter-spacing:.12em;text-transform:uppercase;font-weight:600;border-radius:100px;transition:all .4s var(--ease)}
+.btn-primary{background:var(--accent);color:var(--bg)}
+.btn-primary:hover{background:var(--accent-soft);transform:translateY(-2px);box-shadow:0 10px 34px rgba(47,74,57,.28)}
+.btn-light{background:rgba(248,245,239,.12);color:#F8F5EF;border:1px solid rgba(248,245,239,.35)}
+.btn-light:hover{background:rgba(248,245,239,.2);letter-spacing:.16em}
+.btn-ghost{border:1px solid var(--accent);color:var(--accent);background:var(--accent-tint)}
+.btn-ghost:hover{background:var(--accent);color:var(--bg);transform:translateY(-2px)}
+
+/* MARQUEE */
+.marquee{padding:1.6rem 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--bg-soft);overflow:hidden}
+.marquee-track{display:flex;gap:3rem;animation:mq 28s linear infinite;width:max-content}
+.marquee-item{display:flex;align-items:center;gap:3rem;font-size:.74rem;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-soft);font-weight:500;white-space:nowrap}
+.mq-dot{width:5px;height:5px;border-radius:50%;background:var(--clay)}
+@keyframes mq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* SECTIONS */
+.section{padding:clamp(5rem,12vh,9rem) 0;position:relative}
+.s-label{display:inline-flex;align-items:center;gap:.5rem;font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin-bottom:1.4rem}
+.s-label::before{content:'';width:30px;height:1px;background:var(--accent)}
+.s-title{font-family:var(--font-display);font-size:clamp(2rem,4vw,3.1rem);font-weight:400;line-height:1.15;color:var(--ink)}
+.s-title em{font-style:italic;color:var(--accent)}
+.s-head{text-align:center;max-width:720px;margin:0 auto clamp(3rem,6vw,4.5rem)}
+.s-head .s-label{justify-content:center}
+.s-head .s-title{margin:0 auto}
+.s-sub{margin:1.3rem auto 0;font-size:.94rem;line-height:1.7;color:var(--ink-soft);max-width:540px}
+
+/* REVEAL */
+.reveal{opacity:0;transform:translateY(40px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
+.reveal.visible{opacity:1;transform:translateY(0)}
+.reveal-clip-up{opacity:0;clip-path:inset(100% 0 0 0);transition:opacity .8s var(--ease),clip-path 1.1s var(--ease)}
+.reveal-clip-up.visible{opacity:1;clip-path:inset(0 0 0 0)}
+.reveal-pop{opacity:0;transform:scale(.7);transition:opacity .5s var(--ease),transform .7s cubic-bezier(.34,1.56,.64,1)}
+.reveal-pop.visible{opacity:1;transform:scale(1)}
+.reveal-zoom{opacity:0;transform:scale(.94);transition:opacity 1s var(--ease),transform 1.2s var(--ease)}
+.reveal-zoom.visible{opacity:1;transform:scale(1)}
+.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}.d4{transition-delay:.4s}
+@media (prefers-reduced-motion: reduce){
+  .reveal,.reveal-clip-up,.reveal-pop,.reveal-zoom{opacity:1!important;transform:none!important;clip-path:none!important;transition:none!important}
+}
+
+/* GALLERY */
+.gallery{background:var(--bg)}
+.g-filters{display:flex;gap:.6rem;justify-content:center;flex-wrap:wrap;margin-bottom:2.5rem}
+.g-chip{padding:.55rem 1.3rem;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;font-weight:500;border-radius:100px;border:1px solid var(--line);color:var(--ink-soft);background:transparent;transition:all .3s var(--ease)}
+.g-chip:hover{border-color:var(--accent);color:var(--ink)}
+.g-chip.active{background:var(--accent);color:var(--bg);border-color:var(--accent)}
+.g-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
+.g-item{position:relative;border-radius:14px;overflow:hidden;cursor:pointer;aspect-ratio:4/3;transition:opacity .4s var(--ease),transform .4s var(--ease)}
+.g-item.tall{grid-row:span 2;aspect-ratio:auto}
+.g-item.is-hidden{opacity:0;transform:scale(.92);pointer-events:none;display:none}
+.g-item img{width:100%;height:100%;object-fit:cover;transition:transform 1s var(--ease)}
+.g-item:hover img{transform:scale(1.07)}
+.g-item-ov{position:absolute;inset:0;background:linear-gradient(180deg,transparent 50%,rgba(20,19,16,.78) 100%);opacity:0;transition:opacity .4s}
+.g-item:hover .g-item-ov{opacity:1}
+.g-item-cap{position:absolute;left:1.1rem;bottom:1.1rem;right:1.1rem;z-index:2;transform:translateY(8px);opacity:0;transition:all .4s var(--ease)}
+.g-item:hover .g-item-cap{transform:translateY(0);opacity:1}
+.g-item-cap h4{font-family:var(--font-display);color:#F8F5EF;font-size:1.05rem}
+.g-item-cap span{font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(248,245,239,.7)}
+.g-zoom{position:absolute;top:1rem;right:1rem;width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:rgba(20,19,16,.45);backdrop-filter:blur(8px);border:1px solid rgba(248,245,239,.25);color:#F8F5EF;opacity:0;transition:opacity .4s;z-index:2}
+.g-item:hover .g-zoom{opacity:1}
+
+/* LIGHTBOX */
+.lb{position:fixed;inset:0;z-index:1000;background:rgba(15,14,12,.94);display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .4s var(--ease);padding:clamp(1rem,4vw,3rem)}
+.lb.open{opacity:1;pointer-events:auto}
+.lb img{max-width:92vw;max-height:84vh;border-radius:10px;transform:scale(.96);transition:transform .4s var(--ease);box-shadow:0 30px 80px rgba(0,0,0,.5)}
+.lb.open img{transform:scale(1)}
+.lb-cap{position:absolute;bottom:clamp(1rem,4vh,2.4rem);left:0;right:0;text-align:center;color:rgba(248,245,239,.8);font-size:.78rem;letter-spacing:.12em;text-transform:uppercase}
+.lb-btn{position:absolute;width:48px;height:48px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:rgba(248,245,239,.1);border:1px solid rgba(248,245,239,.25);color:#F8F5EF;font-size:1.3rem;transition:background .3s}
+.lb-btn:hover{background:rgba(248,245,239,.22)}
+.lb-close{top:clamp(1rem,3vh,2rem);right:clamp(1rem,3vw,2rem)}
+.lb-prev{left:clamp(.5rem,2vw,2rem);top:50%;transform:translateY(-50%)}
+.lb-next{right:clamp(.5rem,2vw,2rem);top:50%;transform:translateY(-50%)}
+
+/* VIRTUAL TOURS */
+.tours{background:var(--bg-soft)}
+.tour-wrap{display:grid;grid-template-columns:1fr;gap:1.5rem}
+.tour-tabs{display:flex;gap:.5rem;flex-wrap:wrap;justify-content:center;margin-bottom:1.6rem}
+.tour-tab{padding:.55rem 1.3rem;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;font-weight:500;border-radius:100px;border:1px solid var(--line);color:var(--ink-soft);background:transparent;transition:all .3s}
+.tour-tab.active{background:var(--accent);color:var(--bg);border-color:var(--accent)}
+.tour-stage{position:relative;border-radius:18px;overflow:hidden;aspect-ratio:16/9;background:#000;cursor:grab;border:1px solid var(--line)}
+.tour-stage:active{cursor:grabbing}
+.tour-pan{position:absolute;top:0;left:0;height:100%;width:160%;will-change:transform}
+.tour-pan img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .8s var(--ease)}
+.tour-pan img.active{opacity:1}
+.tour-hint{position:absolute;left:50%;bottom:1rem;transform:translateX(-50%);z-index:3;display:inline-flex;align-items:center;gap:.5rem;padding:.5rem 1rem;border-radius:100px;background:rgba(20,19,16,.5);backdrop-filter:blur(8px);color:#F8F5EF;font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;pointer-events:none;transition:opacity .4s}
+.tour-hint.hide{opacity:0}
+.tour-hotspot{position:absolute;top:46%;left:38%;z-index:3;width:34px;height:34px;border-radius:50%;background:rgba(248,245,239,.85);display:flex;align-items:center;justify-content:center;color:var(--accent);cursor:pointer;animation:pulse 2.4s infinite}
+.tour-hotspot span{position:absolute;left:130%;white-space:nowrap;background:rgba(20,19,16,.8);color:#F8F5EF;font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;padding:.4rem .7rem;border-radius:6px;opacity:0;transition:opacity .3s;pointer-events:none}
+.tour-hotspot:hover span{opacity:1}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(248,245,239,.5)}50%{box-shadow:0 0 0 14px rgba(248,245,239,0)}}
+.tour-360-slot{margin-top:1.5rem;border:1px dashed var(--line);border-radius:14px;padding:1.5rem;text-align:center;color:var(--ink-soft);font-size:.82rem}
+
+/* ROI */
+.roi{background:var(--bg)}
+.roi-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(2.5rem,5vw,4.5rem);align-items:center}
+.roi-controls{background:var(--bg-card);border:1px solid var(--line);border-radius:18px;padding:clamp(1.8rem,3vw,2.6rem)}
+.roi-field{margin-bottom:1.6rem}
+.roi-field:last-child{margin-bottom:0}
+.roi-field label{display:flex;justify-content:space-between;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:.7rem}
+.roi-field label b{font-family:var(--font-display);font-size:1rem;color:var(--accent);letter-spacing:0}
+.roi-field input[type=range]{width:100%;-webkit-appearance:none;appearance:none;height:4px;border-radius:4px;background:var(--line);outline:none}
+.roi-field input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:20px;height:20px;border-radius:50%;background:var(--accent);cursor:pointer;border:3px solid var(--bg-card);box-shadow:0 2px 8px rgba(47,74,57,.3)}
+.roi-field input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;background:var(--accent);cursor:pointer;border:3px solid var(--bg-card)}
+.roi-field select{width:100%;padding:.8rem 1rem;border:1px solid var(--line);border-radius:10px;background:var(--bg);font-family:inherit;font-size:.9rem;color:var(--ink)}
+.roi-out{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1.8rem}
+.roi-card{background:var(--bg-soft);border:1px solid var(--line);border-radius:14px;padding:1.3rem}
+.roi-card .l{font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:.5rem}
+.roi-card .v{font-family:var(--font-display);font-size:clamp(1.3rem,2.4vw,1.9rem);color:var(--ink)}
+.roi-card.hl{background:var(--accent);border-color:var(--accent)}
+.roi-card.hl .l{color:rgba(244,241,234,.7)}
+.roi-card.hl .v{color:#F4F1EA}
+.roi-chart{display:flex;align-items:flex-end;gap:.5rem;height:160px;padding:1rem 0;border-bottom:1px solid var(--line)}
+.roi-bar{flex:1;background:linear-gradient(180deg,var(--clay),var(--accent));border-radius:6px 6px 0 0;height:4px;transition:height .8s var(--ease)}
+.roi-chart-x{display:flex;gap:.5rem;margin-top:.6rem}
+.roi-chart-x span{flex:1;text-align:center;font-size:.62rem;color:var(--ink-soft)}
+.roi-note{font-size:.72rem;color:var(--ink-soft);margin-top:1.4rem;font-style:italic}
+
+/* AGENTS */
+.agents{background:var(--bg-soft)}
+.ag-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+.ag-card{background:var(--bg-card);border:1px solid var(--line);border-radius:18px;padding:2rem;text-align:center;transition:transform .5s var(--ease),box-shadow .5s,border-color .4s;cursor:pointer}
+.ag-card:hover{transform:translateY(-6px);box-shadow:0 24px 60px rgba(28,27,24,.1);border-color:var(--accent)}
+.ag-avatar{width:88px;height:88px;border-radius:50%;margin:0 auto 1.2rem;display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-size:1.8rem;color:var(--bg);background:linear-gradient(135deg,var(--accent),var(--clay));overflow:hidden}
+.ag-avatar img{width:100%;height:100%;object-fit:cover}
+.ag-card h4{font-family:var(--font-display);font-size:1.2rem;margin-bottom:.3rem}
+.ag-role{font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--clay);margin-bottom:1rem}
+.ag-bio{font-size:.84rem;line-height:1.7;color:var(--ink-soft);max-height:0;overflow:hidden;transition:max-height .5s var(--ease),margin .5s var(--ease)}
+.ag-card.open .ag-bio{max-height:200px;margin-top:.4rem}
+.ag-contact{display:flex;gap:1rem;justify-content:center;margin-top:1.2rem;font-size:.78rem;color:var(--accent)}
+.ag-contact a{display:inline-flex;align-items:center;gap:.4rem}
+.ag-more{margin-top:1rem;font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft)}
+
+/* CTA */
+.cta{position:relative;overflow:hidden;padding:clamp(5rem,10vh,8rem) 0;text-align:center}
+.cta-bg{position:absolute;inset:0;background:url('assets/images/nandi-hills-mist.jpg') center/cover no-repeat;filter:saturate(.85) brightness(.5)}
+.cta-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,19,16,.6),rgba(20,19,16,.85))}
+.cta-in{position:relative;z-index:2;max-width:620px;margin:0 auto}
+.cta h2{font-family:var(--font-display);font-size:clamp(2.2rem,4.5vw,3.6rem);line-height:1.1;color:#F8F5EF;margin-bottom:1.2rem}
+.cta h2 em{font-style:italic;color:#C9D8B6}
+.cta p{font-size:1rem;line-height:1.65;color:rgba(248,245,239,.8);margin:0 auto 2rem}
+.cta-form{display:flex;gap:.8rem;flex-wrap:wrap;justify-content:center}
+.cta-form input{flex:1;min-width:200px;padding:.95rem 1.2rem;border-radius:100px;border:1px solid rgba(248,245,239,.3);background:rgba(248,245,239,.1);color:#F8F5EF;font-family:inherit;font-size:.9rem}
+.cta-form input::placeholder{color:rgba(248,245,239,.5)}
+.cta-msg{margin-top:1.2rem;color:#C9D8B6;font-size:.9rem;opacity:0;transition:opacity .4s;min-height:1.2em}
+.cta-msg.show{opacity:1}
+
+/* FOOTER */
+.footer{background:var(--ink);color:#F4F1EA;padding:3.5rem 0 2.2rem}
+.footer-in{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem}
+.footer-brand{font-family:var(--font-display);font-size:1.4rem;letter-spacing:.14em;margin-bottom:1rem}
+.footer-tag{font-size:.84rem;line-height:1.7;color:rgba(244,241,234,.6);max-width:280px}
+.footer-col h5{font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:#C9D8B6;margin-bottom:1rem}
+.footer-col a{display:block;font-size:.84rem;color:rgba(244,241,234,.6);margin-bottom:.5rem;transition:color .3s}
+.footer-col a:hover{color:#F4F1EA}
+.footer-base{border-top:1px solid rgba(244,241,234,.12);margin-top:2.5rem;padding-top:1.4rem;display:flex;justify-content:space-between;font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(244,241,234,.4)}
+
+@media (max-width:900px){
+.nav-links{display:none}
+.g-grid,.ag-grid{grid-template-columns:1fr 1fr}
+.roi-grid,.footer-in{grid-template-columns:1fr;gap:2rem}
+.roi-out{grid-template-columns:1fr 1fr}
+.still-stats{gap:1.5rem}
+.g-item.tall{grid-row:span 1;aspect-ratio:4/3}
+}
+@media (max-width:560px){
+.g-grid{grid-template-columns:1fr}
+.ag-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav" id="nav">
+  <div class="container nav-inner">
+    <a href="#hero" class="nav-logo">TRUENEST</a>
+    <div class="nav-links">
+      <a class="nav-link" href="#gallery">Gallery</a>
+      <a class="nav-link" href="#tours">Virtual Tours</a>
+      <a class="nav-link" href="#roi">Investment</a>
+      <a class="nav-link" href="#agents">Advisors</a>
+    </div>
+    <button class="nav-cta" onclick="document.getElementById('inquire').scrollIntoView({behavior:'smooth'})">Private Inquiry</button>
+  </div>
+</nav>
+
+<!-- HERO: cinematic film ~15s, then latest project still -->
+<section class="hero" id="hero">
+  <video class="hero-video" autoplay muted playsinline loop src="assets/images/hero.mp4"></video>
+  <div class="hero-scrim"></div>
+
+  <div class="hero-still">
+    <img src="assets/images/retreat76-elevation.jpg" alt="Retreat 76">
+    <div class="hero-still-scrim"></div>
+    <div class="container hero-still-card">
+      <div class="still-eyebrow">Latest Release · Now Previewing</div>
+      <h2 class="still-name">Retreat 76</h2>
+      <p class="still-loc">Nandi Hills, Bangalore · 915m</p>
+      <div class="still-stats">
+        <div><div class="still-stat-n">76</div><div class="still-stat-l">Residences</div></div>
+        <div><div class="still-stat-n">16.8K</div><div class="still-stat-l">Sq Ft Land</div></div>
+        <div><div class="still-stat-n">1 BHK</div><div class="still-stat-l">Configuration</div></div>
+        <div><div class="still-stat-n">915m</div><div class="still-stat-l">Altitude</div></div>
+      </div>
+      <a href="#gallery" class="btn btn-primary"><span>Enter The Experience</span><iconify-icon icon="solar:arrow-right-linear"></iconify-icon></a>
+    </div>
+  </div>
+
+  <div class="container hero-intro">
+    <div class="hero-tag"><iconify-icon icon="solar:leaf-bold"></iconify-icon><span>TrueNest · A Cinematic Estate Experience</span></div>
+    <h1 class="hero-title">A residence,<br><em>played like film.</em></h1>
+    <p class="hero-desc">Boutique biophilic residences carved into the western ridge of Nandi Hills — presented with the cinema, craft and discretion of the world's finest estates.</p>
+    <div class="hero-actions">
+      <a href="#gallery" class="btn btn-primary"><span>Explore Residences</span><iconify-icon icon="solar:arrow-right-linear"></iconify-icon></a>
+      <a href="#tours" class="btn btn-light"><span>Take a Virtual Tour</span></a>
+    </div>
+  </div>
+  <div class="hero-progress" id="heroProgress"></div>
+</section>
+
+<div class="marquee">
+  <div class="marquee-track">
+    <div class="marquee-item"><span>Biophilic Urbanism</span><span class="mq-dot"></span><span>Quiet Luxury</span><span class="mq-dot"></span><span>Nandi Hills · 915m</span><span class="mq-dot"></span><span>RERA Approved</span><span class="mq-dot"></span><span>Possession 2026</span><span class="mq-dot"></span><span>Private Acquisition</span><span class="mq-dot"></span></div>
+    <div class="marquee-item" aria-hidden="true"><span>Biophilic Urbanism</span><span class="mq-dot"></span><span>Quiet Luxury</span><span class="mq-dot"></span><span>Nandi Hills · 915m</span><span class="mq-dot"></span><span>RERA Approved</span><span class="mq-dot"></span><span>Possession 2026</span><span class="mq-dot"></span><span>Private Acquisition</span><span class="mq-dot"></span></div>
+  </div>
+</div>
+
+<!-- INTERACTIVE GALLERY -->
+<section class="section gallery" id="gallery">
+  <div class="container">
+    <div class="s-head reveal">
+      <div class="s-label">The Gallery</div>
+      <h2 class="s-title">An estate, <em>frame by frame.</em></h2>
+      <p class="s-sub">Filter the collection, then open any frame full-screen. Use the arrows or your keyboard to move through the set.</p>
+    </div>
+    <div class="g-filters reveal">
+      <button class="g-chip active" data-filter="all">All</button>
+      <button class="g-chip" data-filter="interior">Interiors</button>
+      <button class="g-chip" data-filter="elevation">Elevations</button>
+      <button class="g-chip" data-filter="landscape">Landscape</button>
+    </div>
+    <div class="g-grid" id="gGrid">
+      <figure class="g-item tall reveal" data-cat="elevation" data-full="assets/images/retreat76-elevation.jpg" data-title="Retreat 76 — Western Elevation" data-sub="Elevation">
+        <img src="assets/images/retreat76-elevation.jpg" alt="Retreat 76 elevation" loading="lazy">
+        <div class="g-item-ov"></div><div class="g-zoom"><iconify-icon icon="solar:magnifer-zoom-in-linear"></iconify-icon></div>
+        <figcaption class="g-item-cap"><h4>Western Elevation</h4><span>Retreat 76</span></figcaption>
+      </figure>
+      <figure class="g-item reveal d1" data-cat="interior" data-full="assets/images/luxury-interior.jpg" data-title="The Living Volume" data-sub="Interior">
+        <img src="assets/images/luxury-interior.jpg" alt="Luxury interior" loading="lazy">
+        <div class="g-item-ov"></div><div class="g-zoom"><iconify-icon icon="solar:magnifer-zoom-in-linear"></iconify-icon></div>
+        <figcaption class="g-item-cap"><h4>The Living Volume</h4><span>Interior</span></figcaption>
+      </figure>
+      <figure class="g-item reveal d2" data-cat="interior" data-full="assets/images/minimal-interior.jpg" data-title="The Art of Subtraction" data-sub="Interior">
+        <img src="assets/images/minimal-interior.jpg" alt="Minimal interior" loading="lazy">
+        <div class="g-item-ov"></div><div class="g-zoom"><iconify-icon icon="solar:magnifer-zoom-in-linear"></iconify-icon></div>
+        <figcaption class="g-item-cap"><h4>Art of Subtraction</h4><span>Interior</span></figcaption>
+      </figure>
+      <figure class="g-item reveal" data-cat="landscape" data-full="assets/images/nandi-hills-mist.jpg" data-title="The Western Ridge at Dusk" data-sub="Landscape">
+        <img src="assets/images/nandi-hills-mist.jpg" alt="Nandi Hills mist" loading="lazy">
+        <div class="g-item-ov"></div><div class="g-zoom"><iconify-icon icon="solar:magnifer-zoom-in-linear"></iconify-icon></div>
+        <figcaption class="g-item-cap"><h4>The Western Ridge</h4><span>Landscape</span></figcaption>
+      </figure>
+      <figure class="g-item reveal d1" data-cat="elevation" data-full="assets/images/hillsandskies-elevation.jpg" data-title="Hills &amp; Skies — Horizon Elevation" data-sub="Elevation">
+        <img src="assets/images/hillsandskies-elevation.jpg" alt="Hills and Skies elevation" loading="lazy">
+        <div class="g-item-ov"></div><div class="g-zoom"><iconify-icon icon="solar:magnifer-zoom-in-linear"></iconify-icon></div>
+        <figcaption class="g-item-cap"><h4>Horizon Elevation</h4><span>Hills &amp; Skies</span></figcaption>
+      </figure>
+      <figure class="g-item tall reveal d2" data-cat="interior" data-full="assets/images/interior-lounge.jpg" data-title="The Lounge" data-sub="Interior">
+        <img src="assets/images/interior-lounge.jpg" alt="Interior lounge" loading="lazy">
+        <div class="g-item-ov"></div><div class="g-zoom"><iconify-icon icon="solar:magnifer-zoom-in-linear"></iconify-icon></div>
+        <figcaption class="g-item-cap"><h4>The Lounge</h4><span>Interior</span></figcaption>
+      </figure>
+      <figure class="g-item reveal" data-cat="landscape" data-full="assets/images/story-compass.jpg" data-title="Oriented to the Dusk" data-sub="Landscape">
+        <img src="assets/images/story-compass.jpg" alt="Orientation study" loading="lazy">
+        <div class="g-item-ov"></div><div class="g-zoom"><iconify-icon icon="solar:magnifer-zoom-in-linear"></iconify-icon></div>
+        <figcaption class="g-item-cap"><h4>Oriented to the Dusk</h4><span>Landscape</span></figcaption>
+      </figure>
+      <figure class="g-item reveal d1" data-cat="elevation" data-full="assets/images/retreat-76.png" data-title="Retreat 76 — Full Rendering" data-sub="Elevation">
+        <img src="assets/images/retreat-76.png" alt="Retreat 76 rendering" loading="lazy">
+        <div class="g-item-ov"></div><div class="g-zoom"><iconify-icon icon="solar:magnifer-zoom-in-linear"></iconify-icon></div>
+        <figcaption class="g-item-cap"><h4>Full Rendering</h4><span>Retreat 76</span></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- LIGHTBOX -->
+<div class="lb" id="lb" aria-hidden="true" role="dialog" aria-modal="true">
+  <button class="lb-btn lb-close" id="lbClose" aria-label="Close"><iconify-icon icon="solar:close-circle-linear"></iconify-icon></button>
+  <button class="lb-btn lb-prev" id="lbPrev" aria-label="Previous"><iconify-icon icon="solar:alt-arrow-left-linear"></iconify-icon></button>
+  <img id="lbImg" src="" alt="">
+  <button class="lb-btn lb-next" id="lbNext" aria-label="Next"><iconify-icon icon="solar:alt-arrow-right-linear"></iconify-icon></button>
+  <div class="lb-cap" id="lbCap"></div>
+</div>
+
+<!-- VIRTUAL TOURS -->
+<section class="section tours" id="tours">
+  <div class="container">
+    <div class="s-head reveal">
+      <div class="s-label">Virtual Tours</div>
+      <h2 class="s-title">Walk the residence <em>without leaving home.</em></h2>
+      <p class="s-sub">Switch rooms below, then click-and-drag across the frame to look around.</p>
+    </div>
+    <div class="tour-wrap reveal-zoom">
+      <div class="tour-tabs">
+        <button class="tour-tab active" data-room="0">Living</button>
+        <button class="tour-tab" data-room="1">Bedroom</button>
+        <button class="tour-tab" data-room="2">Terrace</button>
+      </div>
+      <div class="tour-stage" id="tourStage">
+        <div class="tour-pan" id="tourPan">
+          <img class="active" src="assets/images/luxury-interior.jpg" alt="Living room tour">
+          <img src="assets/images/minimal-interior.jpg" alt="Bedroom tour">
+          <img src="assets/images/interior-lounge.jpg" alt="Terrace lounge tour">
+        </div>
+        <div class="tour-hotspot" title="Material detail"><iconify-icon icon="solar:point-on-map-linear"></iconify-icon><span>Hand-finished lime plaster</span></div>
+        <div class="tour-hint" id="tourHint"><iconify-icon icon="solar:hand-shake-linear"></iconify-icon> Drag to look around</div>
+      </div>
+      <!-- PLACEHOLDER: drop a real 360 tour here (Matterport / Kuula / Momento360 share URL).
+           Replace the block below with: <iframe src="YOUR_TOUR_URL" allowfullscreen loading="lazy"
+           style="width:100%;aspect-ratio:16/9;border:0;border-radius:14px"></iframe> -->
+      <div class="tour-360-slot">
+        <strong>360° immersive tour slot</strong> — ready for a Matterport / Kuula link. Currently showing the interactive drag-pan preview above.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ROI INVESTMENT -->
+<section class="section roi" id="roi">
+  <div class="container">
+    <div class="s-head reveal">
+      <div class="s-label">The Investment Case</div>
+      <h2 class="s-title">Model your <em>return.</em></h2>
+      <p class="s-sub">Adjust the inputs to project value growth and rental income over your hold period.</p>
+    </div>
+    <div class="roi-grid">
+      <div class="roi-controls reveal">
+        <div class="roi-field">
+          <label>Residence <b id="roiPlanLabel">Retreat 76 · 1 BHK</b></label>
+          <select id="roiPlan">
+            <option value="0" selected>Retreat 76 · 1 BHK</option>
+            <option value="1">Hills &amp; Skies · Sky Studio</option>
+            <option value="2">Hills &amp; Skies · Orchard Suite</option>
+          </select>
+        </div>
+        <div class="roi-field">
+          <label>Investment <b id="roiAmtLabel">₹1.20 Cr</b></label>
+          <input type="range" id="roiAmt" min="8000000" max="40000000" step="500000" value="12000000">
+        </div>
+        <div class="roi-field">
+          <label>Hold Period <b id="roiYrLabel">8 years</b></label>
+          <input type="range" id="roiYr" min="3" max="15" step="1" value="8">
+        </div>
+        <p class="roi-note">Illustrative projection only — not investment advice. Appreciation and rental yield are sample assumptions and not a guarantee of returns.</p>
+      </div>
+      <div class="reveal d1">
+        <div class="roi-out">
+          <div class="roi-card"><div class="l">Projected Value</div><div class="v" id="roiVal">₹0</div></div>
+          <div class="roi-card"><div class="l">Cumulative Rent</div><div class="v" id="roiRent">₹0</div></div>
+          <div class="roi-card"><div class="l">Total Return</div><div class="v" id="roiTot">0%</div></div>
+          <div class="roi-card hl"><div class="l">Annualised</div><div class="v" id="roiAnn">0%</div></div>
+        </div>
+        <div class="roi-chart" id="roiChart"></div>
+        <div class="roi-chart-x" id="roiChartX"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AGENT PROFILES -->
+<section class="section agents" id="agents">
+  <div class="container">
+    <div class="s-head reveal">
+      <div class="s-label">Private Advisors</div>
+      <h2 class="s-title">Your acquisition, <em>personally guided.</em></h2>
+      <p class="s-sub">A small, senior team handles every TrueNest acquisition end to end. Tap a profile for the full background.</p>
+    </div>
+    <div class="ag-grid">
+      <!-- PLACEHOLDER: swap .ag-avatar initials for <img src="assets/images/agent-*.jpg"> headshots -->
+      <div class="ag-card reveal">
+        <div class="ag-avatar">AM</div>
+        <h4>Ananya Murthy</h4>
+        <div class="ag-role">Principal Advisor</div>
+        <div class="ag-bio">Sixteen years in boutique residential acquisition across South India. Leads private structuring and discreet off-market placements for TrueNest's senior clientele.</div>
+        <div class="ag-contact"><a href="#inquire"><iconify-icon icon="solar:phone-linear"></iconify-icon> Connect</a></div>
+        <div class="ag-more">Tap for bio</div>
+      </div>
+      <div class="ag-card reveal d1">
+        <div class="ag-avatar">RK</div>
+        <h4>Rohan Kamath</h4>
+        <div class="ag-role">Investment Strategy</div>
+        <div class="ag-bio">Former real-assets analyst. Builds the financial case for each residence — yield modelling, exit planning and portfolio fit for investor buyers.</div>
+        <div class="ag-contact"><a href="#inquire"><iconify-icon icon="solar:phone-linear"></iconify-icon> Connect</a></div>
+        <div class="ag-more">Tap for bio</div>
+      </div>
+      <div class="ag-card reveal d2">
+        <div class="ag-avatar">SL</div>
+        <h4>Sara Lobo</h4>
+        <div class="ag-role">Client Experience</div>
+        <div class="ag-bio">Curates the end-to-end journey — private site walks, design personalisation and handover. The single point of contact from first visit to first key.</div>
+        <div class="ag-contact"><a href="#inquire"><iconify-icon icon="solar:phone-linear"></iconify-icon> Connect</a></div>
+        <div class="ag-more">Tap for bio</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA / INQUIRY -->
+<section class="cta" id="inquire">
+  <div class="cta-bg"></div>
+  <div class="container cta-in">
+    <div class="s-label" style="justify-content:center;color:#C9D8B6">Private Acquisition</div>
+    <h2>Begin a <em>private conversation.</em></h2>
+    <p>Leave your details and a TrueNest advisor will arrange a discreet site walk at Nandi Hills.</p>
+    <form class="cta-form" id="ctaForm" novalidate>
+      <input type="text" name="name" placeholder="Your name" required>
+      <input type="email" name="email" placeholder="Email address" required>
+      <button type="submit" class="btn btn-primary"><span>Request Invitation</span><iconify-icon icon="solar:arrow-right-linear"></iconify-icon></button>
+    </form>
+    <div class="cta-msg" id="ctaMsg"></div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-in">
+      <div><div class="footer-brand">TRUENEST</div><p class="footer-tag">Boutique biophilic residences at the intersection of nature and architecture. Nandi Hills, Bangalore.</p></div>
+      <div class="footer-col"><h5>Residences</h5><a href="#gallery">Retreat 76</a><a href="#gallery">Hills &amp; Skies</a><a href="#tours">Virtual Tours</a></div>
+      <div class="footer-col"><h5>Invest</h5><a href="#roi">ROI Model</a><a href="#agents">Advisors</a><a href="#inquire">Private Inquiry</a></div>
+      <div class="footer-col"><h5>Contact</h5><a href="#">+91 80 4455 9900</a><a href="#">hello@truenest.co.in</a><a href="#">Instagram</a></div>
+    </div>
+    <div class="footer-base"><span>© 2026 TrueNest · RERA/KA/24/0142</span><span>Truly In Nature</span></div>
+  </div>
+</footer>
+
+<script>
+// Nav scroll
+(function(){const n=document.getElementById('nav');const u=()=>n.classList.toggle('scrolled',scrollY>50);addEventListener('scroll',u,{passive:true});u();})();
+
+// Hero: cinematic film ~15s -> Retreat 76 still (verbatim technique from index-sample-1)
+(function(){
+  const hero=document.getElementById('hero');
+  const vid=hero.querySelector('.hero-video');
+  const bar=document.getElementById('heroProgress');
+  const DUR=15000;
+  if(matchMedia('(prefers-reduced-motion: reduce)').matches){hero.classList.add('show-still');try{vid.pause()}catch(e){}return;}
+  let start=null,done=false;
+  function tick(t){
+    if(done)return;
+    if(!start)start=t;
+    const p=Math.min((t-start)/DUR,1);
+    bar.style.width=(p*100)+'%';
+    if(p>=1){done=true;hero.classList.add('show-still');try{vid.pause()}catch(e){}return;}
+    requestAnimationFrame(tick);
+  }
+  let begun=false;
+  const go=()=>{if(begun)return;begun=true;requestAnimationFrame(tick);};
+  vid.addEventListener('playing',go,{once:true});
+  setTimeout(go,800);
+})();
+
+// Reveal
+(function(){const e=document.querySelectorAll('.reveal,.reveal-clip-up,.reveal-pop,.reveal-zoom');if(!('IntersectionObserver'in window)){e.forEach(x=>x.classList.add('visible'));return;}const io=new IntersectionObserver(es=>{es.forEach(x=>{if(x.isIntersecting){x.target.classList.add('visible');io.unobserve(x.target);}})},{threshold:.12,rootMargin:'0px 0px -8% 0px'});e.forEach(x=>io.observe(x));})();
+
+// Gallery filter + lightbox
+(function(){
+  const grid=document.getElementById('gGrid');
+  const items=[...grid.querySelectorAll('.g-item')];
+  const chips=[...document.querySelectorAll('.g-chip')];
+  let filter='all';
+  chips.forEach(c=>c.addEventListener('click',()=>{
+    chips.forEach(x=>x.classList.remove('active'));c.classList.add('active');
+    filter=c.dataset.filter;
+    items.forEach(it=>{
+      const show=filter==='all'||it.dataset.cat===filter;
+      it.classList.toggle('is-hidden',!show);
+    });
+  }));
+  // Lightbox
+  const lb=document.getElementById('lb'),lbImg=document.getElementById('lbImg'),lbCap=document.getElementById('lbCap');
+  let idx=0;
+  const visible=()=>items.filter(it=>!it.classList.contains('is-hidden'));
+  function open(it){const set=visible();idx=set.indexOf(it);render(set);lb.classList.add('open');lb.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';}
+  function render(set){const it=set[idx];lbImg.src=it.dataset.full;lbImg.alt=it.dataset.title;lbCap.textContent=it.dataset.title+' — '+it.dataset.sub;}
+  function step(d){const set=visible();idx=(idx+d+set.length)%set.length;render(set);}
+  function close(){lb.classList.remove('open');lb.setAttribute('aria-hidden','true');document.body.style.overflow='';}
+  items.forEach(it=>it.addEventListener('click',()=>open(it)));
+  document.getElementById('lbClose').addEventListener('click',close);
+  document.getElementById('lbPrev').addEventListener('click',e=>{e.stopPropagation();step(-1);});
+  document.getElementById('lbNext').addEventListener('click',e=>{e.stopPropagation();step(1);});
+  lb.addEventListener('click',e=>{if(e.target===lb)close();});
+  addEventListener('keydown',e=>{if(!lb.classList.contains('open'))return;if(e.key==='Escape')close();if(e.key==='ArrowRight')step(1);if(e.key==='ArrowLeft')step(-1);});
+})();
+
+// Virtual tours: room tabs + drag-to-pan + idle drift
+(function(){
+  const stage=document.getElementById('tourStage'),pan=document.getElementById('tourPan');
+  const imgs=[...pan.querySelectorAll('img')],tabs=[...document.querySelectorAll('.tour-tab')];
+  const hint=document.getElementById('tourHint');
+  let x=-15,drag=false,sx=0,sox=0,idle=null,drift=-1;
+  const minX=()=>-(pan.offsetWidth-stage.offsetWidth);
+  function setX(v){x=Math.max(minX(),Math.min(0,v));pan.style.transform='translateX('+x+'px)';}
+  function autoDrift(){idle=setInterval(()=>{if(drag)return;let nx=x+drift;if(nx<=minX()||nx>=0)drift*=-1;setX(nx);},40);}
+  tabs.forEach(t=>t.addEventListener('click',()=>{
+    tabs.forEach(z=>z.classList.remove('active'));t.classList.add('active');
+    imgs.forEach(z=>z.classList.remove('active'));imgs[+t.dataset.room].classList.add('active');
+  }));
+  const down=(cx)=>{drag=true;sx=cx;sox=x;hint.classList.add('hide');};
+  const move=(cx)=>{if(drag)setX(sox+(cx-sx));};
+  const up=()=>{drag=false;};
+  stage.addEventListener('mousedown',e=>down(e.clientX));
+  addEventListener('mousemove',e=>move(e.clientX));
+  addEventListener('mouseup',up);
+  stage.addEventListener('touchstart',e=>down(e.touches[0].clientX),{passive:true});
+  stage.addEventListener('touchmove',e=>move(e.touches[0].clientX),{passive:true});
+  stage.addEventListener('touchend',up);
+  setTimeout(()=>setX(-15),100);autoDrift();
+})();
+
+// ROI calculator
+(function(){
+  const plans=[
+    {name:'Retreat 76 · 1 BHK',appr:.09,yield:.035},
+    {name:'Hills & Skies · Sky Studio',appr:.08,yield:.04},
+    {name:'Hills & Skies · Orchard Suite',appr:.10,yield:.045}
+  ];
+  const $=id=>document.getElementById(id);
+  const fmtINR=n=>{n=Math.round(n);if(n>=1e7)return '₹'+(n/1e7).toFixed(2)+' Cr';if(n>=1e5)return '₹'+(n/1e5).toFixed(2)+' L';return '₹'+n.toLocaleString('en-IN');};
+  const chart=$('roiChart'),chartX=$('roiChartX');
+  function calc(){
+    const p=plans[+$('roiPlan').value],amt=+$('roiAmt').value,yr=+$('roiYr').value;
+    $('roiPlanLabel').textContent=p.name;
+    $('roiAmtLabel').textContent=fmtINR(amt);
+    $('roiYrLabel').textContent=yr+' years';
+    const exit=amt*Math.pow(1+p.appr,yr);
+    const rent=amt*p.yield*yr;
+    const tot=((exit+rent-amt)/amt)*100;
+    const ann=(Math.pow((exit+rent)/amt,1/yr)-1)*100;
+    $('roiVal').textContent=fmtINR(exit);
+    $('roiRent').textContent=fmtINR(rent);
+    $('roiTot').textContent=tot.toFixed(0)+'%';
+    $('roiAnn').textContent=ann.toFixed(1)+'%';
+    // chart: value path year 0..yr (max ~8 bars)
+    const steps=Math.min(yr,8),vals=[];
+    for(let i=0;i<=steps;i++){const y=Math.round(i*yr/steps);vals.push({y,v:amt*Math.pow(1+p.appr,y)});}
+    const max=vals[vals.length-1].v;
+    chart.innerHTML=vals.map(o=>'<div class="roi-bar" style="height:'+(8+(o.v/max)*92)+'%"></div>').join('');
+    chartX.innerHTML=vals.map(o=>'<span>Y'+o.y+'</span>').join('');
+  }
+  ['roiPlan','roiAmt','roiYr'].forEach(id=>$(id).addEventListener('input',calc));
+  calc();
+})();
+
+// Agent profiles expand
+(function(){document.querySelectorAll('.ag-card').forEach(c=>c.addEventListener('click',()=>{
+  const open=c.classList.contains('open');
+  document.querySelectorAll('.ag-card').forEach(x=>x.classList.remove('open'));
+  if(!open)c.classList.add('open');
+}));})();
+
+// Inquiry form (front-end only)
+(function(){const f=document.getElementById('ctaForm'),m=document.getElementById('ctaMsg');
+f.addEventListener('submit',e=>{e.preventDefault();const n=f.name.value.trim(),em=f.email.value.trim();
+if(!n||!em){m.textContent='Please enter your name and email.';m.classList.add('show');return;}
+m.textContent='Thank you, '+n.split(' ')[0]+'. An advisor will be in touch shortly.';m.classList.add('show');f.reset();});})();
+</script>
+</body>
+</html>
