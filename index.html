@@ -257,6 +257,20 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
 .g-grid{grid-template-columns:1fr}
 .ag-grid{grid-template-columns:1fr}
 }
+/* ONGOING PROJECT BANNER (scroll-revealed) */
+.ob{position:relative;min-height:78vh;display:flex;align-items:center;overflow:hidden;background:var(--ink)}
+.ob-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1.05)}
+.ob-scrim{position:absolute;inset:0;background:linear-gradient(90deg,rgba(20,19,16,.88) 0%,rgba(20,19,16,.55) 45%,transparent 80%),linear-gradient(180deg,transparent 55%,rgba(20,19,16,.72) 100%)}
+.ob-in{position:relative;z-index:2;padding:clamp(4rem,10vh,7rem) 0}
+.ob-eyebrow{display:inline-flex;align-items:center;gap:.5rem;font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:#C9D8B6;margin-bottom:1rem}
+.ob-eyebrow::before{content:'';width:28px;height:1px;background:#C9D8B6}
+.ob-name{font-family:var(--font-display);font-size:clamp(2.6rem,6vw,4.6rem);color:#F8F5EF;line-height:1.04}
+.ob-name em{font-style:italic;color:#C9D8B6}
+.ob-loc{font-size:.9rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(248,245,239,.72);margin-top:.7rem}
+.ob-stats{display:flex;gap:2.6rem;margin:2rem 0;flex-wrap:wrap}
+.ob-stat-n{font-family:var(--font-display);font-size:1.9rem;color:#F8F5EF}
+.ob-stat-l{font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(248,245,239,.6);margin-top:.25rem}
+@media (max-width:560px){.ob-stats{gap:1.4rem}}
 </style>
 </head>
 <body>
@@ -276,27 +290,10 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
   </div>
 </nav>
 
-<!-- HERO: cinematic film ~15s, then latest project still -->
+<!-- HERO: cinematic film, looping -->
 <section class="hero" id="hero">
   <video class="hero-video" autoplay muted playsinline loop src="assets/images/hero.mp4"></video>
   <div class="hero-scrim"></div>
-
-  <div class="hero-still">
-    <img src="assets/images/retreat76-elevation.jpg" alt="Retreat 76">
-    <div class="hero-still-scrim"></div>
-    <div class="container hero-still-card">
-      <div class="still-eyebrow">Latest Release · Now Previewing</div>
-      <h2 class="still-name">Retreat 76</h2>
-      <p class="still-loc">Nandi Hills, Bangalore · 915m</p>
-      <div class="still-stats">
-        <div><div class="still-stat-n">76</div><div class="still-stat-l">Residences</div></div>
-        <div><div class="still-stat-n">16.8K</div><div class="still-stat-l">Sq Ft Land</div></div>
-        <div><div class="still-stat-n">1 BHK</div><div class="still-stat-l">Configuration</div></div>
-        <div><div class="still-stat-n">915m</div><div class="still-stat-l">Altitude</div></div>
-      </div>
-      <a href="#gallery" class="btn btn-primary"><span>Enter The Experience</span><iconify-icon icon="solar:arrow-right-linear"></iconify-icon></a>
-    </div>
-  </div>
 
   <div class="container hero-intro">
     <div class="hero-tag"><iconify-icon icon="solar:leaf-bold"></iconify-icon><span>TrueNest · A Cinematic Estate Experience</span></div>
@@ -307,7 +304,27 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
       <a href="#tours" class="btn btn-light"><span>Take a Virtual Tour</span></a>
     </div>
   </div>
-  <div class="hero-progress" id="heroProgress"></div>
+</section>
+
+<!-- ONGOING PROJECT — revealed on scroll, kept after the looping hero -->
+<section class="ob" id="ongoing">
+  <img class="ob-bg" src="assets/images/retreat76-elevation.jpg" alt="Retreat 76">
+  <div class="ob-scrim"></div>
+  <div class="container ob-in reveal">
+    <div class="ob-eyebrow">Now Previewing · Ongoing Release</div>
+    <h2 class="ob-name">Retreat <em>76</em></h2>
+    <p class="ob-loc">Nandi Hills, Bangalore · 915m</p>
+    <div class="ob-stats">
+      <div><div class="ob-stat-n">76</div><div class="ob-stat-l">Residences</div></div>
+      <div><div class="ob-stat-n">16.8K</div><div class="ob-stat-l">Sq Ft Land</div></div>
+      <div><div class="ob-stat-n">1 BHK</div><div class="ob-stat-l">Configuration</div></div>
+      <div><div class="ob-stat-n">915m</div><div class="ob-stat-l">Altitude</div></div>
+    </div>
+    <div class="hero-actions">
+      <a href="retreat76.html" class="btn btn-primary"><span>View Retreat 76</span><iconify-icon icon="solar:arrow-right-linear"></iconify-icon></a>
+      <a href="#gallery" class="btn btn-light"><span>Enter The Experience</span></a>
+    </div>
+  </div>
 </section>
 
 <div class="marquee">
@@ -530,15 +547,14 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
 // Nav scroll
 (function(){const n=document.getElementById('nav');const u=()=>n.classList.toggle('scrolled',scrollY>50);addEventListener('scroll',u,{passive:true});u();})();
 
-// Hero: cinematic film loops continuously.
-// Reduced-motion users get the static Retreat 76 still instead of autoplaying video.
+// Hero: cinematic film loops continuously. The Retreat 76 banner now
+// lives in its own #ongoing section below, revealed on scroll.
+// Reduced-motion users get a paused first frame (no autoplaying video).
 (function(){
   const hero=document.getElementById('hero');
   const vid=hero.querySelector('.hero-video');
-  const bar=document.getElementById('heroProgress');
-  if(bar)bar.style.display='none';
   if(matchMedia('(prefers-reduced-motion: reduce)').matches){
-    hero.classList.add('show-still');try{vid.pause()}catch(e){}return;
+    try{vid.removeAttribute('autoplay');vid.pause()}catch(e){}return;
   }
   vid.loop=true;
   const play=()=>{const p=vid.play();if(p&&p.catch)p.catch(()=>{});};
