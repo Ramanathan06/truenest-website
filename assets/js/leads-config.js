@@ -8,4 +8,4 @@
  * thank-you message (no data is stored) — so the live site never breaks
  * before the backend exists.
  */
-window.TRUENEST_LEADS_ENDPOINT = "";
+window.TRUENEST_LEADS_ENDPOINT = "https://truenest-website-8lbx.vercel.app/api/leads";
