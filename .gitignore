@@ -5,3 +5,7 @@ node_modules/
 .env.local
 .cache/
 dist/
+
+# Client docs — keep out of the public repo
+Requirements for Truenest Website.docx
+*.docx
