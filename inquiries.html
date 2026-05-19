@@ -99,7 +99,7 @@
       <div class="inq-form reveal-zoom">
         <h3>Private Acquisition <em>Inquiry</em></h3>
         <p class="form-intro">All enquiries are handled in confidence. We typically respond within one business day.</p>
-        <form id="inqForm" novalidate>
+        <form id="inqForm" novalidate data-lead-form data-lead-source="inquiries" data-lead-intent="inquiry" data-lead-msg="#inqMsg">
           <div class="inq-field">
             <label for="f-name">Full Name</label>
             <input type="text" id="f-name" name="name" placeholder="Your formal name" required>
@@ -171,19 +171,9 @@
 </footer>
 <script src="assets/js/truenest.js"></script>
 <script>
-// Inquiry form (front-end only)
-(function(){
-  var f=document.getElementById('inqForm'),m=document.getElementById('inqMsg');
-  if(!f)return;
-  f.addEventListener('submit',function(e){
-    e.preventDefault();
-    var n=f.name.value.trim(),em=f.email.value.trim();
-    if(!n||!em){m.textContent='Please enter your name and email.';m.classList.add('show');return;}
-    m.textContent='Thank you, '+n.split(' ')[0]+'. A TrueNest advisor will be in touch shortly.';
-    m.classList.add('show');
-    f.reset();
-  });
-})();
+// Inquiry form is handled by assets/js/leads.js
 </script>
+<script src="assets/js/leads-config.js"></script>
+<script src="assets/js/leads.js"></script>
 </body>
 </html>

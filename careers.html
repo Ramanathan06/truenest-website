@@ -238,7 +238,7 @@
 
       <div class="app-panel reveal d1">
         <h3>Send your introduction</h3>
-        <form class="app-form" id="appForm" novalidate>
+        <form class="app-form" id="appForm" novalidate data-lead-form data-lead-source="careers" data-lead-intent="careers" data-lead-msg="#appMsg">
           <div class="app-row">
             <div class="app-field">
               <label for="afName">Full Name *</label>
@@ -304,13 +304,9 @@
     if(!open){c.classList.add('open');b.style.maxHeight=b.scrollHeight+'px';}
   });
 });})();
-// Application form (front-end only)
-(function(){var f=document.getElementById('appForm'),m=document.getElementById('appMsg');
-if(!f)return;
-f.addEventListener('submit',function(e){e.preventDefault();
-var n=f.name.value.trim(),em=f.email.value.trim(),r=f.role.value,msg=f.message.value.trim();
-if(!n||!em||!r||!msg){m.textContent='Please complete your name, email, area of interest and introduction.';m.classList.add('show');return;}
-m.textContent='Thank you, '+n.split(' ')[0]+'. We read every application personally — you will hear from us within 10 working days.';m.classList.add('show');f.reset();});})();
+// Application form is handled by assets/js/leads.js
 </script>
+<script src="assets/js/leads-config.js"></script>
+<script src="assets/js/leads.js"></script>
 </body>
 </html>

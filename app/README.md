@@ -66,6 +66,17 @@ timeout — so you only do the Root Directory + env vars by hand.
 - The `/leads` gate is a shared token (good enough for this slice). A proper
   auth-backed admin comes with the Payload CMS iteration.
 
-## Connecting the existing static site (optional, after deploy)
-The static site forms can post to this app's `/api/leads` once it's deployed
-and CORS is set — that wiring is a follow-up; for now use `/inquire`.
+## Connecting the existing static site (already wired)
+The static site's three forms (home CTA, `inquiries.html`, `careers.html`)
+already POST to this app's `/api/leads` via `assets/js/leads.js`.
+
+To activate after deploy:
+1. Open `assets/js/leads-config.js` (repo root, **not** in `app/`).
+2. Set the endpoint to your deployment, e.g.:
+   `window.TRUENEST_LEADS_ENDPOINT = "https://truenest-xyz.vercel.app/api/leads";`
+3. Commit/push — GitHub Pages redeploys; forms now store leads.
+
+Until that line is filled, the forms still work but only show the
+thank-you message (no data stored) — the live site never breaks.
+CORS already allows `https://ramanathan06.github.io` and localhost; add a
+custom domain via `LEADS_ALLOWED_ORIGINS`.

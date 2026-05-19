@@ -522,7 +522,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
     <div class="s-label" style="justify-content:center;color:#C9D8B6">Private Acquisition</div>
     <h2>Begin a <em>private conversation.</em></h2>
     <p>Leave your details and a TrueNest advisor will arrange a discreet site walk at Nandi Hills.</p>
-    <form class="cta-form" id="ctaForm" novalidate>
+    <form class="cta-form" id="ctaForm" novalidate data-lead-form data-lead-source="home-cta" data-lead-intent="inquiry" data-lead-msg="#ctaMsg">
       <input type="text" name="name" placeholder="Your name" required>
       <input type="email" name="email" placeholder="Email address" required>
       <button type="submit" class="btn btn-primary"><span>Request Invitation</span><iconify-icon icon="solar:arrow-right-linear"></iconify-icon></button>
@@ -661,11 +661,9 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
   if(!open)c.classList.add('open');
 }));})();
 
-// Inquiry form (front-end only)
-(function(){const f=document.getElementById('ctaForm'),m=document.getElementById('ctaMsg');
-f.addEventListener('submit',e=>{e.preventDefault();const n=f.name.value.trim(),em=f.email.value.trim();
-if(!n||!em){m.textContent='Please enter your name and email.';m.classList.add('show');return;}
-m.textContent='Thank you, '+n.split(' ')[0]+'. An advisor will be in touch shortly.';m.classList.add('show');f.reset();});})();
+// Inquiry form is handled by assets/js/leads.js
 </script>
+<script src="assets/js/leads-config.js"></script>
+<script src="assets/js/leads.js"></script>
 </body>
 </html>
