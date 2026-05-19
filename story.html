@@ -1,191 +1,254 @@
-<!DOCTYPE html>
-<html class="light" lang="en">
+<!doctype html>
+<html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Our Story | TrueNest | Biophilic Urbanism Collective, Bangalore</title>
-    <meta name="description" content="Learn about TrueNest — Bangalore's boutique real estate collective dedicated to biophilic urbanism and quiet luxury living. Meet our five founders and discover our philosophy." />
-    <meta name="keywords" content="TrueNest story, biophilic urbanism Bangalore, luxury real estate developers Bangalore, TrueNest founders, quiet luxury philosophy, nature architecture Bangalore" />
-    <meta name="robots" content="index, follow" />
-    <link rel="canonical" href="https://truenest.co.in/story.html" />
-    <meta property="og:title" content="Our Story | TrueNest" />
-    <meta property="og:description" content="The story behind TrueNest — biophilic urbanism and quiet luxury in Bangalore." />
-    <meta property="og:image" content="assets/images/story-vision.jpg" />
-    <meta property="og:url" content="https://truenest.co.in/story.html" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="assets/css/site.css" />
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <script src="assets/js/tailwind.config.js"></script>
-    <style>
-        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24; }
-        @keyframes grayscale-reveal { 0%{filter:grayscale(100%)} 100%{filter:grayscale(0%)} }
-        .animate-color-reveal { animation: grayscale-reveal 5s ease-out forwards; }
-        .founder-card:hover .founder-img { filter: grayscale(0%); transform: scale(1.03); }
-        .founder-img { filter: grayscale(100%); transition: filter 0.7s ease, transform 0.7s ease; }
-        .fade-in-up { opacity: 0; transform: translateY(24px); transition: opacity 0.8s ease, transform 0.8s ease; }
-        .fade-in-up.visible { opacity: 1; transform: translateY(0); }
-        /* Organic warm background */
-        .organic-bg { background: linear-gradient(150deg, #fafaf6 0%, #f2e8d8 50%, #fafaf6 100%); }
-    </style>
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "AboutPage",
-        "name": "Our Story | TrueNest",
-        "description": "The founding philosophy and leadership team behind TrueNest.",
-        "url": "https://truenest.co.in/story.html",
-        "about": {
-            "@type": "Organization",
-            "name": "TrueNest",
-            "foundingDate": "2024",
-            "foundingLocation": "Bangalore, India",
-            "description": "Boutique biophilic luxury residential developer in Bangalore."
-        }
-    }
-    </script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Story | TrueNest — Truly In Nature</title>
+<meta name="description" content="TrueNest is a manifestation of biophilic urbanism in Bangalore — boutique residences crafted in quiet conversation with the land, the light and the legacy of place.">
+<link rel="canonical" href="https://truenest.co.in/story.html">
+<meta property="og:title" content="Our Story | TrueNest">
+<meta property="og:description" content="The founding philosophy behind TrueNest — biophilic urbanism and quiet luxury in Bangalore.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="assets/images/story-vision.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&display=swap" rel="stylesheet">
+<script src="https://code.iconify.design/iconify-icon/1.0.8/iconify-icon.min.js"></script>
+<link rel="stylesheet" href="assets/css/truenest.css">
+<style>
+/* Story-page-specific layout — system classes untouched */
+.story-hero{position:relative;min-height:70vh;display:flex;align-items:flex-end;overflow:hidden;background:var(--ink)}
+.story-hero img.story-hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
+.story-hero .hero-scrim{position:absolute;inset:0;z-index:1}
+.story-hero .hero-intro{position:relative;z-index:3;width:100%;padding:8rem 0 clamp(3.5rem,9vh,6rem)}
+.hero-tag{display:inline-flex;align-items:center;gap:.5rem;padding:.45rem 1rem;border:1px solid rgba(244,241,234,.3);border-radius:100px;font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:#F4F1EA;margin-bottom:1.2rem;background:rgba(244,241,234,.1);backdrop-filter:blur(8px)}
+.hero-title{font-family:var(--font-display);font-size:clamp(2.6rem,6vw,5rem);font-weight:400;line-height:1.04;letter-spacing:-.02em;color:#F8F5EF}
+.hero-title em{font-style:italic;color:#C9D8B6}
+.hero-desc{margin-top:1.3rem;font-size:clamp(.95rem,1.1vw,1.08rem);line-height:1.7;color:rgba(248,245,239,.85);max-width:580px}
+
+.story-row{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2.5rem,6vw,5rem);align-items:center}
+.story-row + .story-row{margin-top:clamp(4rem,9vh,7rem)}
+.story-row.flip .story-media{order:2}
+.story-media{border-radius:18px;overflow:hidden;border:1px solid var(--line);aspect-ratio:4/3}
+.story-media img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s var(--ease)}
+.story-media:hover img{transform:scale(1.04)}
+.story-copy h3{font-family:var(--font-display);font-size:clamp(1.6rem,3vw,2.4rem);font-weight:400;line-height:1.18;color:var(--ink);margin-bottom:1.1rem}
+.story-copy h3 em{font-style:italic;color:var(--accent)}
+.story-copy p{font-size:.96rem;line-height:1.8;color:var(--ink-soft)}
+.story-copy p + p{margin-top:1rem}
+
+.pull-quote{max-width:880px;margin:clamp(4rem,9vh,7rem) auto 0;text-align:center;padding:clamp(2.5rem,5vw,4rem) clamp(1.5rem,4vw,3rem);background:var(--bg-card);border:1px solid var(--line);border-radius:20px}
+.pull-quote iconify-icon{font-size:1.8rem;color:var(--clay)}
+.pull-quote blockquote{font-family:var(--font-display);font-size:clamp(1.4rem,3vw,2.1rem);font-style:italic;line-height:1.45;color:var(--ink);margin:1rem 0}
+.pull-quote cite{font-style:normal;font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-soft)}
+
+.values-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+.value-card{background:var(--bg-card);border:1px solid var(--line);border-radius:18px;padding:clamp(1.8rem,3vw,2.4rem);transition:transform .5s var(--ease),box-shadow .5s,border-color .4s}
+.value-card:hover{transform:translateY(-6px);box-shadow:0 24px 60px rgba(28,27,24,.08);border-color:var(--accent)}
+.value-card iconify-icon{font-size:2rem;color:var(--accent);margin-bottom:1.2rem;display:block}
+.value-card h4{font-family:var(--font-display);font-size:1.35rem;font-weight:500;margin-bottom:.7rem;color:var(--ink)}
+.value-card p{font-size:.9rem;line-height:1.75;color:var(--ink-soft)}
+
+.founders-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:1.5rem}
+.founder{text-align:center}
+.founder-photo{width:128px;height:128px;border-radius:50%;overflow:hidden;margin:0 auto 1.2rem;border:1px solid var(--line);transition:border-color .4s}
+.founder:hover .founder-photo{border-color:var(--accent)}
+.founder-photo img{width:100%;height:100%;object-fit:cover;filter:grayscale(100%);transition:filter .7s var(--ease),transform .7s var(--ease)}
+.founder:hover .founder-photo img{filter:grayscale(0%);transform:scale(1.04)}
+.founder h4{font-family:var(--font-display);font-size:1.02rem;font-weight:500;line-height:1.25;color:var(--ink);margin-bottom:.25rem}
+.founder .role{font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;color:var(--clay);margin-bottom:.8rem}
+.founder .said{font-size:.82rem;line-height:1.6;color:var(--ink-soft);font-style:italic}
+
+/* CTA bg override for this page */
+.cta .cta-bg.story-cta-bg{background:url('assets/images/story-vision.jpg') center/cover no-repeat;filter:saturate(.85) brightness(.5)}
+
+@media (max-width:900px){
+  .story-row{grid-template-columns:1fr;gap:2rem}
+  .story-row.flip .story-media{order:0}
+  .values-grid{grid-template-columns:1fr}
+  .founders-grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:560px){
+  .founders-grid{grid-template-columns:1fr 1fr}
+}
+@media (prefers-reduced-motion: reduce){
+  .story-media img,.founder-photo img{transition:none!important}
+}
+</style>
 </head>
-<body class="bg-background text-on-surface font-body-md antialiased organic-bg">
-    <div id="shared-header"></div>
+<body>
 
-    <!-- HERO -->
-    <header class="pt-48 pb-16 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
-        <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
-            <div class="md:col-span-8 fade-in-up">
-                <span class="font-label-caps text-label-caps text-secondary mb-4 block tracking-widest">OUR NARRATIVE</span>
-                <h1 class="font-display-xl text-display-xl text-on-surface leading-none mb-8">Crafting a silent<br />dialogue between <span class="italic">stone</span><br />and <span class="italic">sky.</span></h1>
-                <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl leading-relaxed">
-                    TrueNest is a manifestation of Biophilic Urbanism in Bangalore. We don't just build structures — we curate living ecosystems that offer the grounded luxury of a secluded courtyard amidst the concrete pulse of the city.
-                </p>
-            </div>
-        </div>
-    </header>
+<nav class="nav" id="nav">
+  <div class="container nav-inner">
+    <a href="index.html" class="nav-logo">TRUENEST</a>
+    <div class="nav-links">
+      <a class="nav-link" href="projects.html">Residences</a>
+      <a class="nav-link" href="retreat76.html">Retreat 76</a>
+      <a class="nav-link" href="story.html">Story</a>
+      <a class="nav-link" href="testimonials.html">Testimonials</a>
+      <a class="nav-link" href="careers.html">Careers</a>
+    </div>
+    <a class="nav-cta" href="inquiries.html">Private Inquiry</a>
+  </div>
+</nav>
 
-    <!-- VISION & MISSION -->
-    <section class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto mb-24 py-8">
-        <div class="relative grid grid-cols-1 md:grid-cols-12 gap-y-16 md:gap-y-0">
-            <div class="md:col-span-7 relative z-10 md:pr-12 fade-in-up">
-                <div class="aspect-[2/1] max-h-[380px] overflow-hidden animate-color-reveal bg-surface-container mb-8">
-                    <img alt="TrueNest vision — a skyline where every structure breathes" class="w-full h-full object-cover" src="assets/images/story-vision.jpg" />
-                </div>
-                <div class="max-w-md">
-                    <h3 class="font-headline-lg text-headline-lg mb-4 leading-tight">Vision: A skyline where every <span class="italic">structure</span> breathes.</h3>
-                    <p class="font-body-md text-on-surface-variant leading-relaxed">To redefine luxury living in Bangalore through Biophilic Urbanism — crafting residences that exist in quiet conversation with the land, the light, and the legacy of place.</p>
-                </div>
-            </div>
-            <div class="md:col-span-5 md:-ml-24 md:pt-32 relative z-20 fade-in-up">
-                <div class="aspect-[2/1] max-h-[380px] overflow-hidden animate-color-reveal bg-surface-container mb-8 border-[12px] border-background shadow-2xl">
-                    <img alt="TrueNest mission — to build with intention, not excess" class="w-full h-full object-cover" src="assets/images/story-mission.jpg" />
-                </div>
-                <div>
-                    <h3 class="font-headline-lg text-headline-lg mb-4 leading-tight">Mission: To build with <span class="italic">intention</span>, not excess.</h3>
-                    <p class="font-body-md text-on-surface-variant leading-relaxed">We curate enduring sanctuaries from honest materials — concrete, stone, timber, and green — shaping spaces that age with grace and ground their inhabitants in the rhythm of nature.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+<!-- HERO -->
+<section class="story-hero">
+  <img class="story-hero-bg" src="assets/images/story-vision.jpg" alt="A skyline where every structure breathes">
+  <div class="hero-scrim"></div>
+  <div class="container hero-intro">
+    <div class="hero-tag reveal"><iconify-icon icon="solar:leaf-bold"></iconify-icon><span>Our Narrative</span></div>
+    <h1 class="hero-title reveal d1">Crafting a silent dialogue<br>between <em>stone</em> and <em>sky.</em></h1>
+    <p class="hero-desc reveal d2">TrueNest is a manifestation of biophilic urbanism in Bangalore. We don't just build structures — we curate living ecosystems that offer the grounded luxury of a secluded courtyard amidst the concrete pulse of the city.</p>
+  </div>
+</section>
 
-    <!-- VALUES -->
-    <section class="py-section-gap bg-surface-container-low px-margin-mobile md:px-margin-desktop">
-        <div class="max-w-container-max mx-auto">
-            <div class="text-center mb-16 fade-in-up">
-                <span class="font-label-caps text-label-caps text-primary mb-4 block">THE PRINCIPLES</span>
-                <h2 class="font-headline-xl text-headline-xl">What We <span class="italic">Stand For</span></h2>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="p-8 bg-background border border-outline/10 fade-in-up">
-                    <span class="material-symbols-outlined text-4xl text-primary mb-6 block">architecture</span>
-                    <h3 class="font-headline-lg text-[24px] mb-4">Craft</h3>
-                    <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">Every material is chosen for its honesty — concrete that ages beautifully, timber that tells time, stone that grounds the spirit.</p>
-                </div>
-                <div class="p-8 bg-background border border-outline/10 fade-in-up">
-                    <span class="material-symbols-outlined text-4xl text-primary mb-6 block">psychology</span>
-                    <h3 class="font-headline-lg text-[24px] mb-4">Intention</h3>
-                    <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">We design from the inside out — beginning with how you will feel, not how it will look. Subtraction is our design language.</p>
-                </div>
-                <div class="p-8 bg-background border border-outline/10 fade-in-up">
-                    <span class="material-symbols-outlined text-4xl text-primary mb-6 block">eco</span>
-                    <h3 class="font-headline-lg text-[24px] mb-4">Nature</h3>
-                    <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">Biophilic design is not aesthetic — it is a commitment. Light, air, living green walls, and the sound of water are structural elements, not add-ons.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+<!-- VISION & MISSION -->
+<section class="section">
+  <div class="container">
+    <div class="s-head reveal">
+      <div class="s-label">What Guides Us</div>
+      <h2 class="s-title">A quiet conversation with <em>the land.</em></h2>
+      <p class="s-sub">Two beliefs hold everything we make together — the horizon we are building toward, and the discipline we hold ourselves to.</p>
+    </div>
 
-    <!-- FOUNDERS -->
-    <section class="py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
-        <div class="text-center mb-16 fade-in-up">
-            <span class="font-label-caps text-label-caps text-secondary mb-4 block">THE STEWARDS</span>
-            <h2 class="font-headline-xl text-headline-xl mb-6">Founding <span class="italic">Philosophy</span></h2>
-            <p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto leading-relaxed">
-                Our leadership believes that luxury isn't found in the excessive, but in the essential. By stripping away the unnecessary, they have carved a legacy in stone, earth, and light.
-            </p>
-        </div>
-        <div class="grid grid-cols-2 md:grid-cols-5 gap-8 md:gap-6">
-            <div class="founder-card text-center cursor-default fade-in-up">
-                <div class="w-32 h-32 md:w-40 md:h-40 mx-auto rounded-full overflow-hidden mb-6 ring-2 ring-outline/10 hover:ring-primary/30 transition-all duration-500">
-                    <img class="founder-img w-full h-full object-cover" alt="R Sandeep Kumar Reddy — MD & Co-Founder, TrueNest" src="assets/images/story-compass.jpg" />
-                </div>
-                <h3 class="font-headline-lg text-[18px] leading-tight mb-1">R Sandeep Kumar Reddy</h3>
-                <p class="font-label-caps text-[10px] text-outline mb-3">MD &amp; CO-FOUNDER</p>
-                <p class="font-body-md text-[13px] text-on-surface-variant italic leading-snug">"We design spaces that enhance the soul's connection to nature."</p>
-            </div>
-            <div class="founder-card text-center cursor-default fade-in-up">
-                <div class="w-32 h-32 md:w-40 md:h-40 mx-auto rounded-full overflow-hidden mb-6 ring-2 ring-outline/10 hover:ring-primary/30 transition-all duration-500">
-                    <img class="founder-img w-full h-full object-cover" alt="K Kathirvelan — CEO & Co-Founder, TrueNest" src="assets/images/story-vision.jpg" />
-                </div>
-                <h3 class="font-headline-lg text-[18px] leading-tight mb-1">K Kathirvelan</h3>
-                <p class="font-label-caps text-[10px] text-outline mb-3">CEO &amp; CO-FOUNDER</p>
-                <p class="font-body-md text-[13px] text-on-surface-variant italic leading-snug">"True grandeur is silent — in the tactile quality of a sandstone wall."</p>
-            </div>
-            <div class="founder-card text-center cursor-default fade-in-up">
-                <div class="w-32 h-32 md:w-40 md:h-40 mx-auto rounded-full overflow-hidden mb-6 ring-2 ring-outline/10 hover:ring-primary/30 transition-all duration-500">
-                    <img class="founder-img w-full h-full object-cover" alt="Chegu Siva Krishna — Co-Founder, TrueNest" src="assets/images/story-compass.jpg" />
-                </div>
-                <h3 class="font-headline-lg text-[18px] leading-tight mb-1">Chegu Siva Krishna</h3>
-                <p class="font-label-caps text-[10px] text-outline mb-3">CO-FOUNDER</p>
-                <p class="font-body-md text-[13px] text-on-surface-variant italic leading-snug">"Architecture is the art of breathing — spaces that house life."</p>
-            </div>
-            <div class="founder-card text-center cursor-default fade-in-up">
-                <div class="w-32 h-32 md:w-40 md:h-40 mx-auto rounded-full overflow-hidden mb-6 ring-2 ring-outline/10 hover:ring-primary/30 transition-all duration-500">
-                    <img class="founder-img w-full h-full object-cover" alt="Vennapusa Narender Reddy — Co-Founder, TrueNest" src="assets/images/story-vision.jpg" />
-                </div>
-                <h3 class="font-headline-lg text-[18px] leading-tight mb-1">Vennapusa Narender Reddy</h3>
-                <p class="font-label-caps text-[10px] text-outline mb-3">CO-FOUNDER</p>
-                <p class="font-body-md text-[13px] text-on-surface-variant italic leading-snug">"We curate enduring sanctuaries from honest materials."</p>
-            </div>
-            <div class="founder-card text-center cursor-default fade-in-up">
-                <div class="w-32 h-32 md:w-40 md:h-40 mx-auto rounded-full overflow-hidden mb-6 ring-2 ring-outline/10 hover:ring-primary/30 transition-all duration-500">
-                    <img class="founder-img w-full h-full object-cover" alt="Chegu Girish Kumar — Co-Founder, TrueNest" src="assets/images/story-compass.jpg" />
-                </div>
-                <h3 class="font-headline-lg text-[18px] leading-tight mb-1">Chegu Girish Kumar</h3>
-                <p class="font-label-caps text-[10px] text-outline mb-3">CO-FOUNDER</p>
-                <p class="font-body-md text-[13px] text-on-surface-variant italic leading-snug">"Every site is a borrowed landscape — we design to return more."</p>
-            </div>
-        </div>
-    </section>
+    <div class="story-row">
+      <div class="story-media reveal-clip-up">
+        <img src="assets/images/story-vision.jpg" alt="TrueNest vision — a skyline where every structure breathes">
+      </div>
+      <div class="story-copy reveal d1">
+        <h3>Vision — a skyline where every <em>structure</em> breathes.</h3>
+        <p>To redefine luxury living in Bangalore through biophilic urbanism — crafting residences that exist in quiet conversation with the land, the light, and the legacy of place.</p>
+      </div>
+    </div>
 
-    <!-- CTA -->
-    <section class="py-16 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto border-t border-outline/10">
-        <div class="flex flex-col md:flex-row items-center justify-between gap-8">
-            <div>
-                <h3 class="font-headline-lg text-headline-lg mb-2">Curious about our <span class="italic">philosophy in action?</span></h3>
-                <p class="font-body-md text-body-md text-on-surface-variant">Explore our projects or get in touch with our team.</p>
-            </div>
-            <div class="flex gap-4 flex-shrink-0">
-                <a href="projects.html" class="px-8 py-4 border border-primary text-primary font-label-caps text-label-caps hover:bg-primary hover:text-on-primary transition-all">VIEW PROJECTS</a>
-                <a href="inquiries.html" class="px-8 py-4 bg-on-background text-primary-fixed font-label-caps text-label-caps hover:bg-primary transition-colors">CONTACT US</a>
-            </div>
-        </div>
-    </section>
+    <div class="story-row flip">
+      <div class="story-media reveal-clip-up">
+        <img src="assets/images/story-mission.jpg" alt="TrueNest mission — to build with intention, not excess">
+      </div>
+      <div class="story-copy reveal d1">
+        <h3>Mission — to build with <em>intention</em>, not excess.</h3>
+        <p>We curate enduring sanctuaries from honest materials — concrete, stone, timber, and green — shaping spaces that age with grace and ground their inhabitants in the rhythm of nature.</p>
+      </div>
+    </div>
 
-    <div id="shared-footer"></div>
-    <script src="assets/js/components.js"></script>
-    <script>
-    const obs = new IntersectionObserver(entries => entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); }), {threshold:0.1});
-    document.querySelectorAll('.fade-in-up').forEach(el => obs.observe(el));
-    </script>
+    <figure class="pull-quote reveal-zoom">
+      <iconify-icon icon="solar:quote-up-square-bold"></iconify-icon>
+      <blockquote>Luxury isn't found in the excessive, but in the essential. By stripping away the unnecessary, we carve a legacy in stone, earth, and light.</blockquote>
+      <cite>The TrueNest Founding Philosophy</cite>
+    </figure>
+  </div>
+</section>
+
+<!-- VALUES -->
+<section class="section" style="background:var(--bg-soft)">
+  <div class="container">
+    <div class="s-head reveal">
+      <div class="s-label">The Principles</div>
+      <h2 class="s-title">What we <em>stand for.</em></h2>
+      <p class="s-sub">Three commitments shape every site, every section, and every material decision we make.</p>
+    </div>
+    <div class="values-grid">
+      <article class="value-card reveal">
+        <iconify-icon icon="solar:ruler-pen-linear"></iconify-icon>
+        <h4>Craft</h4>
+        <p>Every material is chosen for its honesty — concrete that ages beautifully, timber that tells time, stone that grounds the spirit.</p>
+      </article>
+      <article class="value-card reveal d1">
+        <iconify-icon icon="solar:lightbulb-bolt-linear"></iconify-icon>
+        <h4>Intention</h4>
+        <p>We design from the inside out — beginning with how you will feel, not how it will look. Subtraction is our design language.</p>
+      </article>
+      <article class="value-card reveal d2">
+        <iconify-icon icon="solar:leaf-linear"></iconify-icon>
+        <h4>Nature</h4>
+        <p>Biophilic design is not aesthetic — it is a commitment. Light, air, living green walls, and the sound of water are structural elements, not add-ons.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- FOUNDERS -->
+<section class="section">
+  <div class="container">
+    <div class="s-head reveal">
+      <div class="s-label">The Stewards</div>
+      <h2 class="s-title">Founding <em>philosophy.</em></h2>
+      <p class="s-sub">Our leadership believes that luxury isn't found in the excessive, but in the essential. By stripping away the unnecessary, they have carved a legacy in stone, earth, and light.</p>
+    </div>
+    <div class="founders-grid">
+      <div class="founder reveal">
+        <div class="founder-photo"><img src="assets/images/story-compass.jpg" alt="R Sandeep Kumar Reddy — MD & Co-Founder, TrueNest"></div>
+        <h4>R Sandeep Kumar Reddy</h4>
+        <div class="role">MD &amp; Co-Founder</div>
+        <p class="said">&ldquo;We design spaces that enhance the soul's connection to nature.&rdquo;</p>
+      </div>
+      <div class="founder reveal d1">
+        <div class="founder-photo"><img src="assets/images/story-vision.jpg" alt="K Kathirvelan — CEO & Co-Founder, TrueNest"></div>
+        <h4>K Kathirvelan</h4>
+        <div class="role">CEO &amp; Co-Founder</div>
+        <p class="said">&ldquo;True grandeur is silent — in the tactile quality of a sandstone wall.&rdquo;</p>
+      </div>
+      <div class="founder reveal d2">
+        <div class="founder-photo"><img src="assets/images/story-compass.jpg" alt="Chegu Siva Krishna — Co-Founder, TrueNest"></div>
+        <h4>Chegu Siva Krishna</h4>
+        <div class="role">Co-Founder</div>
+        <p class="said">&ldquo;Architecture is the art of breathing — spaces that house life.&rdquo;</p>
+      </div>
+      <div class="founder reveal d3">
+        <div class="founder-photo"><img src="assets/images/story-vision.jpg" alt="Vennapusa Narender Reddy — Co-Founder, TrueNest"></div>
+        <h4>Vennapusa Narender Reddy</h4>
+        <div class="role">Co-Founder</div>
+        <p class="said">&ldquo;We curate enduring sanctuaries from honest materials.&rdquo;</p>
+      </div>
+      <div class="founder reveal d4">
+        <div class="founder-photo"><img src="assets/images/story-compass.jpg" alt="Chegu Girish Kumar — Co-Founder, TrueNest"></div>
+        <h4>Chegu Girish Kumar</h4>
+        <div class="role">Co-Founder</div>
+        <p class="said">&ldquo;Every site is a borrowed landscape — we design to return more.&rdquo;</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PHILOSOPHY IN ACTION -->
+<section class="section" style="background:var(--bg-soft)">
+  <div class="container">
+    <div class="story-row">
+      <div class="story-media reveal-clip-up">
+        <img src="assets/images/story-compass.jpg" alt="Every site oriented to its land, light and legacy">
+      </div>
+      <div class="story-copy reveal d1">
+        <h3>Curious about our <em>philosophy in action?</em></h3>
+        <p>Explore the residences where these beliefs become walls, light and green — or get in touch with our team for a private conversation.</p>
+        <p style="margin-top:1.6rem"><a class="btn btn-ghost" href="projects.html"><span>View Projects</span><iconify-icon icon="solar:arrow-right-linear"></iconify-icon></a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <div class="cta-bg story-cta-bg"></div>
+  <div class="container cta-in">
+    <div class="s-label" style="justify-content:center;color:#C9D8B6">Private Conversation</div>
+    <h2>Build with <em>intention.</em></h2>
+    <p>Get in touch with our team to explore TrueNest residences and arrange a discreet site walk.</p>
+    <a class="btn btn-primary" href="inquiries.html"><span>Contact Us</span><iconify-icon icon="solar:arrow-right-linear"></iconify-icon></a>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-in">
+      <div><div class="footer-brand">TRUENEST</div><p class="footer-tag">Boutique biophilic residences at the intersection of nature and architecture. Nandi Hills, Bangalore.</p></div>
+      <div class="footer-col"><h5>Residences</h5><a href="retreat76.html">Retreat 76</a><a href="hillsandskies.html">Hills &amp; Skies</a><a href="projects.html">All Projects</a></div>
+      <div class="footer-col"><h5>Company</h5><a href="story.html">Our Story</a><a href="testimonials.html">Testimonials</a><a href="careers.html">Careers</a></div>
+      <div class="footer-col"><h5>Contact</h5><a href="inquiries.html">Enquire</a><a href="tel:+918044559900">+91 80 4455 9900</a><a href="mailto:hello@truenest.co.in">hello@truenest.co.in</a></div>
+    </div>
+    <div class="footer-base"><span>© 2026 TrueNest · RERA/KA/24/0142</span><span>Truly In Nature</span></div>
+  </div>
+</footer>
+<script src="assets/js/truenest.js"></script>
 </body>
 </html>

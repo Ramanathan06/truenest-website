@@ -1,173 +1,189 @@
-<!DOCTYPE html>
-<html class="light" lang="en">
+<!doctype html>
+<html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact TrueNest | Inquire About Our Residences | Nandi Hills</title>
-    <meta name="description" content="Get in touch with TrueNest. Inquire about Retreat 76 and Hills & Skies residences, schedule a site visit, or request a brochure. Private advisory available." />
-    <meta name="keywords" content="contact TrueNest, inquire Nandi Hills apartments, TrueNest contact, luxury home inquiry Bangalore, Retreat 76 inquiry, Hills Skies inquiry" />
-    <meta name="robots" content="index, follow" />
-    <link rel="canonical" href="https://truenest.co.in/inquiries.html" />
-    <meta property="og:title" content="Contact TrueNest | Private Inquiries" />
-    <meta property="og:description" content="Reach TrueNest's private advisory team for discreet conversations about our Nandi Hills residences." />
-    <meta property="og:image" content="assets/images/luxury-interior.jpg" />
-    <meta property="og:url" content="https://truenest.co.in/inquiries.html" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="assets/css/site.css" />
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <script src="assets/js/tailwind.config.js"></script>
-    <style>
-        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24; }
-        .blueprint-divider { height: 1px; background: rgba(206,197,186,0.4); position: relative; }
-        .blueprint-divider::after { content: "TN-CR-024"; position: absolute; right: 0; top: 4px; font-family: 'Metropolis'; font-size: 10px; color: #c08b3a; letter-spacing: 0.05em; }
-        .form-field input, .form-field textarea, .form-field select { transition: border-color 0.2s ease; }
-    </style>
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "ContactPage",
-        "name": "Contact TrueNest",
-        "description": "Private inquiry page for TrueNest luxury residences in Nandi Hills, Bangalore.",
-        "url": "https://truenest.co.in/inquiries.html",
-        "contactPoint": {
-            "@type": "ContactPoint",
-            "telephone": "+91-80-4455-9900",
-            "email": "hello@truenest.co.in",
-            "contactType": "sales",
-            "availableLanguage": ["English", "Hindi", "Kannada"]
-        }
-    }
-    </script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Private Inquiry | TrueNest — Begin the Conversation</title>
+<meta name="description" content="Reach TrueNest's private advisory team to inquire about Retreat 76 and Hills & Skies, schedule a discreet site visit at Nandi Hills, or request a brochure.">
+<link rel="canonical" href="https://truenest.co.in/inquiries.html">
+<meta property="og:title" content="Private Inquiry | TrueNest">
+<meta property="og:description" content="A discreet conversation about our boutique biophilic residences at Nandi Hills, Bangalore.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&display=swap" rel="stylesheet">
+<script src="https://code.iconify.design/iconify-icon/1.0.8/iconify-icon.min.js"></script>
+<link rel="stylesheet" href="assets/css/truenest.css">
+<style>
+  .inq-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(2.5rem,5vw,4.5rem);align-items:start}
+  .inq-form{background:var(--bg-card);border:1px solid var(--line);border-radius:20px;padding:clamp(1.8rem,3.5vw,3rem)}
+  .inq-form h3{font-family:var(--font-display);font-size:clamp(1.4rem,2.6vw,2rem);font-weight:400;color:var(--ink);margin-bottom:.5rem}
+  .inq-form h3 em{font-style:italic;color:var(--accent)}
+  .inq-form .form-intro{font-size:.9rem;line-height:1.65;color:var(--ink-soft);margin-bottom:2rem}
+  .inq-field{margin-bottom:1.4rem}
+  .inq-field label{display:block;font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:.55rem}
+  .inq-field input,.inq-field select,.inq-field textarea{width:100%;padding:.9rem 1.1rem;border:1px solid var(--line);border-radius:12px;background:var(--bg);font-family:inherit;font-size:.92rem;color:var(--ink);transition:border-color .25s,box-shadow .25s}
+  .inq-field textarea{resize:vertical;min-height:120px}
+  .inq-field input:focus,.inq-field select:focus,.inq-field textarea:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-tint)}
+  .inq-field select{appearance:none;-webkit-appearance:none;cursor:pointer}
+  .inq-prefs{display:flex;gap:1.5rem;flex-wrap:wrap;padding-top:.2rem}
+  .inq-prefs label{display:inline-flex;align-items:center;gap:.5rem;font-size:.86rem;letter-spacing:0;text-transform:none;color:var(--ink);cursor:pointer;margin:0}
+  .inq-prefs input[type=radio]{width:auto;accent-color:var(--accent);cursor:pointer}
+  .inq-submit{width:100%;justify-content:center;margin-top:.6rem}
+  .inq-msg{margin-top:1.2rem;color:var(--accent);font-size:.9rem;opacity:0;transition:opacity .4s;min-height:1.2em;font-weight:500}
+  .inq-msg.show{opacity:1}
+  .inq-aside{display:flex;flex-direction:column;gap:1.1rem}
+  .inq-card{background:var(--bg-soft);border:1px solid var(--line);border-radius:18px;padding:1.7rem}
+  .inq-card .ic-ico{width:42px;height:42px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:var(--accent-tint);color:var(--accent);font-size:1.2rem;margin-bottom:1rem}
+  .inq-card h4{font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:var(--clay);margin-bottom:.7rem}
+  .inq-card p,.inq-card a{font-size:.95rem;line-height:1.7;color:var(--ink-soft)}
+  .inq-card a{display:block;transition:color .25s}
+  .inq-card a:hover{color:var(--accent)}
+  @media (max-width:900px){.inq-grid{grid-template-columns:1fr;gap:2.5rem}}
+</style>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"ContactPage",
+  "name":"Contact TrueNest",
+  "description":"Private inquiry page for TrueNest luxury residences in Nandi Hills, Bangalore.",
+  "url":"https://truenest.co.in/inquiries.html",
+  "contactPoint":{
+    "@type":"ContactPoint",
+    "telephone":"+91-80-4455-9900",
+    "email":"hello@truenest.co.in",
+    "contactType":"sales",
+    "availableLanguage":["English","Hindi","Kannada"]
+  }
+}
+</script>
 </head>
-<body class="bg-background text-on-surface selection:bg-primary-container selection:text-primary">
-    <div id="shared-header"></div>
+<body>
 
-    <!-- HERO -->
-    <header class="pt-40 pb-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
-        <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
-            <div class="md:col-span-8">
-                <span class="font-label-caps text-label-caps text-secondary mb-4 block tracking-widest">CONFIDENTIAL ENQUIRIES</span>
-                <h1 class="font-display-lg text-display-lg md:text-display-xl text-on-surface leading-tight mb-8">
-                    An ecosystem of <span class="italic">absolute discretion</span> and enduring craftsmanship.
-                </h1>
-                <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl leading-relaxed">For those who seek more than a residence — an acquisition of legacy. Our private advisory team facilitates seamless transitions into our most exclusive architectural sanctuaries.</p>
+<nav class="nav" id="nav">
+  <div class="container nav-inner">
+    <a href="index.html" class="nav-logo">TRUENEST</a>
+    <div class="nav-links">
+      <a class="nav-link" href="projects.html">Residences</a>
+      <a class="nav-link" href="retreat76.html">Retreat 76</a>
+      <a class="nav-link" href="story.html">Story</a>
+      <a class="nav-link" href="testimonials.html">Testimonials</a>
+      <a class="nav-link" href="careers.html">Careers</a>
+    </div>
+    <a class="nav-cta" href="inquiries.html">Private Inquiry</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" style="min-height:58vh">
+  <img class="hero-video" src="assets/images/luxury-interior.jpg" alt="TrueNest luxury interior — private sanctuary with valley views">
+  <div class="hero-scrim"></div>
+  <div class="container hero-intro reveal">
+    <div class="hero-tag"><iconify-icon icon="solar:leaf-bold"></iconify-icon><span>Confidential Enquiries</span></div>
+    <h1 class="hero-title">Begin a<br><em>private conversation.</em></h1>
+    <p class="hero-desc">For those who seek more than a residence — an acquisition of legacy. Our private advisory team facilitates seamless, discreet transitions into our most exclusive architectural sanctuaries at Nandi Hills.</p>
+  </div>
+</section>
+
+<!-- INQUIRY -->
+<section class="section">
+  <div class="container">
+    <div class="s-head reveal">
+      <div class="s-label">Private Acquisition</div>
+      <h2 class="s-title">An ecosystem of <em>absolute discretion.</em></h2>
+      <p class="s-sub">Leave your details and a TrueNest advisor will arrange a discreet site walk and answer your questions personally.</p>
+    </div>
+
+    <div class="inq-grid">
+      <!-- FORM -->
+      <div class="inq-form reveal-zoom">
+        <h3>Private Acquisition <em>Inquiry</em></h3>
+        <p class="form-intro">All enquiries are handled in confidence. We typically respond within one business day.</p>
+        <form id="inqForm" novalidate>
+          <div class="inq-field">
+            <label for="f-name">Full Name</label>
+            <input type="text" id="f-name" name="name" placeholder="Your formal name" required>
+          </div>
+          <div class="inq-field">
+            <label for="f-email">Email Address</label>
+            <input type="email" id="f-email" name="email" placeholder="your@email.com" required>
+          </div>
+          <div class="inq-field">
+            <label>Contact Preference</label>
+            <div class="inq-prefs">
+              <label><input type="radio" name="pref" value="email" checked> Email</label>
+              <label><input type="radio" name="pref" value="call"> Phone Call</label>
+              <label><input type="radio" name="pref" value="whatsapp"> WhatsApp</label>
             </div>
+          </div>
+          <div class="inq-field">
+            <label for="f-project">Project Interest</label>
+            <select id="f-project" name="project">
+              <option value="">Select a project</option>
+              <option>Retreat 76 — Nandi Hills</option>
+              <option>Hills &amp; Skies — Nandi Hills</option>
+              <option>Both Projects</option>
+              <option>Future Projects</option>
+            </select>
+          </div>
+          <div class="inq-field">
+            <label for="f-message">Your Requirements</label>
+            <textarea id="f-message" name="message" rows="4" placeholder="Tell us about your vision, timeline, or specific needs..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary inq-submit"><span>Submit Inquiry</span><iconify-icon icon="solar:arrow-right-linear"></iconify-icon></button>
+          <div class="inq-msg" id="inqMsg" role="status" aria-live="polite"></div>
+        </form>
+      </div>
+
+      <!-- CONTACT DETAILS -->
+      <aside class="inq-aside">
+        <div class="inq-card reveal d1">
+          <div class="ic-ico"><iconify-icon icon="solar:map-point-linear"></iconify-icon></div>
+          <h4>Office</h4>
+          <p>#17, SLN Layout,<br>Rampura,<br>Bangalore — 560049</p>
         </div>
-    </header>
+        <div class="inq-card reveal d2">
+          <div class="ic-ico"><iconify-icon icon="solar:phone-linear"></iconify-icon></div>
+          <h4>Direct</h4>
+          <a href="mailto:hello@truenest.co.in">hello@truenest.co.in</a>
+          <a href="tel:+918044559900">+91 80 4455 9900</a>
+        </div>
+        <div class="inq-card reveal d3">
+          <div class="ic-ico"><iconify-icon icon="solar:clock-circle-linear"></iconify-icon></div>
+          <h4>Hours</h4>
+          <p>Mon–Sat<br>10:00 — 18:00 IST<br>By appointment</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
 
-    <!-- MAIN CONTENT -->
-    <main class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto space-y-section-gap pb-section-gap">
-        <section class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
-            <!-- FORM -->
-            <div class="lg:col-span-5 bg-surface-container-low p-8 md:p-12 border border-outline/10">
-                <h2 class="font-headline-lg text-headline-lg text-on-surface mb-10">Private Acquisition Inquiry</h2>
-                <form class="space-y-10" action="mailto:hello@truenest.co.in" method="GET" enctype="text/plain">
-                    <div class="form-field">
-                        <label class="font-label-caps text-label-caps text-on-surface-variant mb-2 block">Full Name</label>
-                        <input class="w-full bg-transparent border-0 border-b border-outline-variant py-3 px-0 focus:ring-0 focus:border-primary font-body-md text-body-md outline-none" placeholder="Your formal name" type="text" name="name" required />
-                    </div>
-                    <div class="form-field">
-                        <label class="font-label-caps text-label-caps text-on-surface-variant mb-2 block">Email Address</label>
-                        <input class="w-full bg-transparent border-0 border-b border-outline-variant py-3 px-0 focus:ring-0 focus:border-primary font-body-md text-body-md outline-none" placeholder="your@email.com" type="email" name="email" required />
-                    </div>
-                    <div class="form-field">
-                        <label class="font-label-caps text-label-caps text-on-surface-variant mb-2 block">Contact Preference</label>
-                        <div class="flex gap-8 py-3">
-                            <label class="flex items-center gap-2 cursor-pointer font-body-md text-body-md">
-                                <input class="text-primary focus:ring-primary border-outline" name="pref" type="radio" value="email" /> Email
-                            </label>
-                            <label class="flex items-center gap-2 cursor-pointer font-body-md text-body-md">
-                                <input class="text-primary focus:ring-primary border-outline" name="pref" type="radio" value="call" /> Phone Call
-                            </label>
-                            <label class="flex items-center gap-2 cursor-pointer font-body-md text-body-md">
-                                <input class="text-primary focus:ring-primary border-outline" name="pref" type="radio" value="whatsapp" /> WhatsApp
-                            </label>
-                        </div>
-                    </div>
-                    <div class="form-field">
-                        <label class="font-label-caps text-label-caps text-on-surface-variant mb-2 block">Project Interest</label>
-                        <select class="w-full bg-transparent border-0 border-b border-outline-variant py-3 px-0 focus:ring-0 focus:border-primary font-body-md text-body-md outline-none appearance-none" name="project">
-                            <option value="">Select a project</option>
-                            <option>Retreat 76 — Nandi Hills</option>
-                            <option>Hills & Skies — Nandi Hills</option>
-                            <option>Both Projects</option>
-                            <option>Future Projects</option>
-                        </select>
-                    </div>
-                    <div class="form-field">
-                        <label class="font-label-caps text-label-caps text-on-surface-variant mb-2 block">Your Requirements</label>
-                        <textarea class="w-full bg-transparent border-0 border-b border-outline-variant py-3 px-0 focus:ring-0 focus:border-primary font-body-md text-body-md resize-none outline-none" placeholder="Tell us about your vision, timeline, or specific needs..." rows="4" name="message"></textarea>
-                    </div>
-                    <button type="submit" class="w-full py-5 bg-primary text-on-primary font-label-caps text-label-caps tracking-widest hover:bg-on-surface-variant transition-all flex justify-between items-center px-8 group">
-                        SUBMIT INQUIRY
-                        <span class="material-symbols-outlined group-hover:translate-x-2 transition-transform">arrow_forward</span>
-                    </button>
-                </form>
-            </div>
-
-            <!-- RIGHT: IMAGE + CONTACT -->
-            <div class="lg:col-span-7 flex flex-col gap-gutter">
-                <div class="relative overflow-hidden" style="height:500px">
-                    <img alt="TrueNest luxury interior — private sanctuary with valley views" class="w-full h-full object-cover" src="assets/images/luxury-interior.jpg" />
-                    <div class="absolute inset-0 border-[20px] border-surface/20 pointer-events-none"></div>
-                </div>
-                <div class="blueprint-divider my-2"></div>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    <div>
-                        <h3 class="font-label-caps text-label-caps text-primary mb-3">OFFICE</h3>
-                        <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">#17, SLN Layout,<br />Rampura,<br />Bangalore — 560049</p>
-                    </div>
-                    <div>
-                        <h3 class="font-label-caps text-label-caps text-primary mb-3">DIRECT</h3>
-                        <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
-                            <a href="mailto:hello@truenest.co.in" class="hover:text-primary transition-colors">hello@truenest.co.in</a><br />
-                            <a href="tel:+918044559900" class="hover:text-primary transition-colors">+91 80 4455 9900</a>
-                        </p>
-                    </div>
-                    <div>
-                        <h3 class="font-label-caps text-label-caps text-primary mb-3">HOURS</h3>
-                        <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">Mon–Sat<br />10:00 — 18:00 IST<br />By appointment</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ACQUISITION EXPERIENCE -->
-        <section>
-            <div class="mb-14">
-                <h2 class="font-headline-lg text-headline-lg text-on-surface mb-2">The Acquisition <span class="italic">Experience</span></h2>
-                <div class="w-24 h-0.5 bg-primary"></div>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-surface-container-high p-10 flex flex-col justify-between border border-outline/5 hover:border-primary/20 transition-all">
-                    <div>
-                        <span class="material-symbols-outlined text-4xl text-primary mb-8 block">lock</span>
-                        <h3 class="font-headline-lg text-headline-lg mb-4">Privacy Custody</h3>
-                        <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">Non-disclosure protocols for all site visits and negotiations. We manage your investment identity with absolute vigilance.</p>
-                    </div>
-                </div>
-                <div class="bg-primary text-on-primary p-10 flex flex-col justify-between shadow-2xl">
-                    <div>
-                        <span class="material-symbols-outlined text-4xl mb-8 block">architecture</span>
-                        <h3 class="font-headline-lg text-headline-lg mb-4">Structural Bespoke</h3>
-                        <p class="font-body-md text-body-md opacity-80 leading-relaxed">Direct access to our lead architects for pre-acquisition structural modifications and interior customization during the build phase.</p>
-                    </div>
-                </div>
-                <div class="bg-surface-container-high p-10 flex flex-col justify-between border border-outline/5 hover:border-primary/20 transition-all">
-                    <div>
-                        <span class="material-symbols-outlined text-4xl text-primary mb-8 block">doorbell</span>
-                        <h3 class="font-headline-lg text-headline-lg mb-4">Lifestyle Curation</h3>
-                        <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">Post-acquisition management including landscape maintenance, private security integration, and art installation services.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <div id="shared-footer"></div>
-    <script src="assets/js/components.js"></script>
+<footer class="footer">
+  <div class="container">
+    <div class="footer-in">
+      <div><div class="footer-brand">TRUENEST</div><p class="footer-tag">Boutique biophilic residences at the intersection of nature and architecture. Nandi Hills, Bangalore.</p></div>
+      <div class="footer-col"><h5>Residences</h5><a href="retreat76.html">Retreat 76</a><a href="hillsandskies.html">Hills &amp; Skies</a><a href="projects.html">All Projects</a></div>
+      <div class="footer-col"><h5>Company</h5><a href="story.html">Our Story</a><a href="testimonials.html">Testimonials</a><a href="careers.html">Careers</a></div>
+      <div class="footer-col"><h5>Contact</h5><a href="inquiries.html">Enquire</a><a href="tel:+918044559900">+91 80 4455 9900</a><a href="mailto:hello@truenest.co.in">hello@truenest.co.in</a></div>
+    </div>
+    <div class="footer-base"><span>© 2026 TrueNest · RERA/KA/24/0142</span><span>Truly In Nature</span></div>
+  </div>
+</footer>
+<script src="assets/js/truenest.js"></script>
+<script>
+// Inquiry form (front-end only)
+(function(){
+  var f=document.getElementById('inqForm'),m=document.getElementById('inqMsg');
+  if(!f)return;
+  f.addEventListener('submit',function(e){
+    e.preventDefault();
+    var n=f.name.value.trim(),em=f.email.value.trim();
+    if(!n||!em){m.textContent='Please enter your name and email.';m.classList.add('show');return;}
+    m.textContent='Thank you, '+n.split(' ')[0]+'. A TrueNest advisor will be in touch shortly.';
+    m.classList.add('show');
+    f.reset();
+  });
+})();
+</script>
 </body>
 </html>
