@@ -295,7 +295,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
 
 <!-- HERO: cinematic film, looping -->
 <section class="hero" id="hero">
-  <video class="hero-video" autoplay muted playsinline loop src="assets/images/hero.mp4"></video>
+  <video class="hero-video" autoplay muted playsinline preload="auto" src="assets/images/hero.mp4"></video>
   <div class="hero-scrim"></div>
 
   <div class="container hero-intro">
@@ -309,7 +309,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
   </div>
 </section>
 
-<!-- ONGOING PROJECT — revealed on scroll, kept after the looping hero -->
+<!-- ONGOING PROJECT — auto-revealed when the hero film finishes (or on scroll) -->
 <section class="ob" id="ongoing">
   <img class="ob-bg" src="assets/images/retreat76-elevation.jpg" alt="Retreat 76">
   <div class="ob-scrim"></div>
@@ -550,19 +550,36 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
 // Nav scroll
 (function(){const n=document.getElementById('nav');const u=()=>n.classList.toggle('scrolled',scrollY>50);addEventListener('scroll',u,{passive:true});u();})();
 
-// Hero: cinematic film loops continuously. The Retreat 76 banner now
-// lives in its own #ongoing section below, revealed on scroll.
-// Reduced-motion users get a paused first frame (no autoplaying video).
+// Hero: the cinematic film plays ONCE, then the ongoing-project
+// banner (#ongoing) is automatically revealed and brought into view.
+// Reduced-motion users (and autoplay-blocked / errored video) skip
+// straight to the banner so the project is always reachable.
 (function(){
   const hero=document.getElementById('hero');
   const vid=hero.querySelector('.hero-video');
+  const ongoing=document.getElementById('ongoing');
+  let revealed=false;
+  const revealOngoing=()=>{
+    if(revealed)return; revealed=true;
+    if(ongoing){
+      ongoing.querySelectorAll('.reveal,.reveal-clip-up,.reveal-pop,.reveal-zoom')
+        .forEach(x=>x.classList.add('visible'));
+      ongoing.scrollIntoView({behavior:'smooth',block:'start'});
+    }
+  };
   if(matchMedia('(prefers-reduced-motion: reduce)').matches){
-    try{vid.removeAttribute('autoplay');vid.pause()}catch(e){}return;
+    try{vid.removeAttribute('autoplay');vid.pause()}catch(e){}
+    revealOngoing(); return;
   }
-  vid.loop=true;
-  const play=()=>{const p=vid.play();if(p&&p.catch)p.catch(()=>{});};
-  play();
-  vid.addEventListener('ended',play); // safety net if loop attr is ignored
+  vid.addEventListener('ended',revealOngoing);
+  vid.addEventListener('error',revealOngoing);
+  const p=vid.play();
+  if(p&&p.catch)p.catch(revealOngoing); // autoplay blocked -> show banner
+  // Safety net: if the video never fires 'ended' (e.g. stalled), reveal
+  // once its duration has elapsed.
+  vid.addEventListener('loadedmetadata',()=>{
+    if(isFinite(vid.duration))setTimeout(revealOngoing,(vid.duration+1)*1000);
+  });
 })();
 
 // Reveal
