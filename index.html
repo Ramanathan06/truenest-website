@@ -530,26 +530,20 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
 // Nav scroll
 (function(){const n=document.getElementById('nav');const u=()=>n.classList.toggle('scrolled',scrollY>50);addEventListener('scroll',u,{passive:true});u();})();
 
-// Hero: cinematic film ~15s -> Retreat 76 still
+// Hero: cinematic film loops continuously.
+// Reduced-motion users get the static Retreat 76 still instead of autoplaying video.
 (function(){
   const hero=document.getElementById('hero');
   const vid=hero.querySelector('.hero-video');
   const bar=document.getElementById('heroProgress');
-  const DUR=15000;
-  if(matchMedia('(prefers-reduced-motion: reduce)').matches){hero.classList.add('show-still');try{vid.pause()}catch(e){}return;}
-  let start=null,done=false;
-  function tick(t){
-    if(done)return;
-    if(!start)start=t;
-    const p=Math.min((t-start)/DUR,1);
-    bar.style.width=(p*100)+'%';
-    if(p>=1){done=true;hero.classList.add('show-still');try{vid.pause()}catch(e){}return;}
-    requestAnimationFrame(tick);
+  if(bar)bar.style.display='none';
+  if(matchMedia('(prefers-reduced-motion: reduce)').matches){
+    hero.classList.add('show-still');try{vid.pause()}catch(e){}return;
   }
-  let begun=false;
-  const go=()=>{if(begun)return;begun=true;requestAnimationFrame(tick);};
-  vid.addEventListener('playing',go,{once:true});
-  setTimeout(go,800);
+  vid.loop=true;
+  const play=()=>{const p=vid.play();if(p&&p.catch)p.catch(()=>{});};
+  play();
+  vid.addEventListener('ended',play); // safety net if loop attr is ignored
 })();
 
 // Reveal
