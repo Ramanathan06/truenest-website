@@ -49,9 +49,15 @@ npm run dev
 - Leads: http://localhost:3000/leads?key=YOUR_LEADS_ADMIN_TOKEN
 
 ### 5. Deploy (Vercel)
-1. https://vercel.com → New Project → import this repo, set **Root Directory** to `app`.
-2. Add the same four env vars in Vercel → Project → Settings → Environment Variables.
-3. Deploy. Your leads page: `https://<deployment>/leads?key=YOUR_LEADS_ADMIN_TOKEN`.
+1. https://vercel.com → New Project → import this repo.
+2. **Set Root Directory to `app`** (dashboard only — this *cannot* be set in
+   `vercel.json`; it's the one manual step). Vercel auto-detects Next.js.
+3. Add the same four env vars in Vercel → Project → Settings → Environment Variables.
+4. Deploy. Your leads page: `https://<deployment>/leads?key=YOUR_LEADS_ADMIN_TOKEN`.
+
+`app/vercel.json` already pins the rest: Next.js framework, Mumbai region
+(`bom1`, close to a Mumbai Supabase project), and the `/api/leads` function
+timeout — so you only do the Root Directory + env vars by hand.
 
 ## Security notes
 - `leads` has **RLS enabled with no policies** → the browser/anon key can't
