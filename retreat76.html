@@ -1,261 +1,275 @@
-<!DOCTYPE html>
-<html class="light" lang="en">
+<!doctype html>
+<html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Retreat 76 | TrueNest | 76 Luxury Residences in Nandi Hills, Bangalore</title>
-    <meta name="description" content="Retreat 76 offers 76 luxury 1 BHK service apartments at 915m altitude in Nandi Hills, Bangalore. Starting ₹60 Lakhs. RERA & CUDA approved. Infinity pool, spa, organic garden." />
-    <meta name="keywords" content="Retreat 76, Nandi Hills apartments, luxury 1 BHK Bangalore, TrueNest Retreat 76, biophilic homes Nandi Hills, service apartments Nandi Hills" />
-    <meta name="robots" content="index, follow" />
-    <link rel="canonical" href="https://truenest.co.in/retreat76.html" />
-    <meta property="og:title" content="Retreat 76 | TrueNest Nandi Hills" />
-    <meta property="og:description" content="76 luxury biophilic residences at 915m altitude. Starting ₹60 Lakhs. RERA approved." />
-    <meta property="og:image" content="assets/images/retreat76-elevation.jpg" />
-    <meta property="og:url" content="https://truenest.co.in/retreat76.html" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="assets/css/site.css" />
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <script src="assets/js/tailwind.config.js"></script>
-    <style>
-        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24; }
-        .blueprint-line { height: 1px; background-color: #b8d4c0; opacity: 0.4; }
-        .tab-btn.active { color: #c08b3a; border-bottom: 2px solid #c08b3a; }
-        .fade-in-up { opacity: 0; transform: translateY(24px); transition: opacity 0.7s ease, transform 0.7s ease; }
-        .fade-in-up.visible { opacity: 1; transform: translateY(0); }
-        .amenity-card { transition: background 0.3s ease, transform 0.3s ease; }
-        .amenity-card:hover { background: #e8e1d5; transform: translateY(-4px); }
-        /* Sunset warm tint for hero background */
-        .sunset-bg { background: linear-gradient(135deg, #fafaf6 0%, #f5e8d0 40%, #fafaf6 100%); }
-    </style>
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "RealEstateListing",
-        "name": "Retreat 76",
-        "description": "76 luxury 1 BHK service apartments at 915m altitude in Nandi Hills, Bangalore. Biophilic design with infinity pool, spa and organic garden.",
-        "url": "https://truenest.co.in/retreat76.html",
-        "address": { "@type": "PostalAddress", "addressLocality": "Nandi Hills", "addressRegion": "Karnataka", "addressCountry": "IN" },
-        "geo": { "@type": "GeoCoordinates", "latitude": 13.3979, "longitude": 77.6918 },
-        "offers": { "@type": "Offer", "price": "6000000", "priceCurrency": "INR", "availability": "https://schema.org/PreOrder" },
-        "numberOfRooms": 1,
-        "floorSize": { "@type": "QuantitativeValue", "value": "550", "unitCode": "SQF" }
-    }
-    </script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Retreat 76 | TrueNest — Biophilic Residences, Nandi Hills</title>
+<meta name="description" content="Retreat 76 — 76 luxury 1 BHK service apartments at 915m altitude in Nandi Hills, Bangalore. Starting ₹60 Lakhs. RERA &amp; CUDA approved. Infinity pool, spa, organic garden.">
+<link rel="canonical" href="https://truenest.co.in/retreat76.html">
+<meta property="og:title" content="Retreat 76 | TrueNest">
+<meta property="og:description" content="76 biophilic 1 BHK residences at 915m in Nandi Hills. Starting ₹60 Lakhs. RERA &amp; CUDA approved.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&display=swap" rel="stylesheet">
+<script src="https://code.iconify.design/iconify-icon/1.0.8/iconify-icon.min.js"></script>
+<link rel="stylesheet" href="assets/css/truenest.css">
+<style>
+/* Page-specific layout for Retreat 76 only */
+.r-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem;margin-top:2.5rem}
+.r-stat{background:var(--bg-card);border:1px solid var(--line);border-radius:16px;padding:1.6rem 1.4rem;text-align:center}
+.r-stat .n{font-family:var(--font-display);font-size:clamp(1.5rem,2.6vw,2rem);color:var(--accent);line-height:1}
+.r-stat .l{font-size:.64rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-soft);margin-top:.6rem}
+
+.r-badges{display:flex;gap:.7rem;flex-wrap:wrap;justify-content:center;margin-top:2rem}
+.r-badge{display:inline-flex;align-items:center;gap:.5rem;padding:.5rem 1.1rem;border:1px solid var(--line);border-radius:100px;background:var(--bg-card);font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft)}
+.r-badge iconify-icon{color:var(--accent);font-size:1rem}
+
+.r-gallery{display:grid;grid-template-columns:1.4fr 1fr;gap:1.2rem;margin-top:1rem}
+.r-gallery figure{position:relative;border-radius:16px;overflow:hidden;aspect-ratio:4/3}
+.r-gallery figure.lead{grid-row:span 2;aspect-ratio:auto}
+.r-gallery img{width:100%;height:100%;object-fit:cover;transition:transform 1s var(--ease)}
+.r-gallery figure:hover img{transform:scale(1.05)}
+.r-gallery figcaption{position:absolute;left:1rem;bottom:1rem;font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:#F8F5EF;background:rgba(20,19,16,.4);backdrop-filter:blur(6px);padding:.4rem .8rem;border-radius:100px}
+
+.unit-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;max-width:880px;margin:0 auto}
+.unit-card{position:relative;background:var(--bg-card);border:1px solid var(--line);border-radius:18px;padding:2.2rem}
+.unit-card.premium{border-color:var(--accent)}
+.unit-tag{position:absolute;top:-.7rem;left:1.8rem;background:var(--accent);color:var(--bg);font-size:.6rem;letter-spacing:.16em;text-transform:uppercase;padding:.35rem .9rem;border-radius:100px}
+.unit-card .kicker{font-size:.64rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-soft)}
+.unit-card h3{font-family:var(--font-display);font-size:1.5rem;margin:.5rem 0 1.2rem}
+.unit-rule{height:1px;background:var(--line);margin:1.2rem 0}
+.unit-row{display:flex;justify-content:space-between;font-size:.86rem;padding:.4rem 0}
+.unit-row span{color:var(--ink-soft)}
+.unit-row b{font-weight:600;color:var(--ink)}
+.unit-price{margin-top:1.4rem;background:var(--bg-soft);border:1px solid var(--line);border-radius:12px;padding:1rem;text-align:center}
+.unit-price .pl{font-size:.6rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-soft)}
+.unit-price .pv{font-family:var(--font-display);font-size:1.5rem;color:var(--accent);margin-top:.3rem}
+.unit-fine{text-align:center;font-size:.74rem;font-style:italic;color:var(--ink-soft);margin-top:1.6rem}
+
+.amen-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem}
+.amen-card{background:var(--bg-card);border:1px solid var(--line);border-radius:16px;padding:1.8rem 1.4rem;text-align:center;transition:transform .4s var(--ease),border-color .4s}
+.amen-card:hover{transform:translateY(-4px);border-color:var(--accent)}
+.amen-card iconify-icon{font-size:2rem;color:var(--accent)}
+.amen-card h4{font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;margin:.9rem 0 .5rem}
+.amen-card p{font-size:.82rem;line-height:1.6;color:var(--ink-soft)}
+
+.loc-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(2.5rem,5vw,4.5rem);align-items:start}
+.loc-list{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.loc-item{display:flex;gap:1rem;background:var(--bg-card);border:1px solid var(--line);border-radius:14px;padding:1.2rem;transition:border-color .3s}
+.loc-item:hover{border-color:var(--accent)}
+.loc-item iconify-icon{font-size:1.4rem;color:var(--accent);flex-shrink:0;margin-top:.1rem}
+.loc-item h4{font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;margin-bottom:.3rem}
+.loc-item p{font-size:.8rem;line-height:1.55;color:var(--ink-soft)}
+.loc-link{display:inline-flex;align-items:center;gap:.5rem;margin-top:1.6rem;font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);font-weight:600}
+.loc-link iconify-icon{font-size:1.1rem}
+
+.back-link{display:inline-flex;align-items:center;gap:.5rem;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:1.4rem;transition:color .3s}
+.back-link:hover{color:var(--accent)}
+
+@media (max-width:900px){
+  .r-grid{grid-template-columns:1fr 1fr}
+  .r-gallery,.unit-grid,.loc-grid{grid-template-columns:1fr}
+  .r-gallery figure.lead{grid-row:auto}
+  .amen-grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:560px){
+  .r-grid,.amen-grid,.loc-list{grid-template-columns:1fr}
+}
+</style>
 </head>
-<body class="bg-background text-on-surface font-body-md antialiased sunset-bg">
-    <div id="shared-header"></div>
+<body>
 
-    <!-- HERO -->
-    <header class="pt-32 pb-12 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
-        <a href="projects.html" class="inline-flex items-center gap-2 text-outline hover:text-primary transition-colors mb-8 group">
-            <span class="material-symbols-outlined text-lg transition-transform group-hover:-translate-x-1">arrow_back</span>
-            <span class="font-label-caps text-label-caps">BACK TO PROJECTS</span>
-        </a>
-        <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-end">
-            <div class="md:col-span-8">
-                <div class="flex items-center gap-4 mb-4">
-                    <div class="flex items-center gap-2 px-4 py-2 border border-tertiary/30 bg-tertiary-container/10">
-                        <span class="material-symbols-outlined text-lg text-tertiary">verified</span>
-                        <span class="font-label-caps text-[11px] text-tertiary">RERA APPROVED</span>
-                    </div>
-                    <div class="flex items-center gap-2 px-4 py-2 border border-secondary/30 bg-secondary-container/10">
-                        <span class="material-symbols-outlined text-lg text-secondary">assured_workload</span>
-                        <span class="font-label-caps text-[11px] text-secondary">CUDA APPROVED</span>
-                    </div>
-                </div>
-                <span class="font-label-caps text-label-caps text-secondary mb-3 block">PROJECT 01 · COMING SOON</span>
-                <h1 class="font-display-xl text-display-xl text-primary leading-tight mb-4">Retreat 76</h1>
-                <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl leading-relaxed">
-                    Perched on the serene slopes of Nandi Hills, Retreat 76 redefines the service apartment experience. Monolithic concrete forms softened by indigenous flora — a sanctuary carved from the mountain itself.
-                </p>
-            </div>
-            <div class="md:col-span-4 flex md:justify-end mt-6 md:mt-0 gap-3">
-                <a href="#" class="inline-flex items-center gap-2 px-6 py-3 bg-on-background text-primary-fixed font-label-caps text-label-caps hover:bg-primary transition-colors">
-                    <span class="material-symbols-outlined text-lg">download</span> BROCHURE
-                </a>
-                <a href="inquiries.html" class="inline-flex items-center gap-2 px-6 py-3 border border-primary text-primary font-label-caps text-label-caps hover:bg-primary hover:text-on-primary transition-all">
-                    ENQUIRE
-                </a>
-            </div>
-        </div>
-    </header>
+<nav class="nav" id="nav">
+  <div class="container nav-inner">
+    <a href="index.html" class="nav-logo">TRUENEST</a>
+    <div class="nav-links">
+      <a class="nav-link" href="projects.html">Residences</a>
+      <a class="nav-link" href="retreat76.html">Retreat 76</a>
+      <a class="nav-link" href="story.html">Story</a>
+      <a class="nav-link" href="testimonials.html">Testimonials</a>
+      <a class="nav-link" href="careers.html">Careers</a>
+    </div>
+    <a class="nav-cta" href="inquiries.html">Private Inquiry</a>
+  </div>
+</nav>
 
-    <!-- IMAGE GALLERY TABS -->
-    <section class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto mb-16">
-        <div class="flex gap-6 mb-6 border-b border-outline/10 overflow-x-auto">
-            <button class="tab-btn active font-label-caps text-label-caps py-3 px-1 text-outline whitespace-nowrap transition-colors" data-tab="elevation">ELEVATION</button>
-            <button class="tab-btn font-label-caps text-label-caps py-3 px-1 text-outline whitespace-nowrap transition-colors" data-tab="interior">INTERIOR</button>
-            <button class="tab-btn font-label-caps text-label-caps py-3 px-1 text-outline whitespace-nowrap transition-colors" data-tab="floorplan">FLOOR PLAN</button>
-            <button class="tab-btn font-label-caps text-label-caps py-3 px-1 text-outline whitespace-nowrap transition-colors" data-tab="amenities-gallery">AMENITIES</button>
-            <button class="tab-btn font-label-caps text-label-caps py-3 px-1 text-outline whitespace-nowrap transition-colors" data-tab="surroundings">SURROUNDINGS</button>
-        </div>
-        <div id="gallery">
-            <div class="tab-panel" data-tab="elevation">
-                <img class="w-full aspect-[16/9] object-cover" alt="Retreat 76 exterior elevation — brutalist architecture meets nature" src="assets/images/retreat76-elevation.jpg" />
-            </div>
-            <div class="tab-panel hidden" data-tab="interior">
-                <img class="w-full aspect-[16/9] object-cover" alt="Retreat 76 interior — warm natural materials and minimal luxury" src="assets/images/interior-lounge.jpg" />
-            </div>
-            <div class="tab-panel hidden" data-tab="floorplan">
-                <div class="w-full aspect-[16/9] bg-surface-container flex flex-col items-center justify-center gap-4">
-                    <span class="material-symbols-outlined text-5xl text-outline/40">architecture</span>
-                    <p class="font-headline-lg text-headline-lg text-on-surface-variant italic">Floor plans coming soon</p>
-                    <a href="inquiries.html" class="font-label-caps text-label-caps text-primary border-b border-primary pb-0.5">Request floor plan →</a>
-                </div>
-            </div>
-            <div class="tab-panel hidden" data-tab="amenities-gallery">
-                <img class="w-full aspect-[16/9] object-cover" alt="Retreat 76 amenities — infinity pool and wellness spaces" src="assets/images/nandi-hills-mist.jpg" />
-            </div>
-            <div class="tab-panel hidden" data-tab="surroundings">
-                <img class="w-full aspect-[16/9] object-cover" alt="Nandi Hills surroundings — misty slopes and lush greenery" src="assets/images/nandi-hills-mist.jpg" />
-            </div>
-        </div>
-    </section>
+<!-- HERO -->
+<section class="hero" id="hero" style="min-height:74vh">
+  <img class="hero-video" src="assets/images/retreat76-elevation.jpg" alt="Retreat 76 — exterior elevation in Nandi Hills">
+  <div class="hero-scrim"></div>
+  <div class="container">
+    <div class="hero-intro">
+      <span class="hero-tag"><iconify-icon icon="solar:leaf-bold"></iconify-icon><span>Project 01 · Coming Soon · RERA &amp; CUDA Approved</span></span>
+      <h1 class="hero-title">Retreat <em>76</em></h1>
+      <p class="hero-desc">Perched on the serene slopes of Nandi Hills at 915m, Retreat 76 redefines the service-apartment experience — monolithic forms softened by indigenous flora, a sanctuary carved from the mountain itself.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="inquiries.html"><span>Request the Brochure</span><iconify-icon icon="solar:arrow-right-linear"></iconify-icon></a>
+        <a class="btn btn-light" href="projects.html"><span>All Residences</span></a>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <!-- UNIT SPECS -->
-    <section class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto mb-24 fade-in-up">
-        <span class="font-label-caps text-label-caps text-secondary mb-4 block">UNIT SPECIFICATIONS</span>
-        <h2 class="font-headline-xl text-headline-xl mb-3">Choose Your <span class="italic">Sanctuary</span></h2>
-        <p class="font-body-md text-on-surface-variant mb-12 max-w-xl leading-relaxed">Thoughtfully designed 1 BHK service apartments in two distinct layouts — each offering a private balcony with panoramic hill views.</p>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl">
-            <!-- Variant A -->
-            <div class="border border-outline/15 p-8 hover:border-primary/30 transition-colors bg-background">
-                <span class="font-label-caps text-[10px] text-outline block mb-4">1 BHK — VARIANT A</span>
-                <h3 class="font-headline-lg text-headline-lg mb-2">Compact Studio</h3>
-                <div class="blueprint-line w-full my-6"></div>
-                <div class="space-y-3 mb-8">
-                    <div class="flex justify-between"><span class="text-outline text-sm">Super Built-up</span><span class="text-on-surface font-medium">550 sq.ft</span></div>
-                    <div class="flex justify-between"><span class="text-outline text-sm">Carpet Area</span><span class="text-on-surface font-medium">~410 sq.ft</span></div>
-                    <div class="flex justify-between"><span class="text-outline text-sm">Balcony</span><span class="text-on-surface font-medium">Private sit-out</span></div>
-                    <div class="flex justify-between"><span class="text-outline text-sm">Facing</span><span class="text-on-surface font-medium">Valley / East</span></div>
-                </div>
-                <div class="bg-primary-container/50 p-4 text-center">
-                    <span class="font-label-caps text-[10px] text-outline block">PRICE STARTS FROM</span>
-                    <span class="font-headline-lg text-headline-lg text-primary">₹60 Lakhs*</span>
-                </div>
-            </div>
-            <!-- Variant B -->
-            <div class="border border-primary/30 p-8 relative ring-1 ring-primary/10 bg-background">
-                <span class="absolute -top-3 left-6 bg-primary text-on-primary px-3 py-1 font-label-caps text-[10px]">PREMIUM</span>
-                <span class="font-label-caps text-[10px] text-outline block mb-4">1 BHK — VARIANT B</span>
-                <h3 class="font-headline-lg text-headline-lg mb-2">Grand Studio</h3>
-                <div class="blueprint-line w-full my-6"></div>
-                <div class="space-y-3 mb-8">
-                    <div class="flex justify-between"><span class="text-outline text-sm">Super Built-up</span><span class="text-on-surface font-medium">700 sq.ft</span></div>
-                    <div class="flex justify-between"><span class="text-outline text-sm">Carpet Area</span><span class="text-on-surface font-medium">~520 sq.ft</span></div>
-                    <div class="flex justify-between"><span class="text-outline text-sm">Balcony</span><span class="text-on-surface font-medium">Wrap-around, extended</span></div>
-                    <div class="flex justify-between"><span class="text-outline text-sm">Facing</span><span class="text-on-surface font-medium">Panoramic Hill View</span></div>
-                </div>
-                <div class="bg-primary-container/50 p-4 text-center">
-                    <span class="font-label-caps text-[10px] text-outline block">PRICE STARTS FROM</span>
-                    <span class="font-headline-lg text-headline-lg text-primary">₹60 Lakhs*</span>
-                </div>
-            </div>
-        </div>
-        <p class="text-outline text-sm mt-6 italic">*Prices indicative, subject to change. GST & registration charges extra.</p>
-    </section>
+<div class="marquee">
+  <div class="marquee-track">
+    <div class="marquee-item"><span>Nandi Hills · 915m</span><span class="mq-dot"></span><span>76 Residences</span><span class="mq-dot"></span><span>1 BHK Service Apartments</span><span class="mq-dot"></span><span>RERA Approved</span><span class="mq-dot"></span><span>CUDA Approved</span><span class="mq-dot"></span><span>From ₹60 Lakhs</span><span class="mq-dot"></span></div>
+    <div class="marquee-item" aria-hidden="true"><span>Nandi Hills · 915m</span><span class="mq-dot"></span><span>76 Residences</span><span class="mq-dot"></span><span>1 BHK Service Apartments</span><span class="mq-dot"></span><span>RERA Approved</span><span class="mq-dot"></span><span>CUDA Approved</span><span class="mq-dot"></span><span>From ₹60 Lakhs</span><span class="mq-dot"></span></div>
+  </div>
+</div>
 
-    <!-- AMENITIES -->
-    <section class="py-24 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto bg-surface-container-low">
-        <span class="font-label-caps text-label-caps text-secondary mb-4 block">THE EXPERIENCE</span>
-        <h2 class="font-headline-xl text-headline-xl mb-12">Curated <span class="italic">Amenities</span></h2>
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-            <div class="amenity-card p-6 text-center bg-background border border-outline/8">
-                <span class="material-symbols-outlined text-4xl text-primary mb-4 block">pool</span>
-                <h4 class="font-label-caps text-label-caps text-on-surface mb-1">INFINITY POOL</h4>
-                <p class="text-on-surface-variant text-sm">Temperature-controlled with valley views</p>
-            </div>
-            <div class="amenity-card p-6 text-center bg-background border border-outline/8">
-                <span class="material-symbols-outlined text-4xl text-primary mb-4 block">spa</span>
-                <h4 class="font-label-caps text-label-caps text-on-surface mb-1">WELLNESS SPA</h4>
-                <p class="text-on-surface-variant text-sm">Ayurvedic treatments & steam rooms</p>
-            </div>
-            <div class="amenity-card p-6 text-center bg-background border border-outline/8">
-                <span class="material-symbols-outlined text-4xl text-primary mb-4 block">fitness_center</span>
-                <h4 class="font-label-caps text-label-caps text-on-surface mb-1">FITNESS STUDIO</h4>
-                <p class="text-on-surface-variant text-sm">Open-air gym with Technogym equipment</p>
-            </div>
-            <div class="amenity-card p-6 text-center bg-background border border-outline/8">
-                <span class="material-symbols-outlined text-4xl text-primary mb-4 block">local_cafe</span>
-                <h4 class="font-label-caps text-label-caps text-on-surface mb-1">CAFÉ LOUNGE</h4>
-                <p class="text-on-surface-variant text-sm">Artisanal coffee bar & co-work space</p>
-            </div>
-            <div class="amenity-card p-6 text-center bg-background border border-outline/8">
-                <span class="material-symbols-outlined text-4xl text-primary mb-4 block">yard</span>
-                <h4 class="font-label-caps text-label-caps text-on-surface mb-1">ORGANIC GARDEN</h4>
-                <p class="text-on-surface-variant text-sm">Farm-to-table kitchen garden</p>
-            </div>
-            <div class="amenity-card p-6 text-center bg-background border border-outline/8">
-                <span class="material-symbols-outlined text-4xl text-primary mb-4 block">movie</span>
-                <h4 class="font-label-caps text-label-caps text-on-surface mb-1">OPEN-AIR CINEMA</h4>
-                <p class="text-on-surface-variant text-sm">Starlit screening under the hills</p>
-            </div>
-            <div class="amenity-card p-6 text-center bg-background border border-outline/8">
-                <span class="material-symbols-outlined text-4xl text-primary mb-4 block">sports_tennis</span>
-                <h4 class="font-label-caps text-label-caps text-on-surface mb-1">SPORTS COURTS</h4>
-                <p class="text-on-surface-variant text-sm">Badminton, tennis & basketball</p>
-            </div>
-            <div class="amenity-card p-6 text-center bg-background border border-outline/8">
-                <span class="material-symbols-outlined text-4xl text-primary mb-4 block">child_care</span>
-                <h4 class="font-label-caps text-label-caps text-on-surface mb-1">KIDS ZONE</h4>
-                <p class="text-on-surface-variant text-sm">Nature-themed play area & crèche</p>
-            </div>
-        </div>
-    </section>
+<!-- OVERVIEW -->
+<section class="section">
+  <div class="container">
+    <a href="projects.html" class="back-link reveal"><iconify-icon icon="solar:arrow-left-linear"></iconify-icon> Back to Projects</a>
+    <div class="s-head reveal">
+      <div class="s-label">The Residence</div>
+      <h2 class="s-title">A sanctuary <em>carved from the mountain.</em></h2>
+      <p class="s-sub">Seventy-six boutique 1 BHK service apartments on the elevated slopes of Nandi Hills — biophilic architecture at 915m, an hour from Bangalore yet a world apart.</p>
+    </div>
+    <div class="r-grid reveal d1">
+      <div class="r-stat"><div class="n">76</div><div class="l">Residences</div></div>
+      <div class="r-stat"><div class="n">1 BHK</div><div class="l">Configuration</div></div>
+      <div class="r-stat"><div class="n">915m</div><div class="l">Altitude</div></div>
+      <div class="r-stat"><div class="n">₹60L</div><div class="l">Starting Price*</div></div>
+    </div>
+    <div class="r-badges reveal d2">
+      <span class="r-badge"><iconify-icon icon="solar:verified-check-linear"></iconify-icon> RERA Approved</span>
+      <span class="r-badge"><iconify-icon icon="solar:shield-check-linear"></iconify-icon> CUDA Approved</span>
+      <span class="r-badge"><iconify-icon icon="solar:map-point-linear"></iconify-icon> Nandi Hills, Bangalore</span>
+    </div>
+  </div>
+</section>
 
-    <!-- LOCATION -->
-    <section class="py-24 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
-        <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
-            <div class="md:col-span-5">
-                <span class="font-label-caps text-label-caps text-secondary mb-4 block">STRATEGIC PROXIMITY</span>
-                <h2 class="font-headline-xl text-headline-xl mb-4">Location <span class="italic">Advantages</span></h2>
-                <p class="font-body-md text-on-surface-variant mb-8 leading-relaxed">Nestled within the Nandi Hills ecosystem — unmatched connectivity to Bangalore's key landmarks while maintaining the serenity of an elevated retreat.</p>
-                <a href="https://www.google.com/maps/search/?api=1&query=13.3979,77.6918" target="_blank" class="inline-flex items-center gap-2 text-primary font-label-caps text-label-caps hover:underline">
-                    <span class="material-symbols-outlined text-lg">map</span> VIEW ON GOOGLE MAPS
-                </a>
-            </div>
-            <div class="md:col-span-7">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
-                    <div class="flex items-start gap-4 p-5 border border-outline/10 hover:border-primary/20 transition-colors"><span class="material-symbols-outlined text-2xl text-primary mt-0.5">landscape</span><div><h4 class="font-label-caps text-[11px] text-on-surface mb-1">NANDI HILLS VIEWPOINT</h4><p class="text-on-surface-variant text-sm">17 km — Sunrise treks & paragliding</p></div></div>
-                    <div class="flex items-start gap-4 p-5 border border-outline/10 hover:border-primary/20 transition-colors"><span class="material-symbols-outlined text-2xl text-primary mt-0.5">hiking</span><div><h4 class="font-label-caps text-[11px] text-on-surface mb-1">SKANDAGIRI TREK</h4><p class="text-on-surface-variant text-sm">6 km — Night trek & ancient fort ruins</p></div></div>
-                    <div class="flex items-start gap-4 p-5 border border-outline/10 hover:border-primary/20 transition-colors"><span class="material-symbols-outlined text-2xl text-primary mt-0.5">flight_takeoff</span><div><h4 class="font-label-caps text-[11px] text-on-surface mb-1">KEMPEGOWDA INTL. AIRPORT</h4><p class="text-on-surface-variant text-sm">32 km — Direct highway connectivity</p></div></div>
-                    <div class="flex items-start gap-4 p-5 border border-outline/10 hover:border-primary/20 transition-colors"><span class="material-symbols-outlined text-2xl text-primary mt-0.5">local_hospital</span><div><h4 class="font-label-caps text-[11px] text-on-surface mb-1">SATYA SAI HOSPITAL</h4><p class="text-on-surface-variant text-sm">2.5 km — Multi-specialty healthcare</p></div></div>
-                    <div class="flex items-start gap-4 p-5 border border-outline/10 hover:border-primary/20 transition-colors"><span class="material-symbols-outlined text-2xl text-primary mt-0.5">temple_hindu</span><div><h4 class="font-label-caps text-[11px] text-on-surface mb-1">BHOGA NANDEESHWARA TEMPLE</h4><p class="text-on-surface-variant text-sm">3 km — 9th century Chola-era temple</p></div></div>
-                    <div class="flex items-start gap-4 p-5 border border-outline/10 hover:border-primary/20 transition-colors"><span class="material-symbols-outlined text-2xl text-primary mt-0.5">factory</span><div><h4 class="font-label-caps text-[11px] text-on-surface mb-1">KIADB INDUSTRIAL AREA</h4><p class="text-on-surface-variant text-sm">32 km — Aerospace & IT corridor</p></div></div>
-                </div>
-            </div>
-        </div>
-    </section>
+<!-- GALLERY -->
+<section class="section" style="background:var(--bg-soft)">
+  <div class="container">
+    <div class="s-head reveal">
+      <div class="s-label">The Visuals</div>
+      <h2 class="s-title">Architecture, <em>in its element.</em></h2>
+      <p class="s-sub">Monolithic concrete forms, warm natural interiors, and the misted slopes that surround them.</p>
+    </div>
+    <div class="r-gallery reveal d1">
+      <figure class="lead">
+        <img src="assets/images/retreat76-elevation.jpg" alt="Retreat 76 exterior elevation — architecture meets nature" loading="lazy">
+        <figcaption>Elevation</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/images/interior-lounge.jpg" alt="Retreat 76 interior — warm natural materials and minimal luxury" loading="lazy">
+        <figcaption>Interior</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/images/nandi-hills-mist.jpg" alt="Nandi Hills surroundings — misty slopes and lush greenery" loading="lazy">
+        <figcaption>Surroundings</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
 
-    <!-- BROCHURE CTA -->
-    <section class="py-24 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
-        <div class="bg-surface-container-high p-12 md:p-20 text-center border border-outline/10">
-            <span class="material-symbols-outlined text-5xl text-primary/30 mb-6 block">menu_book</span>
-            <h2 class="font-headline-xl text-headline-xl mb-4">Download the Complete <span class="italic">Brochure</span></h2>
-            <p class="font-body-md text-on-surface-variant max-w-xl mx-auto mb-8 leading-relaxed">Detailed floor plans, specifications, pricing, and the TrueNest design philosophy — delivered to your inbox.</p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
-                <input type="email" placeholder="Enter your email" class="flex-1 px-4 py-3 border border-outline/20 bg-background font-body-md focus:border-primary focus:ring-1 focus:ring-primary outline-none" />
-                <button class="px-8 py-3 bg-on-background text-primary-fixed font-label-caps text-label-caps whitespace-nowrap hover:bg-primary transition-colors">DOWNLOAD PDF</button>
-            </div>
-        </div>
-    </section>
+<!-- UNIT SPECIFICATIONS -->
+<section class="section">
+  <div class="container">
+    <div class="s-head reveal">
+      <div class="s-label">Unit Specifications</div>
+      <h2 class="s-title">Choose your <em>sanctuary.</em></h2>
+      <p class="s-sub">Thoughtfully designed 1 BHK service apartments in two distinct layouts — each offering a private balcony with panoramic hill views.</p>
+    </div>
+    <div class="unit-grid">
+      <div class="unit-card reveal">
+        <div class="kicker">1 BHK — Variant A</div>
+        <h3>Compact Studio</h3>
+        <div class="unit-rule"></div>
+        <div class="unit-row"><span>Super Built-up</span><b>550 sq.ft</b></div>
+        <div class="unit-row"><span>Carpet Area</span><b>~410 sq.ft</b></div>
+        <div class="unit-row"><span>Balcony</span><b>Private sit-out</b></div>
+        <div class="unit-row"><span>Facing</span><b>Valley / East</b></div>
+        <div class="unit-price"><div class="pl">Price Starts From</div><div class="pv">₹60 Lakhs*</div></div>
+      </div>
+      <div class="unit-card premium reveal d1">
+        <span class="unit-tag">Premium</span>
+        <div class="kicker">1 BHK — Variant B</div>
+        <h3>Grand Studio</h3>
+        <div class="unit-rule"></div>
+        <div class="unit-row"><span>Super Built-up</span><b>700 sq.ft</b></div>
+        <div class="unit-row"><span>Carpet Area</span><b>~520 sq.ft</b></div>
+        <div class="unit-row"><span>Balcony</span><b>Wrap-around, extended</b></div>
+        <div class="unit-row"><span>Facing</span><b>Panoramic Hill View</b></div>
+        <div class="unit-price"><div class="pl">Price Starts From</div><div class="pv">₹60 Lakhs*</div></div>
+      </div>
+    </div>
+    <p class="unit-fine reveal d2">*Prices indicative, subject to change. GST &amp; registration charges extra.</p>
+  </div>
+</section>
 
-    <div id="shared-footer"></div>
-    <script src="assets/js/components.js"></script>
-    <script>
-    document.querySelectorAll('.tab-btn').forEach(btn => {
-        btn.addEventListener('click', () => {
-            document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-            btn.classList.add('active');
-            const tab = btn.dataset.tab;
-            document.querySelectorAll('.tab-panel').forEach(p => p.classList.toggle('hidden', p.dataset.tab !== tab));
-        });
-    });
-    const obs = new IntersectionObserver(entries => entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); }), {threshold:0.1});
-    document.querySelectorAll('.fade-in-up').forEach(el => obs.observe(el));
-    </script>
+<!-- AMENITIES -->
+<section class="section" style="background:var(--bg-soft)">
+  <div class="container">
+    <div class="s-head reveal">
+      <div class="s-label">The Experience</div>
+      <h2 class="s-title">Curated <em>amenities.</em></h2>
+    </div>
+    <div class="amen-grid">
+      <div class="amen-card reveal"><iconify-icon icon="solar:swimming-linear"></iconify-icon><h4>Infinity Pool</h4><p>Temperature-controlled with valley views</p></div>
+      <div class="amen-card reveal d1"><iconify-icon icon="solar:hand-heart-linear"></iconify-icon><h4>Wellness Spa</h4><p>Ayurvedic treatments &amp; steam rooms</p></div>
+      <div class="amen-card reveal d2"><iconify-icon icon="solar:dumbbell-large-linear"></iconify-icon><h4>Fitness Studio</h4><p>Open-air gym with Technogym equipment</p></div>
+      <div class="amen-card reveal d3"><iconify-icon icon="solar:cup-hot-linear"></iconify-icon><h4>Café Lounge</h4><p>Artisanal coffee bar &amp; co-work space</p></div>
+      <div class="amen-card reveal"><iconify-icon icon="solar:leaf-linear"></iconify-icon><h4>Organic Garden</h4><p>Farm-to-table kitchen garden</p></div>
+      <div class="amen-card reveal d1"><iconify-icon icon="solar:clapperboard-play-linear"></iconify-icon><h4>Open-Air Cinema</h4><p>Starlit screening under the hills</p></div>
+      <div class="amen-card reveal d2"><iconify-icon icon="solar:tennis-linear"></iconify-icon><h4>Sports Courts</h4><p>Badminton, tennis &amp; basketball</p></div>
+      <div class="amen-card reveal d3"><iconify-icon icon="solar:smile-circle-linear"></iconify-icon><h4>Kids Zone</h4><p>Nature-themed play area &amp; crèche</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- LOCATION -->
+<section class="section">
+  <div class="container">
+    <div class="loc-grid">
+      <div class="reveal">
+        <div class="s-label">Strategic Proximity</div>
+        <h2 class="s-title">Location <em>advantages.</em></h2>
+        <p class="s-sub" style="margin-left:0;text-align:left">Nestled within the Nandi Hills ecosystem — unmatched connectivity to Bangalore's key landmarks while maintaining the serenity of an elevated retreat.</p>
+        <a class="loc-link" href="https://www.google.com/maps/search/?api=1&query=13.3979,77.6918" target="_blank" rel="noopener"><iconify-icon icon="solar:map-linear"></iconify-icon> View on Google Maps</a>
+      </div>
+      <div class="loc-list reveal d1">
+        <div class="loc-item"><iconify-icon icon="solar:mountain-linear"></iconify-icon><div><h4>Nandi Hills Viewpoint</h4><p>17 km — Sunrise treks &amp; paragliding</p></div></div>
+        <div class="loc-item"><iconify-icon icon="solar:running-linear"></iconify-icon><div><h4>Skandagiri Trek</h4><p>6 km — Night trek &amp; ancient fort ruins</p></div></div>
+        <div class="loc-item"><iconify-icon icon="solar:plane-linear"></iconify-icon><div><h4>Kempegowda Intl. Airport</h4><p>32 km — Direct highway connectivity</p></div></div>
+        <div class="loc-item"><iconify-icon icon="solar:health-linear"></iconify-icon><div><h4>Satya Sai Hospital</h4><p>2.5 km — Multi-specialty healthcare</p></div></div>
+        <div class="loc-item"><iconify-icon icon="solar:buildings-3-linear"></iconify-icon><div><h4>Bhoga Nandeeshwara Temple</h4><p>3 km — 9th century Chola-era temple</p></div></div>
+        <div class="loc-item"><iconify-icon icon="solar:factory-linear"></iconify-icon><div><h4>KIADB Industrial Area</h4><p>32 km — Aerospace &amp; IT corridor</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta" id="inquire">
+  <div class="cta-bg"></div>
+  <div class="container cta-in">
+    <div class="s-label" style="justify-content:center;color:#C9D8B6">The Complete Brochure</div>
+    <h2>Begin a <em>private conversation.</em></h2>
+    <p>Detailed floor plans, specifications, pricing and the TrueNest design philosophy — a TrueNest advisor will arrange a discreet site walk at Nandi Hills.</p>
+    <form class="cta-form" id="ctaForm" novalidate>
+      <input type="text" name="name" placeholder="Your name" required>
+      <input type="email" name="email" placeholder="Email address" required>
+      <button type="submit" class="btn btn-primary"><span>Request the Brochure</span><iconify-icon icon="solar:arrow-right-linear"></iconify-icon></button>
+    </form>
+    <div class="cta-msg" id="ctaMsg"></div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-in">
+      <div><div class="footer-brand">TRUENEST</div><p class="footer-tag">Boutique biophilic residences at the intersection of nature and architecture. Nandi Hills, Bangalore.</p></div>
+      <div class="footer-col"><h5>Residences</h5><a href="retreat76.html">Retreat 76</a><a href="hillsandskies.html">Hills &amp; Skies</a><a href="projects.html">All Projects</a></div>
+      <div class="footer-col"><h5>Company</h5><a href="story.html">Our Story</a><a href="testimonials.html">Testimonials</a><a href="careers.html">Careers</a></div>
+      <div class="footer-col"><h5>Contact</h5><a href="inquiries.html">Enquire</a><a href="tel:+918044559900">+91 80 4455 9900</a><a href="mailto:hello@truenest.co.in">hello@truenest.co.in</a></div>
+    </div>
+    <div class="footer-base"><span>© 2026 TrueNest · RERA/KA/24/0142</span><span>Truly In Nature</span></div>
+  </div>
+</footer>
+<script src="assets/js/truenest.js"></script>
 </body>
 </html>

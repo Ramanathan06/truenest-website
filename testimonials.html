@@ -1,229 +1,197 @@
-<!DOCTYPE html>
-<html class="light" lang="en">
+<!doctype html>
+<html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Client Testimonials | TrueNest | What Our Residents Say</title>
-    <meta name="description" content="Hear from TrueNest residents. Real stories from homeowners who chose a sanctuary above the city — Retreat 76 and Hills & Skies, Nandi Hills, Bangalore." />
-    <meta name="keywords" content="TrueNest testimonials, Retreat 76 reviews, Hills Skies reviews, Nandi Hills luxury apartments reviews, TrueNest resident stories" />
-    <meta name="robots" content="index, follow" />
-    <link rel="canonical" href="https://truenest.co.in/testimonials.html" />
-    <meta property="og:title" content="Client Testimonials | TrueNest" />
-    <meta property="og:description" content="Voices of TrueNest residents — stories from sanctuaries above the city." />
-    <meta property="og:image" content="assets/images/nandi-hills-mist.jpg" />
-    <meta property="og:url" content="https://truenest.co.in/testimonials.html" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="assets/css/site.css" />
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <script src="assets/js/tailwind.config.js"></script>
-    <style>
-        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24; }
-        .testimonial-card { transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; }
-        .testimonial-card:hover { border-color: rgba(192,139,58,0.25); transform: translateY(-6px); box-shadow: 0 16px 48px rgba(28,58,40,0.1); }
-        .fade-in-up { opacity: 0; transform: translateY(28px); transition: opacity 0.8s ease, transform 0.8s ease; }
-        .fade-in-up.visible { opacity: 1; transform: translateY(0); }
-        /* Testimonials background: warm cream with subtle leaf pattern */
-        .testimonial-bg { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80'%3E%3Crect width='80' height='80' fill='%23fafaf6'/%3E%3Cellipse cx='40' cy='40' rx='1' ry='3' fill='%23b8d4c0' opacity='0.25' transform='rotate(30 40 40)'/%3E%3Cellipse cx='20' cy='60' rx='0.8' ry='2.5' fill='%23b8d4c0' opacity='0.15' transform='rotate(-20 20 60)'/%3E%3Cellipse cx='65' cy='15' rx='0.8' ry='2.5' fill='%23b8d4c0' opacity='0.15' transform='rotate(50 65 15)'/%3E%3C/svg%3E"); }
-        .quote-mark { font-family: 'EB Garamond', Georgia, serif; font-size: 96px; line-height: 0.8; color: rgba(28,58,40,0.12); }
-    </style>
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "ItemList",
-        "name": "TrueNest Client Testimonials",
-        "itemListElement": [
-            { "@type": "Review", "reviewBody": "Waking up to misty hills every morning — I didn't know luxury could feel this natural.", "author": { "@type": "Person", "name": "Arjun Mehta" }, "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }, "itemReviewed": { "@type": "Residence", "name": "Retreat 76" } },
-            { "@type": "Review", "reviewBody": "The materials, the silence, the light — TrueNest delivered something I couldn't imagine.", "author": { "@type": "Person", "name": "Kavitha Nair" }, "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }, "itemReviewed": { "@type": "Residence", "name": "Hills & Skies" } }
-        ]
-    }
-    </script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Testimonials | TrueNest — Resident Voices</title>
+<meta name="description" content="Real words from TrueNest residents at Retreat 76 and Hills & Skies — stories from those who chose to live truly in nature above Nandi Hills, Bangalore.">
+<link rel="canonical" href="https://truenest.co.in/testimonials.html">
+<meta property="og:title" content="Testimonials | TrueNest">
+<meta property="og:description" content="Voices of TrueNest residents — stories from sanctuaries above the city.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&display=swap" rel="stylesheet">
+<script src="https://code.iconify.design/iconify-icon/1.0.8/iconify-icon.min.js"></script>
+<link rel="stylesheet" href="assets/css/truenest.css">
+<style>
+.hero-static{position:relative;min-height:60vh;display:flex;align-items:flex-end;overflow:hidden;background:var(--ink)}
+.hero-static>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
+.hero-scrim{position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(20,19,16,.45) 0%,rgba(20,19,16,.2) 40%,rgba(20,19,16,.8) 100%)}
+.hero-intro{position:relative;z-index:2;width:100%;padding:9rem 0 clamp(3.5rem,8vh,5.5rem)}
+.hero-tag{display:inline-flex;align-items:center;gap:.5rem;padding:.45rem 1rem;border:1px solid rgba(244,241,234,.3);border-radius:100px;font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:#F4F1EA;margin-bottom:1.2rem;background:rgba(244,241,234,.1);backdrop-filter:blur(8px)}
+.hero-title{font-family:var(--font-display);font-size:clamp(2.4rem,6vw,4.6rem);font-weight:400;line-height:1.05;letter-spacing:-.02em;color:#F8F5EF}
+.hero-title em{font-style:italic;color:#C9D8B6}
+.hero-desc{margin-top:1.2rem;font-size:clamp(.9rem,1.1vw,1.05rem);line-height:1.6;color:rgba(248,245,239,.85);max-width:560px}
+
+/* Featured testimonial */
+.t-feature{background:var(--accent);border-radius:20px;padding:clamp(2.4rem,5vw,4rem);position:relative;overflow:hidden;color:#F4F1EA}
+.t-feature .t-quote-glyph{position:absolute;top:1.4rem;left:1.8rem;font-size:5rem;color:rgba(244,241,234,.14);line-height:1}
+.t-feature blockquote{font-family:var(--font-display);font-style:italic;font-size:clamp(1.3rem,2.6vw,2rem);line-height:1.4;color:#F8F5EF;position:relative;z-index:1;max-width:880px}
+.t-feature .t-meta{margin-top:2rem;display:flex;align-items:center;gap:1rem;flex-wrap:wrap;position:relative;z-index:1}
+.t-stars{display:flex;gap:.2rem;color:#C9D8B6;font-size:1.05rem}
+.t-feat-name{font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:#F4F1EA;font-weight:600}
+.t-feat-role{font-size:.82rem;color:rgba(244,241,234,.7);margin-top:.25rem}
+.t-divider{width:1px;height:38px;background:rgba(244,241,234,.25)}
+
+/* Card grid */
+.t-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem;margin-top:3rem}
+.t-card{background:var(--bg-card);border:1px solid var(--line);border-radius:18px;padding:2rem;display:flex;flex-direction:column;transition:transform .5s var(--ease),box-shadow .5s,border-color .4s}
+.t-card:hover{transform:translateY(-6px);box-shadow:0 24px 60px rgba(28,27,24,.1);border-color:var(--accent)}
+.t-card-stars{display:flex;gap:.2rem;color:var(--clay);font-size:.92rem;margin-bottom:1.1rem}
+.t-card-glyph{font-size:2.4rem;color:var(--accent-tint);line-height:.6;margin-bottom:.4rem}
+.t-card blockquote{font-family:var(--font-display);font-style:italic;font-size:1.08rem;line-height:1.5;color:var(--ink);flex:1}
+.t-foot{border-top:1px solid var(--line);margin-top:1.6rem;padding-top:1.2rem;display:flex;align-items:center;gap:.9rem}
+.t-avatar{width:46px;height:46px;border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-size:.95rem;color:var(--bg);background:linear-gradient(135deg,var(--accent),var(--clay))}
+.t-name{font-size:.72rem;letter-spacing:.13em;text-transform:uppercase;color:var(--ink);font-weight:600}
+.t-role{font-size:.8rem;color:var(--ink-soft);margin-top:.25rem}
+@media (max-width:900px){.t-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.t-grid{grid-template-columns:1fr}.t-feature .t-meta{gap:.7rem}.t-divider{display:none}}
+</style>
 </head>
-<body class="bg-background text-on-surface font-body-md antialiased testimonial-bg">
-    <div id="shared-header"></div>
+<body>
 
-    <!-- HERO -->
-    <header class="pt-40 pb-16 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
-        <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-end">
-            <div class="md:col-span-7 fade-in-up">
-                <span class="font-label-caps text-label-caps text-primary mb-4 block tracking-widest">RESIDENT VOICES</span>
-                <h1 class="font-display-xl text-display-xl text-on-surface leading-none mb-8">The Voices of Those Who<br />Live <span class="italic">Truly In Nature.</span></h1>
-                <p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl leading-relaxed">Every sanctuary has a story. Here are the words of those who chose to live at the intersection of nature and architecture.</p>
-            </div>
-            <div class="md:col-start-9 md:col-span-4 fade-in-up">
-                <div class="relative aspect-[3/4] overflow-hidden">
-                    <img src="assets/images/nandi-hills-mist.jpg" alt="Nandi Hills — home of TrueNest residences" class="w-full h-full object-cover" />
-                    <div class="absolute inset-0 bg-gradient-to-t from-on-background/40 to-transparent pointer-events-none"></div>
-                    <div class="absolute bottom-6 left-6">
-                        <p class="font-headline-xl text-headline-xl text-white/90">5.0</p>
-                        <p class="font-label-caps text-[9px] text-white/60 tracking-widest">AVERAGE RATING</p>
-                    </div>
-                </div>
-            </div>
+<nav class="nav" id="nav">
+  <div class="container nav-inner">
+    <a href="index.html" class="nav-logo">TRUENEST</a>
+    <div class="nav-links">
+      <a class="nav-link" href="projects.html">Residences</a>
+      <a class="nav-link" href="retreat76.html">Retreat 76</a>
+      <a class="nav-link" href="story.html">Story</a>
+      <a class="nav-link" href="testimonials.html">Testimonials</a>
+      <a class="nav-link" href="careers.html">Careers</a>
+    </div>
+    <a class="nav-cta" href="inquiries.html">Private Inquiry</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero-static">
+  <img src="assets/images/nandi-hills-mist.jpg" alt="Mist over Nandi Hills — home of TrueNest residences">
+  <div class="hero-scrim"></div>
+  <div class="container hero-intro">
+    <div class="hero-tag"><iconify-icon icon="solar:chat-round-line-linear"></iconify-icon><span>Resident Voices</span></div>
+    <h1 class="hero-title">The voices of those who<br>live <em>truly in nature.</em></h1>
+    <p class="hero-desc">Every sanctuary has a story. Here are the words of those who chose to live at the intersection of nature and architecture.</p>
+  </div>
+</header>
+
+<!-- FEATURED TESTIMONIAL -->
+<section class="section" style="padding-bottom:0">
+  <div class="container">
+    <div class="t-feature reveal-zoom">
+      <iconify-icon class="t-quote-glyph" icon="solar:quote-up-bold"></iconify-icon>
+      <blockquote>"Walking the corridor of our apartment at dawn — with fog rolling in through the valley and birdsong filling the air — I realised this wasn't just a home. It was a daily ceremony."</blockquote>
+      <div class="t-meta">
+        <div class="t-stars" aria-label="5 out of 5">
+          <iconify-icon icon="solar:star-bold"></iconify-icon><iconify-icon icon="solar:star-bold"></iconify-icon><iconify-icon icon="solar:star-bold"></iconify-icon><iconify-icon icon="solar:star-bold"></iconify-icon><iconify-icon icon="solar:star-bold"></iconify-icon>
         </div>
-    </header>
-
-    <!-- FEATURED TESTIMONIAL -->
-    <section class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto mb-20 fade-in-up">
-        <div class="bg-on-background text-primary-fixed p-12 md:p-20 relative overflow-hidden">
-            <div class="quote-mark absolute top-8 left-10 select-none text-white">"</div>
-            <div class="relative z-10 grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
-                <div class="md:col-span-8">
-                    <p class="font-headline-xl text-headline-xl italic leading-snug mb-10 text-white/90">
-                        "Walking the corridor of our apartment at dawn — with fog rolling in through the valley and birdsong filling the air — I realised this wasn't just a home. It was a daily ceremony."
-                    </p>
-                    <div>
-                        <p class="font-label-caps text-[12px] tracking-widest">PRIYA & ARJUN MEHTA</p>
-                        <p class="font-body-md text-[14px] text-primary-fixed/60 mt-1">Retreat 76 · Grand Studio, Variant B</p>
-                    </div>
-                </div>
-                <div class="md:col-span-4 flex justify-center md:justify-end">
-                    <div class="flex flex-col items-center gap-2">
-                        <div class="flex gap-1">
-                            <span class="material-symbols-outlined text-primary text-xl" style="font-variation-settings:'FILL' 1">star</span>
-                            <span class="material-symbols-outlined text-primary text-xl" style="font-variation-settings:'FILL' 1">star</span>
-                            <span class="material-symbols-outlined text-primary text-xl" style="font-variation-settings:'FILL' 1">star</span>
-                            <span class="material-symbols-outlined text-primary text-xl" style="font-variation-settings:'FILL' 1">star</span>
-                            <span class="material-symbols-outlined text-primary text-xl" style="font-variation-settings:'FILL' 1">star</span>
-                        </div>
-                        <p class="font-label-caps text-[9px] text-primary-fixed/50 tracking-widest">VERIFIED RESIDENT</p>
-                    </div>
-                </div>
-            </div>
+        <div class="t-divider"></div>
+        <div>
+          <div class="t-feat-name">Priya &amp; Arjun Mehta</div>
+          <div class="t-feat-role">Retreat 76 · Grand Studio, Variant B · Verified Resident</div>
         </div>
-    </section>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <!-- TESTIMONIALS GRID -->
-    <section class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto pb-section-gap">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- TESTIMONIALS GRID -->
+<section class="section">
+  <div class="container">
+    <div class="s-head reveal">
+      <div class="s-label">Resident Stories</div>
+      <h2 class="s-title">In their <em>own words.</em></h2>
+      <p class="s-sub">Unedited reflections from residents of Retreat 76 and Hills &amp; Skies.</p>
+    </div>
+    <div class="t-grid">
 
-            <!-- Card 1 -->
-            <div class="testimonial-card bg-surface-container-low border border-outline/10 p-8 flex flex-col fade-in-up">
-                <div class="flex gap-1 mb-6">
-                    <span class="material-symbols-outlined text-primary text-base" style="font-variation-settings:'FILL' 1">star</span>
-                    <span class="material-symbols-outlined text-primary text-base" style="font-variation-settings:'FILL' 1">star</span>
-                    <span class="material-symbols-outlined text-primary text-base" style="font-variation-settings:'FILL' 1">star</span>
-                    <span class="material-symbols-outlined text-primary text-base" style="font-variation-settings:'FILL' 1">star</span>
-                    <span class="material-symbols-outlined text-primary text-base" style="font-variation-settings:'FILL' 1">star</span>
-                </div>
-                <div class="quote-mark text-left mb-2 leading-none" style="font-size:56px">"</div>
-                <p class="font-headline-lg text-[20px] italic text-on-surface leading-snug mb-6 flex-1">I didn't know luxury could feel this natural. Waking to misty hills every morning is now my ordinary.</p>
-                <div class="border-t border-outline/10 pt-6 mt-auto">
-                    <p class="font-label-caps text-[11px] text-on-surface">KAVITHA NAIR</p>
-                    <p class="font-body-md text-[13px] text-outline mt-0.5">Hills & Skies · Orchard Suite</p>
-                </div>
-            </div>
-
-            <!-- Card 2 -->
-            <div class="testimonial-card bg-surface-container-low border border-outline/10 p-8 flex flex-col fade-in-up md:mt-8">
-                <div class="flex gap-1 mb-6">
-                    <span class="material-symbols-outlined text-primary text-base" style="font-variation-settings:'FILL' 1">star</span>
-                    <span class="material-symbols-outlined text-primary text-base" style="font-variation-settings:'FILL' 1">star</span>
-                    <span class="material-symbols-outlined text-primary text-base" style="font-variation-settings:'FILL' 1">star</span>
-                    <span class="material-symbols-outlined text-primary text-base" style="font-variation-settings:'FILL' 1">star</span>
-                    <span class="material-symbols-outlined text-primary text-base" style="font-variation-settings:'FILL' 1">star</span>
-                </div>
-                <div class="quote-mark text-left mb-2 leading-none" style="font-size:56px">"</div>
-                <p class="font-headline-lg text-[20px] italic text-on-surface leading-snug mb-6 flex-1">The materials, the silence, the quality of light — TrueNest delivered something I couldn't have imagined before I saw it.</p>
-                <div class="border-t border-outline/10 pt-6 mt-auto">
-                    <p class="font-label-caps text-[11px] text-on-surface">ROHAN SHARMA</p>
-                    <p class="font-body-md text-[13px] text-outline mt-0.5">Retreat 76 · Compact Studio</p>
-                </div>
-            </div>
-
-            <!-- Card 3 -->
-            <div class="testimonial-card bg-primary text-on-primary border border-primary p-8 flex flex-col fade-in-up">
-                <div class="flex gap-1 mb-6">
-                    <span class="material-symbols-outlined text-on-primary/80 text-base" style="font-variation-settings:'FILL' 1">star</span>
-                    <span class="material-symbols-outlined text-on-primary/80 text-base" style="font-variation-settings:'FILL' 1">star</span>
-                    <span class="material-symbols-outlined text-on-primary/80 text-base" style="font-variation-settings:'FILL' 1">star</span>
-                    <span class="material-symbols-outlined text-on-primary/80 text-base" style="font-variation-settings:'FILL' 1">star</span>
-                    <span class="material-symbols-outlined text-on-primary/80 text-base" style="font-variation-settings:'FILL' 1">star</span>
-                </div>
-                <div class="quote-mark text-left mb-2 leading-none text-on-primary/20" style="font-size:56px">"</div>
-                <p class="font-headline-lg text-[20px] italic leading-snug mb-6 flex-1">An investment in how I live — not just where. The philosophy runs through every stone, every window, every morning.</p>
-                <div class="border-t border-on-primary/20 pt-6 mt-auto">
-                    <p class="font-label-caps text-[11px]">SUNIL & MEERA KRISHNAN</p>
-                    <p class="font-body-md text-[13px] opacity-70 mt-0.5">Retreat 76 · Grand Studio</p>
-                </div>
-            </div>
-
-            <!-- Card 4 -->
-            <div class="testimonial-card bg-surface-container-low border border-outline/10 p-8 flex flex-col fade-in-up">
-                <div class="flex gap-1 mb-6">
-                    <span class="material-symbols-outlined text-primary text-base" style="font-variation-settings:'FILL' 1">star</span>
-                    <span class="material-symbols-outlined text-primary text-base" style="font-variation-settings:'FILL' 1">star</span>
-                    <span class="material-symbols-outlined text-primary text-base" style="font-variation-settings:'FILL' 1">star</span>
-                    <span class="material-symbols-outlined text-primary text-base" style="font-variation-settings:'FILL' 1">star</span>
-                    <span class="material-symbols-outlined text-primary text-base" style="font-variation-settings:'FILL' 1">star</span>
-                </div>
-                <div class="quote-mark text-left mb-2 leading-none" style="font-size:56px">"</div>
-                <p class="font-headline-lg text-[20px] italic text-on-surface leading-snug mb-6 flex-1">The vertical orchards aren't a gimmick — they're a way of life. My mornings now start with picking herbs for tea. Nothing prepares you for that kind of joy.</p>
-                <div class="border-t border-outline/10 pt-6 mt-auto">
-                    <p class="font-label-caps text-[11px] text-on-surface">DIVYA RAGHUNATHAN</p>
-                    <p class="font-body-md text-[13px] text-outline mt-0.5">Hills & Skies · Sky Studio</p>
-                </div>
-            </div>
-
-            <!-- Card 5 -->
-            <div class="testimonial-card bg-surface-container-low border border-outline/10 p-8 flex flex-col fade-in-up md:mt-8">
-                <div class="flex gap-1 mb-6">
-                    <span class="material-symbols-outlined text-primary text-base" style="font-variation-settings:'FILL' 1">star</span>
-                    <span class="material-symbols-outlined text-primary text-base" style="font-variation-settings:'FILL' 1">star</span>
-                    <span class="material-symbols-outlined text-primary text-base" style="font-variation-settings:'FILL' 1">star</span>
-                    <span class="material-symbols-outlined text-primary text-base" style="font-variation-settings:'FILL' 1">star</span>
-                    <span class="material-symbols-outlined text-primary text-base" style="font-variation-settings:'FILL' 1">star</span>
-                </div>
-                <div class="quote-mark text-left mb-2 leading-none" style="font-size:56px">"</div>
-                <p class="font-headline-lg text-[20px] italic text-on-surface leading-snug mb-6 flex-1">TrueNest understood exactly what I needed before I knew how to say it. The quiet. The textures. The view that never stops giving.</p>
-                <div class="border-t border-outline/10 pt-6 mt-auto">
-                    <p class="font-label-caps text-[11px] text-on-surface">VIKRAM BALASUBRAMANIAN</p>
-                    <p class="font-body-md text-[13px] text-outline mt-0.5">Retreat 76 · Compact Studio</p>
-                </div>
-            </div>
-
-            <!-- Card 6 -->
-            <div class="testimonial-card bg-surface-container-low border border-outline/10 p-8 flex flex-col fade-in-up">
-                <div class="flex gap-1 mb-6">
-                    <span class="material-symbols-outlined text-primary text-base" style="font-variation-settings:'FILL' 1">star</span>
-                    <span class="material-symbols-outlined text-primary text-base" style="font-variation-settings:'FILL' 1">star</span>
-                    <span class="material-symbols-outlined text-primary text-base" style="font-variation-settings:'FILL' 1">star</span>
-                    <span class="material-symbols-outlined text-primary text-base" style="font-variation-settings:'FILL' 1">star</span>
-                    <span class="material-symbols-outlined text-primary text-base" style="font-variation-settings:'FILL' 1">star</span>
-                </div>
-                <div class="quote-mark text-left mb-2 leading-none" style="font-size:56px">"</div>
-                <p class="font-headline-lg text-[20px] italic text-on-surface leading-snug mb-6 flex-1">I've lived in luxury apartments before, but none felt like this. There's a weight to the quality here — in the concrete, in the stone, in the silence between sounds.</p>
-                <div class="border-t border-outline/10 pt-6 mt-auto">
-                    <p class="font-label-caps text-[11px] text-on-surface">ANITHA MOORTHY</p>
-                    <p class="font-body-md text-[13px] text-outline mt-0.5">Hills & Skies · Orchard Suite</p>
-                </div>
-            </div>
+      <article class="t-card reveal">
+        <div class="t-card-stars" aria-label="5 out of 5"><iconify-icon icon="solar:star-bold"></iconify-icon><iconify-icon icon="solar:star-bold"></iconify-icon><iconify-icon icon="solar:star-bold"></iconify-icon><iconify-icon icon="solar:star-bold"></iconify-icon><iconify-icon icon="solar:star-bold"></iconify-icon></div>
+        <iconify-icon class="t-card-glyph" icon="solar:quote-up-bold"></iconify-icon>
+        <blockquote>I didn't know luxury could feel this natural. Waking to misty hills every morning is now my ordinary.</blockquote>
+        <div class="t-foot">
+          <div class="t-avatar">KN</div>
+          <div><div class="t-name">Kavitha Nair</div><div class="t-role">Hills &amp; Skies · Orchard Suite</div></div>
         </div>
-    </section>
+      </article>
 
-    <!-- CTA -->
-    <section class="py-section-gap bg-surface-container-low px-margin-mobile md:px-margin-desktop">
-        <div class="max-w-container-max mx-auto text-center">
-            <span class="font-label-caps text-label-caps text-primary mb-4 block">WRITE YOUR OWN STORY</span>
-            <h2 class="font-headline-xl text-headline-xl mb-6">Be the next resident to<br /><span class="italic">find their sanctuary.</span></h2>
-            <p class="font-body-md text-body-md text-on-surface-variant max-w-xl mx-auto mb-10 leading-relaxed">Explore our curated residences in Nandi Hills and begin a conversation with our private advisory team.</p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="projects.html" class="px-12 py-5 border border-primary text-primary font-label-caps text-label-caps hover:bg-primary hover:text-on-primary transition-all">VIEW PROJECTS</a>
-                <a href="inquiries.html" class="px-12 py-5 bg-on-background text-primary-fixed font-label-caps text-label-caps hover:bg-primary transition-colors group inline-flex items-center gap-3">
-                    INQUIRE NOW
-                    <span class="material-symbols-outlined text-base group-hover:translate-x-1 transition-transform">arrow_forward</span>
-                </a>
-            </div>
+      <article class="t-card reveal d1">
+        <div class="t-card-stars" aria-label="5 out of 5"><iconify-icon icon="solar:star-bold"></iconify-icon><iconify-icon icon="solar:star-bold"></iconify-icon><iconify-icon icon="solar:star-bold"></iconify-icon><iconify-icon icon="solar:star-bold"></iconify-icon><iconify-icon icon="solar:star-bold"></iconify-icon></div>
+        <iconify-icon class="t-card-glyph" icon="solar:quote-up-bold"></iconify-icon>
+        <blockquote>The materials, the silence, the quality of light — TrueNest delivered something I couldn't have imagined before I saw it.</blockquote>
+        <div class="t-foot">
+          <div class="t-avatar">RS</div>
+          <div><div class="t-name">Rohan Sharma</div><div class="t-role">Retreat 76 · Compact Studio</div></div>
         </div>
-    </section>
+      </article>
 
-    <div id="shared-footer"></div>
-    <script src="assets/js/components.js"></script>
-    <script>
-    const obs = new IntersectionObserver(entries => entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); }), {threshold:0.08});
-    document.querySelectorAll('.fade-in-up').forEach(el => obs.observe(el));
-    </script>
+      <article class="t-card reveal d2">
+        <div class="t-card-stars" aria-label="5 out of 5"><iconify-icon icon="solar:star-bold"></iconify-icon><iconify-icon icon="solar:star-bold"></iconify-icon><iconify-icon icon="solar:star-bold"></iconify-icon><iconify-icon icon="solar:star-bold"></iconify-icon><iconify-icon icon="solar:star-bold"></iconify-icon></div>
+        <iconify-icon class="t-card-glyph" icon="solar:quote-up-bold"></iconify-icon>
+        <blockquote>An investment in how I live — not just where. The philosophy runs through every stone, every window, every morning.</blockquote>
+        <div class="t-foot">
+          <div class="t-avatar">SK</div>
+          <div><div class="t-name">Sunil &amp; Meera Krishnan</div><div class="t-role">Retreat 76 · Grand Studio</div></div>
+        </div>
+      </article>
+
+      <article class="t-card reveal">
+        <div class="t-card-stars" aria-label="5 out of 5"><iconify-icon icon="solar:star-bold"></iconify-icon><iconify-icon icon="solar:star-bold"></iconify-icon><iconify-icon icon="solar:star-bold"></iconify-icon><iconify-icon icon="solar:star-bold"></iconify-icon><iconify-icon icon="solar:star-bold"></iconify-icon></div>
+        <iconify-icon class="t-card-glyph" icon="solar:quote-up-bold"></iconify-icon>
+        <blockquote>The vertical orchards aren't a gimmick — they're a way of life. My mornings now start with picking herbs for tea. Nothing prepares you for that kind of joy.</blockquote>
+        <div class="t-foot">
+          <div class="t-avatar">DR</div>
+          <div><div class="t-name">Divya Raghunathan</div><div class="t-role">Hills &amp; Skies · Sky Studio</div></div>
+        </div>
+      </article>
+
+      <article class="t-card reveal d1">
+        <div class="t-card-stars" aria-label="5 out of 5"><iconify-icon icon="solar:star-bold"></iconify-icon><iconify-icon icon="solar:star-bold"></iconify-icon><iconify-icon icon="solar:star-bold"></iconify-icon><iconify-icon icon="solar:star-bold"></iconify-icon><iconify-icon icon="solar:star-bold"></iconify-icon></div>
+        <iconify-icon class="t-card-glyph" icon="solar:quote-up-bold"></iconify-icon>
+        <blockquote>TrueNest understood exactly what I needed before I knew how to say it. The quiet. The textures. The view that never stops giving.</blockquote>
+        <div class="t-foot">
+          <div class="t-avatar">VB</div>
+          <div><div class="t-name">Vikram Balasubramanian</div><div class="t-role">Retreat 76 · Compact Studio</div></div>
+        </div>
+      </article>
+
+      <article class="t-card reveal d2">
+        <div class="t-card-stars" aria-label="5 out of 5"><iconify-icon icon="solar:star-bold"></iconify-icon><iconify-icon icon="solar:star-bold"></iconify-icon><iconify-icon icon="solar:star-bold"></iconify-icon><iconify-icon icon="solar:star-bold"></iconify-icon><iconify-icon icon="solar:star-bold"></iconify-icon></div>
+        <iconify-icon class="t-card-glyph" icon="solar:quote-up-bold"></iconify-icon>
+        <blockquote>I've lived in luxury apartments before, but none felt like this. There's a weight to the quality here — in the concrete, in the stone, in the silence between sounds.</blockquote>
+        <div class="t-foot">
+          <div class="t-avatar">AM</div>
+          <div><div class="t-name">Anitha Moorthy</div><div class="t-role">Hills &amp; Skies · Orchard Suite</div></div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <div class="cta-bg"></div>
+  <div class="container cta-in">
+    <div class="s-label" style="justify-content:center;color:#C9D8B6">Write Your Own Story</div>
+    <h2>Be the next resident to<br><em>find their sanctuary.</em></h2>
+    <p>Explore our curated residences in Nandi Hills and begin a conversation with our private advisory team.</p>
+    <a href="inquiries.html" class="btn btn-primary"><span>Begin a Private Inquiry</span><iconify-icon icon="solar:arrow-right-linear"></iconify-icon></a>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-in">
+      <div><div class="footer-brand">TRUENEST</div><p class="footer-tag">Boutique biophilic residences at the intersection of nature and architecture. Nandi Hills, Bangalore.</p></div>
+      <div class="footer-col"><h5>Residences</h5><a href="retreat76.html">Retreat 76</a><a href="hillsandskies.html">Hills &amp; Skies</a><a href="projects.html">All Projects</a></div>
+      <div class="footer-col"><h5>Company</h5><a href="story.html">Our Story</a><a href="testimonials.html">Testimonials</a><a href="careers.html">Careers</a></div>
+      <div class="footer-col"><h5>Contact</h5><a href="inquiries.html">Enquire</a><a href="tel:+918044559900">+91 80 4455 9900</a><a href="mailto:hello@truenest.co.in">hello@truenest.co.in</a></div>
+    </div>
+    <div class="footer-base"><span>© 2026 TrueNest · RERA/KA/24/0142</span><span>Truly In Nature</span></div>
+  </div>
+</footer>
+<script src="assets/js/truenest.js"></script>
 </body>
 </html>
