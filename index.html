@@ -295,7 +295,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
 
 <!-- HERO: cinematic film, looping -->
 <section class="hero" id="hero">
-  <video class="hero-video" autoplay muted playsinline preload="auto" src="assets/images/hero.mp4"></video>
+  <video class="hero-video" autoplay muted playsinline preload="auto" src="assets/hero-videos/1.mp4" data-hero-clips="assets/hero-videos/1.mp4,assets/hero-videos/2.mp4,assets/hero-videos/3.mp4,assets/hero-videos/4.mp4"></video>
   <div class="hero-scrim"></div>
 
   <div class="container hero-intro">
@@ -571,15 +571,17 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
     try{vid.removeAttribute('autoplay');vid.pause()}catch(e){}
     revealOngoing(); return;
   }
-  vid.addEventListener('ended',revealOngoing);
-  vid.addEventListener('error',revealOngoing);
-  const p=vid.play();
-  if(p&&p.catch)p.catch(revealOngoing); // autoplay blocked -> show banner
-  // Safety net: if the video never fires 'ended' (e.g. stalled), reveal
-  // once its duration has elapsed.
-  vid.addEventListener('loadedmetadata',()=>{
-    if(isFinite(vid.duration))setTimeout(revealOngoing,(vid.duration+1)*1000);
+  // Hero film is a chain of cinematic clips supplied via data-hero-clips.
+  // Advance through them, then reveal the ongoing-project banner.
+  const clips=(vid.dataset.heroClips||'').split(',').map(s=>s.trim()).filter(Boolean);
+  let clipIdx=0;
+  const playClip=(i)=>{vid.src=clips[i]||vid.src;const p=vid.play();if(p&&p.catch)p.catch(revealOngoing);};
+  vid.addEventListener('ended',()=>{
+    clipIdx++;
+    if(clipIdx<clips.length)playClip(clipIdx); else revealOngoing();
   });
+  vid.addEventListener('error',revealOngoing);
+  if(clips.length){playClip(0);} else {const p=vid.play();if(p&&p.catch)p.catch(revealOngoing);}
 })();
 
 // Reveal
