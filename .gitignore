@@ -9,3 +9,10 @@ dist/
 # Client docs — keep out of the public repo
 Requirements for Truenest Website.docx
 *.docx
+
+# Internal planning / status docs
+.mcp.json
+CMS_PLAN.md
+PENDING_FOR_CLIENT.md
+TRUENEST_STATUS.md
+AUTORESPONDER_EMAIL.md
