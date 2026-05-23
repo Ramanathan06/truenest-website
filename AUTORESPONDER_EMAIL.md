@@ -50,7 +50,7 @@ Sent automatically when a visitor submits any form on truenest.co.in
     <hr style="border:none;border-top:1px solid #D8D1C2;margin:40px 0">
     <p style="font-size:12px;color:#5A554B;line-height:1.6">
       TrueNest · Nandi Hills, Bangalore · 915m<br>
-      +91 80 4455 9900 · hello@truenest.co.in<br>
+      +91 63698 29365 · hello@truenest.co.in<br>
       RERA/KA/24/0142
     </p>
   </div>
@@ -75,7 +75,7 @@ The TrueNest Team
 
 —
 TrueNest · Nandi Hills, Bangalore
-+91 80 4455 9900 · hello@truenest.co.in
++91 63698 29365 · hello@truenest.co.in
 RERA/KA/24/0142
 ```
 
