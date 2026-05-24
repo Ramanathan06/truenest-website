@@ -471,5 +471,33 @@
 <script src="assets/js/leads-config.js"></script>
 <script src="assets/js/leads.js"></script>
 <a href="https://wa.me/916369829365?text=Hi%20TrueNest%2C%20I%27d%20like%20to%20know%20more" target="_blank" rel="noopener" aria-label="Chat on WhatsApp" style="position:fixed;bottom:24px;right:24px;z-index:999;width:56px;height:56px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 20px rgba(0,0,0,.25);transition:transform .2s" onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'"><iconify-icon icon="mdi:whatsapp" style="color:#fff;font-size:30px"></iconify-icon></a>
+<div id="mobile-drawer" class="mobile-drawer" role="dialog" aria-modal="true" aria-label="Site navigation" aria-hidden="true">
+<a class="nav-link" href="index.html">Home</a>
+<a class="nav-link" href="projects.html">Residences</a>
+<a class="nav-link" href="retreat76.html">Retreat 76</a>
+<a class="nav-link" href="hillsandskies.html">Hills &amp; Skies</a>
+<a class="nav-link" href="story.html">Story</a>
+<a class="nav-link" href="testimonials.html">Testimonials</a>
+<a class="nav-link" href="careers.html">Careers</a>
+<a class="nav-link" href="inquiries.html">Enquire</a>
+<a class="nav-cta" href="inquiries.html">Private Inquiry</a>
+</div>
+<script>
+(function(){
+  var btn=document.querySelector('button.nav-toggle');
+  var drawer=document.getElementById('mobile-drawer');
+  if(!btn||!drawer)return;
+  function toggle(open){
+    var isOpen=open!==undefined?open:btn.getAttribute('aria-expanded')!=='true';
+    btn.setAttribute('aria-expanded',isOpen);
+    btn.setAttribute('aria-label',isOpen?'Close menu':'Open menu');
+    drawer.setAttribute('aria-hidden',!isOpen);
+    document.body.classList.toggle('menu-open',isOpen);
+  }
+  btn.addEventListener('click',function(){toggle();});
+  drawer.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){toggle(false);});});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')toggle(false);});
+})();
+</script>
 </body>
 </html>
