@@ -16,16 +16,12 @@
 <script src="https://code.iconify.design/iconify-icon/1.0.8/iconify-icon.min.js"></script>
 <link rel="stylesheet" href="assets/css/truenest.css">
 <style>
-/* Story-page-specific layout — system classes untouched */
 .story-hero{position:relative;min-height:70vh;display:flex;align-items:flex-end;overflow:hidden;background:var(--ink)}
 .story-hero img.story-hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
 .story-hero .hero-scrim{position:absolute;inset:0;z-index:1}
 .story-hero .hero-intro{position:relative;z-index:3;width:100%;padding:8rem 0 clamp(3.5rem,9vh,6rem)}
-.hero-tag{display:inline-flex;align-items:center;gap:.5rem;padding:.45rem 1rem;border:1px solid rgba(244,241,234,.3);border-radius:100px;font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:#F4F1EA;margin-bottom:1.2rem;background:rgba(244,241,234,.1);backdrop-filter:blur(8px)}
 .hero-title{font-family:var(--font-display);font-size:clamp(2.6rem,6vw,5rem);font-weight:400;line-height:1.04;letter-spacing:-.02em;color:#F8F5EF}
-.hero-title em{font-style:italic;color:#C9D8B6}
 .hero-desc{margin-top:1.3rem;font-size:clamp(.95rem,1.1vw,1.08rem);line-height:1.7;color:rgba(248,245,239,.85);max-width:580px}
-
 .story-row{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2.5rem,6vw,5rem);align-items:center}
 .story-row + .story-row{margin-top:clamp(4rem,9vh,7rem)}
 .story-row.flip .story-media{order:2}
@@ -36,19 +32,16 @@
 .story-copy h3 em{font-style:italic;color:var(--accent)}
 .story-copy p{font-size:.96rem;line-height:1.8;color:var(--ink-soft)}
 .story-copy p + p{margin-top:1rem}
-
 .pull-quote{max-width:880px;margin:clamp(4rem,9vh,7rem) auto 0;text-align:center;padding:clamp(2.5rem,5vw,4rem) clamp(1.5rem,4vw,3rem);background:var(--bg-card);border:1px solid var(--line);border-radius:20px}
 .pull-quote iconify-icon{font-size:1.8rem;color:var(--clay)}
 .pull-quote blockquote{font-family:var(--font-display);font-size:clamp(1.4rem,3vw,2.1rem);font-style:italic;line-height:1.45;color:var(--ink);margin:1rem 0}
 .pull-quote cite{font-style:normal;font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-soft)}
-
 .values-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
 .value-card{background:var(--bg-card);border:1px solid var(--line);border-radius:18px;padding:clamp(1.8rem,3vw,2.4rem);transition:transform .5s var(--ease),box-shadow .5s,border-color .4s}
 .value-card:hover{transform:translateY(-6px);box-shadow:0 24px 60px rgba(28,27,24,.08);border-color:var(--accent)}
 .value-card iconify-icon{font-size:2rem;color:var(--accent);margin-bottom:1.2rem;display:block}
 .value-card h4{font-family:var(--font-display);font-size:1.35rem;font-weight:500;margin-bottom:.7rem;color:var(--ink)}
 .value-card p{font-size:.9rem;line-height:1.75;color:var(--ink-soft)}
-
 .founders-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:1.5rem}
 .founder{text-align:center}
 .founder-photo{width:128px;height:128px;border-radius:50%;overflow:hidden;margin:0 auto 1.2rem;border:1px solid var(--line);transition:border-color .4s}
@@ -58,10 +51,7 @@
 .founder h4{font-family:var(--font-display);font-size:1.02rem;font-weight:500;line-height:1.25;color:var(--ink);margin-bottom:.25rem}
 .founder .role{font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;color:var(--clay);margin-bottom:.8rem}
 .founder .said{font-size:.82rem;line-height:1.6;color:var(--ink-soft);font-style:italic}
-
-/* CTA bg override for this page */
 .cta .cta-bg.story-cta-bg{background:url('assets/images/story-vision.jpg') center/cover no-repeat;filter:saturate(.85) brightness(.5)}
-
 @media (max-width:900px){
   .story-row{grid-template-columns:1fr;gap:2rem}
   .story-row.flip .story-media{order:0}
@@ -80,6 +70,7 @@
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"TrueNest","url":"https://truenest.co.in/","description":"Luxury biophilic residences in Nandi Hills, Bangalore.","telephone":"+91-80-4455-9900","email":"hello@truenest.co.in","address":{"@type":"PostalAddress","addressLocality":"Bangalore","addressRegion":"Karnataka","addressCountry":"IN"},"sameAs":["https://www.instagram.com/","https://www.facebook.com/","https://www.linkedin.com/","https://www.youtube.com/"]}</script>
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to main content</a>
 
 <nav class="nav" id="nav">
   <div class="container nav-inner">
@@ -96,7 +87,7 @@
 </nav>
 
 <!-- HERO -->
-<section class="story-hero">
+<a id="main"></a><section class="story-hero">
   <img class="story-hero-bg" src="assets/images/story-vision.jpg" alt="A skyline where every structure breathes" loading="lazy" decoding="async">
   <div class="hero-scrim"></div>
   <div class="container hero-intro">
@@ -254,5 +245,33 @@
 </footer>
 <script src="assets/js/truenest.js"></script>
 <a href="https://wa.me/916369829365?text=Hi%20TrueNest%2C%20I%27d%20like%20to%20know%20more" target="_blank" rel="noopener" aria-label="Chat on WhatsApp" style="position:fixed;bottom:24px;right:24px;z-index:999;width:56px;height:56px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 20px rgba(0,0,0,.25);transition:transform .2s" onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'"><iconify-icon icon="mdi:whatsapp" style="color:#fff;font-size:30px"></iconify-icon></a>
+<div id="mobile-drawer" class="mobile-drawer" role="dialog" aria-modal="true" aria-label="Site navigation" aria-hidden="true">
+<a class="nav-link" href="index.html">Home</a>
+<a class="nav-link" href="projects.html">Residences</a>
+<a class="nav-link" href="retreat76.html">Retreat 76</a>
+<a class="nav-link" href="hillsandskies.html">Hills &amp; Skies</a>
+<a class="nav-link" href="story.html">Story</a>
+<a class="nav-link" href="testimonials.html">Testimonials</a>
+<a class="nav-link" href="careers.html">Careers</a>
+<a class="nav-link" href="inquiries.html">Enquire</a>
+<a class="nav-cta" href="inquiries.html">Private Inquiry</a>
+</div>
+<script>
+(function(){
+  var btn=document.querySelector('.nav-toggle');
+  var drawer=document.getElementById('mobile-drawer');
+  if(!btn||!drawer)return;
+  function toggle(open){
+    var isOpen=open!==undefined?open:btn.getAttribute('aria-expanded')!=='true';
+    btn.setAttribute('aria-expanded',isOpen);
+    btn.setAttribute('aria-label',isOpen?'Close menu':'Open menu');
+    drawer.setAttribute('aria-hidden',!isOpen);
+    document.body.classList.toggle('menu-open',isOpen);
+  }
+  btn.addEventListener('click',function(){toggle();});
+  drawer.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){toggle(false);});});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')toggle(false);});
+})();
+</script>
 </body>
 </html>
